@@ -1,4 +1,7 @@
 function [ ResultingAllocations ] = resultingAllocationWithAllEncompassingPMFsL(S,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h)
+s=S(1,:);
+p=S(2,:); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
+m=S(3,:); %m(i) is the proportion that i allocates.
 %The 'L' at the end of the function name signifies a 'larger' action space.
 NetCrudeOilImports2017=[-243.1,	414.6,	551.6,		-68.1,		223.2,	157.8,	-202.5,		-923.8,		-116.7,		-261.1,	313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
 CrudeOilImporters2017Normalised=[0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]/sum([0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]);
@@ -52,45 +55,39 @@ f21=F.*kron(transpose(ParticipantsWithoutInfluence),ParticipantsWithInfluence);
 f22=F.*kron(transpose(ParticipantsWithoutInfluence),ParticipantsWithoutInfluence);
 PureFunds=sum(f01)+sum(transpose(f10+f11+f12)); %The funds directly collected by participants is the sum of the money collected from incoming flights arriving from non-participants + the money collected from all the outgoing flights.
 FreeFunds=sum((1-r)*f02)+sum(transpose((1-r)*(f20+f21+f22)));
-totalFreeFunds=sum(FreeFunds);
-%Now we compute the money reaching the different PMFs
-PMF2s=zeros(x,x);
-PMF3s=zeros(x,x,x);
-PMF4s=zeros(x,x,x,x);
 GPGIs=zeros(x,1);
-s=S(1,:);
-p=S(2,:); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
-for i=1:N
-   if floor(s(i))==2
-    [maxvalues, ind] = maxk(A(:,i), 2);
-    orderedind=sort(ind);
-    PMF2s(orderedind(1),orderedind(2))=PMF2s(orderedind(1),orderedind(2))+PureFunds(i)*10*(s(i)-2);   % We recall that we encoded 'giving all to the PMF3 with the three highest ranked GPGPIs' as '3.1'.
-    GPGIs(ind(1))=GPGIs(ind(1))+p(i)*PureFunds(i)*(1-10*(s(i)-2)); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
-    GPGIs(ind(2))=GPGIs(ind(2))+(1-p(i))*PureFunds(i)*(1-10*(s(i)-2));
-   end
-      if floor(s(i))==3
-    [maxvalues, ind] = maxk(A(:,i), 3);
-    orderedind=sort(ind);
-    PMF3s(orderedind(1),orderedind(2),orderedind(3))=PMF3s(orderedind(1),orderedind(2),orderedind(3))+PureFunds(i)*10*(s(i)-3);   
-          GPGIs(ind(1))=GPGIs(ind(1))+p(i)*PureFunds(i)*(1-10*(s(i)-3));
-    GPGIs(ind(2))=GPGIs(ind(2))+(1-p(i))*PureFunds(i)*(1-10*(s(i)-3));
-      end
-      if floor(s(i))==4
-    [maxvalues, ind] = maxk(A(:,i), 4);
-    orderedind=sort(ind);
-    PMF4s(orderedind(1),orderedind(2),orderedind(3),orderedind(4))=PMF4s(orderedind(1),orderedind(2),orderedind(3),orderedind(4))+PureFunds(i)*10*(s(i)-4);   
-          GPGIs(ind(1))=GPGIs(ind(1))+p(i)*PureFunds(i)*(1-10*(s(i)-4));
-    GPGIs(ind(2))=GPGIs(ind(2))+(1-p(i))*PureFunds(i)*(1-10*(s(i)-4));
-      end
-
+        totalFreeFunds=sum(FreeFunds)+sum((1-r)*(1-m).*PureFunds.*ParticipantsWithInfluence);
+              weightedSum=sum(floor(s).*(1-h*floor(s)).*m.*PureFunds*10.*(s-floor(s)));
+for i=1:N %Here we add up all the direct allocations to the GPGIs.
+        nPMF=floor(s(i));
       if s(i)==1
             [maxvalues, ind] = maxk(A(:,i), 2);  
-   GPGIs(ind(1))=GPGIs(ind(1))+p(i)*PureFunds(i);
-      GPGIs(ind(2))=GPGIs(ind(2))+(1-p(i))*PureFunds(i);
+   GPGIs(ind(1))=GPGIs(ind(1))+m(i)*p(i)*PureFunds(i);
+      GPGIs(ind(2))=GPGIs(ind(2))+m(i)*(1-p(i))*PureFunds(i);
       end
+  if nPMF>1
+    [maxvalues, ind] = maxk(A(:,i), nPMF);
+    GPGIs(ind(1))=GPGIs(ind(1))+m(i)*p(i)*PureFunds(i)*(1-10*(s(i)-nPMF)); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
+    GPGIs(ind(2))=GPGIs(ind(2))+m(i)*(1-p(i))*PureFunds(i)*(1-10*(s(i)-nPMF));
+    for k=1:nPMF
+    GPGIs(ind(k))=GPGIs(ind(k))+ h*m(i)*PureFunds(i)*10*(s(i)-nPMF);
+    end
+  end
 end
-ResultingAllocations=transpose(allocationsFromAllEncompassingPMFsL(GPGIs,PMF2s,PMF3s,PMF4s,totalFreeFunds,h));
-else %The definition of the MCFT entails that if all participate without the right to influence then none can retain any money.
+GPGIsFinal=GPGIs;
+for i=1:N
+        nPMF=floor(s(i));
+        if nPMF>1
+            [maxvalues, ind] = maxk(A(:,i), nPMF);
+              sumGPGIs=sum(GPGIs(ind,1));
+    for k=1:nPMF
+    GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
+    end
+        end
+end
+
+ResultingAllocations=GPGIsFinal;
+else %The definition of the MCFT entails that if all participate without the right to influence then each can allocate the (1-r)....
 Z=zeros(1,x);
   f00=F.*kron(transpose(NonParticipants),NonParticipants);
 f01=F.*kron(transpose(NonParticipants),ParticipantsWithInfluence);
@@ -109,7 +106,7 @@ Funds=PureFunds;
 %preferences we now compute the vector Z whose jth component is the amount
 %of funding allocated to cause j:
 for i=1:N
-Z(maxind(i))=Z(maxind(i))+Funds(i);
+Z(maxind(i))=Z(maxind(i))+(1-r)*Funds(i);
 end
 ResultingAllocations=Z;
 end
