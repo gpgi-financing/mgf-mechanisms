@@ -54,3 +54,8 @@ git pull origin master --rebase
 type the following command:
 
 git clone https://github.com/gpgi-financing/mgf-mechanisms.git
+
+
+## Tips 2: For changing the name of a file use: 
+
+git mv parameters.m main.m
