@@ -59,9 +59,8 @@ K=21  ; %K is the number of discretization steps for the retention rate paramete
 M=11; %M is the number of discretization steps for what proportion to allocate.
 P=3;
 J=10;
-x=0.2;
 dwlFactor=1;
-samplesize=20;
+samplesize=100;
 maximalNumberOfAdjustments=200;
 maximalNumberOfRoundsWithoutAnyPlayerJoining=24;
 
