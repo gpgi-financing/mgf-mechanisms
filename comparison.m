@@ -9,12 +9,15 @@ s=zeros(3,N);
 eventualProfilesr=zeros(3*samplesize,N,K);
 eventualOutcomesr=zeros(samplesize,9,K);
 
+% ??
+% K = number_of_step_for_discretization_of_retention_rate
 
 for kk=0:(K-1)
   r=kk/(K-1);
   eventualProfiles=zeros(3*samplesize,N);
   eventualOutcomes=zeros(samplesize,9); %In this matrix we will keep track of the eventual outcomes for the different random paths starting from the randomly sampled initial action profiles.
   initialProfiles=zeros(samplesize,N);
+  
   for z=1:samplesize   %samplesize is the number of initial action profiles that we will consider. For each initial action profile we will sequentially let randomly selected players adjust their action to play a best response.
     flag=true; %We will randomly select players.
     initialProfiles(z,:)=initialactionprofile;

@@ -59,10 +59,15 @@ K=21  ; %K is the number of discretization steps for the retention rate paramete
 M=11; %M is the number of discretization steps for what proportion to allocate.
 P=3;
 J=10;
+<<<<<<< HEAD
+=======
+x = 0.2;
+>>>>>>> make some change
 dwlFactor=1;
 samplesize=20;
 maximalNumberOfAdjustments=200;
 maximalNumberOfRoundsWithoutAnyPlayerJoining=24;
+
 
 %4) Computation of the payoffs coefficients
 %F(i,j) gives the fraction of global passenger kilometers that occurr on flights from i to j.

@@ -38,17 +38,6 @@ for retrieve change from the online repository you to type:
 git pull origin master --rebase
 
 
-
-
-
-
-
-
-
-
-
-
-
 ## Tips 1: For cloning the repo from github
 
 type the following command:
@@ -59,3 +48,12 @@ git clone https://github.com/gpgi-financing/mgf-mechanisms.git
 ## Tips 2: For changing the name of a file use: 
 
 git mv parameters.m main.m
+
+
+## Tips 3: Guideline for syntax style
+
+https://www.python.org/dev/peps/pep-0008/#indentation
+
+Ex:
+
+maximal_number_of_rounds_without_any_player_joining = 24;
