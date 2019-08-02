@@ -54,7 +54,7 @@ else %There is one special case, namely where all participants have the status
     % % % % PMF4s=zeros(x,x,x,x);
     GPGIs=zeros(x,1);
     totalFreeFunds=sum(FreeFunds)+sum((1-r)*(1-m).*PureFunds.*ParticipantsWithInfluence);
-    weightedSum=sum(floor(s).*(1-h*floor(s)).*m.*PureFunds*10.*(s-floor(s)));
+    weightedSum=sum(floor(s).*(1-h*floor(s)).*m.*PureFunds*10.*(s-floor(s))); %This is the weighted sum of the money in the PMFs.
     for i=1:N %Here we add up all the direct allocations to the GPGIs.
       nPMF=floor(s(i));
       if s(i)==1
@@ -72,16 +72,21 @@ else %There is one special case, namely where all participants have the status
       end
     end
     GPGIsFinal=GPGIs;
-    for i=1:N
-      nPMF=floor(s(i));
-      if nPMF>1
-        [maxvalues, ind] = maxk(A(:,i), nPMF);
-        sumGPGIs=sum(GPGIs(ind,1));
-        for k=1:nPMF
-          GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
+    if weightedSum>0
+      for i=1:N
+        nPMF=floor(s(i));
+        if nPMF>1
+          [maxvalues, ind] = maxk(A(:,i), nPMF);
+          sumGPGIs=sum(GPGIs(ind,1));
+          for k=1:nPMF
+            GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
+          end
         end
       end
+    else
+      GPGIsFinal=GPGIsFinal+totalFreeFunds*GPGIs/sum(GPGIs);
     end
+    
     
     ResultingAllocations=GPGIsFinal;
     Yb=transpose(ResultingAllocations)*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds)+sum(1/(1-r)*FreeFunds))*NetCrudeOilImports2017Normalised+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds)+sum(1/(1-r)*FreeFunds));

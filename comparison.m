@@ -1,4 +1,3 @@
-
 %5) The iterated best response algorithm computed using the payoff
 %coefficients computed in 4).
 NN=size(F); %F is the matrix of flights.
@@ -48,14 +47,7 @@ for kk=0:(K-1)
       ParticipantsWithInfluence=1-ParticipantsWithoutInfluence-NonParticipants;
       numberOfParticipants=sum(1-NonParticipants);
       payoffs=PayoffsWithHPMFsL(s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
-      % payoffForkRelativeToNoMechanism=payoffs(k);
       ss=s;
-      %             if s(1,k)==0 || ~patient || payoffForkRelativeToNoMechanism<0 % if the player k does not participate at s then we adjust his action to his best response. Also, if we are in the impatient state or if the player is worse off than he would be in the absence of any mechanism.
-      %         choosingNotParticipatingPermitted=true;
-      %           else
-      %                      choosingNotParticipatingPermitted=false;
-      %         end
-      %          if choosingNotParticipatingPermitted
       payoffsk=zeros(3+3*J,P,M);
       for q=1:P %Here we will go through all the actions that player k could choose and record in the matrix payoffsk the payoffs for player k.
         for m=1:M
@@ -70,20 +62,22 @@ for kk=0:(K-1)
           ss(1,k)=1;
           PayoffGivingToGPGIs=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
           payoffsk(3,q,m)=PayoffGivingToGPGIs(k);
-          for j=1:J
-            ss(1,k)=2+0.1*j/J;
-            PayoffGivingToPMF2s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
-            payoffsk(3+j,q,m)=PayoffGivingToPMF2s(k);
-          end
-          for j=1:J
-            ss(1,k)=3+0.1*j/J;
-            PayoffGivingToPMF3s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
-            payoffsk(3+J+j,q,m)=PayoffGivingToPMF3s(k);
-          end
-          for j=1:J
-            ss(1,k)=4+0.1*j/J;
-            PayoffGivingToPMF4s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
-            payoffsk(3+2*J+j,q,m)=PayoffGivingToPMF4s(k);
+          if J>0
+            for j=1:J
+              ss(1,k)=2+0.1*j/J;
+              PayoffGivingToPMF2s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
+              payoffsk(3+j,q,m)=PayoffGivingToPMF2s(k);
+            end
+            for j=1:J
+              ss(1,k)=3+0.1*j/J;
+              PayoffGivingToPMF3s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
+              payoffsk(3+J+j,q,m)=PayoffGivingToPMF3s(k);
+            end
+            for j=1:J
+              ss(1,k)=4+0.1*j/J;
+              PayoffGivingToPMF4s=PayoffsWithHPMFsL(ss,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
+              payoffsk(3+2*J+j,q,m)=PayoffGivingToPMF4s(k);
+            end
           end
         end
       end
@@ -177,8 +171,7 @@ for kk=0:(K-1)
         numberOfParticipants=sum(1-NonParticipants);
         s
         aFI=[0,0];
-        %aFI=aggregateForceOfIncentivesToDeviateAllEncompassingPMFs(delta,s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease)
-        
+
         eventualOutcomes(z,:)=[numberOfActionProfileChanges 0 0 numberOfParticipants 0 0 -1 moneyRaisedForGPGIsSoFar/step moneyCollectedSoFar/step]; %In the last column we record a -1 for the fact that we have not arrived at a NE.
         eventualProfiles(3*z-2,:)=s(1,:);
         eventualProfiles(3*z-1,:)=s(2,:);
@@ -189,7 +182,7 @@ for kk=0:(K-1)
       
       
       
-      if sum(noProfitableDeviations)==N %i.e. in case there are no profitable deviations apart from potentially deviations by initial participants that consist of quitting.
+      if sum(noProfitableDeviations)==N %i.e. in case there are no profitable deviations apart from potentially deviations by initial participants that consist of quitting. In this case the initial paticipants stop excluding the option of quitting.
         noProfitableDeviationsAtAll=zeros(1,N);
         occasionToAdjustUsedUp=zeros(1,N);
         for k=1:N %Here we check whether the profile s is even a NE once we relax the restriction that no one is allowed to quit.
@@ -227,32 +220,11 @@ for kk=0:(K-1)
           end
           [Max,II]=max(payoffsk(:));
           [jj,qq,mm]=ind2sub(size(payoffsk),II);
-          % % % % % % % %             if k==2&&numberOfActionProfileChanges<PatienceForFindingNE&&sum(NonParticipants)==0 %for the China we restrict responses to those involving participation, as long as all participate.
-          % % % % % % % %              payoffskWithoutQuitting=zeros(2+3*J,P,M);
-          % % % % % % % %                           payoffskWithoutQuitting(2:2+3*J,:,:)=payoffsk(3:3+3*J,:,:);
-          % % % % % % % %                                                     payoffskWithoutQuitting(1,:,:)=payoffsk(1,:,:);
-          % % % % % % % %              [Max,IIII]=max(payoffskWithoutQuitting(:));
-          % % % % % % % %                                     [jj,qq,mm]=ind2sub(size(payoffskWithoutQuitting),IIII);
-          % % % % % % % % %              QQ=floor(IIII/(2+3*J));
-          % % % % % % % % %            III=IIII-(2+3*J)*QQ;
-          % % % % % % % %   if jj>1%i.e. if the optimal response for the China is to participate with the right to influence
-          % % % % % % % %     jj=jj+1;%II=IIII+QQ+1;
-          % % % % % % % %   else
-          % % % % % % % %     jj=1;
-          % % % % % % % %   end
-          % % % % % % % %            end   %%%%%%%% actually, we drop all
-          % restrictions once a Nash equilibrium is reached
           payoffsbefore=PayoffsWithHPMFsL(s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
           payoffsbeforek=payoffsbefore(k);
           if Max-payoffsbeforek<adjustmentcost
             ss=s;
           else
-            % Q=floor(II/(3+3*J));
-            %            I=II-(3+3*J)*Q;
-            %            if I==0
-            %              I=3+3*J;
-            %              Q=Q-1;
-            %            end
             ss=s; %Now we will use the variable ss for a new purpose, namely to store the profile obtained from s by adjusting k's action to his best response.
             ss(2,k)=(qq-1)/(P-1);
             ss(3,k)=(mm-1)/(M-1);

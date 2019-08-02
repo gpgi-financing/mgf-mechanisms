@@ -60,7 +60,7 @@ M=11; %M is the number of discretization steps for what proportion to allocate.
 P=3;
 J=10;
 dwlFactor=1;
-samplesize=100;
+samplesize=20;
 maximalNumberOfAdjustments=200;
 maximalNumberOfRoundsWithoutAnyPlayerJoining=24;
 
@@ -78,7 +78,7 @@ savefig('v1MGFwithPMFs.fig')
 JOriginal=J;
 J=0;
 POriginal=P;
-P=2;
+P=3;
 comparison
 save v1SimpleMGF.mat
 outcomesFromProfilesPMFs
