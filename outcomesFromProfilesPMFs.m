@@ -38,15 +38,15 @@ end
 
 
 
-x=0:1/((K-1)):1;
-plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
-xlabel('retention rate parameter', 'FontSize',22)
-set(gca,'FontSize',20)
-legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching Nash Equilibrium with full participation'})
-title('MGF with Hierarchical Proportional Matching Funds')
-
-[h, ~, plots] = legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching a Nash Equilibrium with full participation'});
-for idx = 1:length(h.String)
-  h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
-end
-
+% x=0:1/((K-1)):1;
+% plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
+% xlabel('retention rate parameter', 'FontSize',22)
+% set(gca,'FontSize',20)
+% legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching Nash Equilibrium with full participation'})
+% title('MGF with Hierarchical Proportional Matching Funds')
+% 
+% [h, ~, plots] = legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching a Nash Equilibrium with full participation'});
+% for idx = 1:length(h.String)
+%   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
+% end
+% 

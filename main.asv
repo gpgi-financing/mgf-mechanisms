@@ -136,7 +136,7 @@ maximalAggregateMoneyGivenToGPGIsCORSIAPlus=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
-title('maximal aggregate money raised for GPGIs')
+title('Maximal Aggregate Money raised for GPGIs')
 hold on
 load('v1SimpleMGF.mat')
 outcomesFromProfilesPMFs
@@ -163,7 +163,7 @@ averageAggregatePayoffsCORSIAPlus=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
-title('expected aggregate payoffs')
+title('Expected Aggregate Payoffs')
 hold on
 load('v1SimpleMGF.mat')
 outcomesFromProfilesPMFs
@@ -191,7 +191,7 @@ maximalAggregatePayoffsCORSIAPlus=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
-title('maximal aggregate payoffs')
+title('Maximal Aggregate Payoffs')
 hold on
 load('v1SimpleMGF.mat')
 outcomesFromProfilesPMFs
@@ -219,7 +219,7 @@ averageAggregateMoneyGivenToGPGIsCORSIAPlus=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
-title('expected aggregate money raised for GPGIs')
+title('Expected Aggregate Money Raised for GPGIs')
 hold on
 load('v1SimpleMGF.mat')
 outcomesFromProfilesPMFs
@@ -322,12 +322,12 @@ plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalA
 legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching Nash Equilibrium with full participation'})
 xlabel('retention rate parameter', 'FontSize',22)
 set(gca,'FontSize',20)
-title('MGF with PMFs without the Carbon Pricing Reward Fund')
+title('MGF with PMFs')
 [h, ~, plots] = legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching a Nash Equilibrium with full participation'});
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v1MGFwithPMFswithoutCPRF.fig')
+savefig('v1MGFwithPMFs.fig')
 savefig('v1MGFwithPMFswithoutCPRF.fig')
 
 %Now we compute the results for the MGF mechanism with PMFs with the full
