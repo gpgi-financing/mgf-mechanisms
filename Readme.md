@@ -57,3 +57,18 @@ https://www.python.org/dev/peps/pep-0008/#indentation
 Ex:
 
 maximal_number_of_rounds_without_any_player_joining = 24;
+
+
+
+
+
+
+## 
+
+2 repos
+
+1 sur ton ordi 
+1 sur le serveur git clone sur le serveur:
+git clone https://github.com/gpgi-financing/mgf-mechanisms.git
+
+
