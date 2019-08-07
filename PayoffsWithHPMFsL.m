@@ -4,10 +4,14 @@ s=S(1,:);
 p=S(2,:); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
 m=S(3,:); %m(i) is the proportion that i allocates.
 joyOfGivingToGPGI=0.00001; % This is a purely technical trick for tie-breaking. In the payoffs at the end we will add this tiny value for every dollar given by each country. This will imply that if a player is indifferent between giving only to GPGIs or giving also to HPMFs, he will give only to GPGIs. This allows us to avoid creating articifical (non-credible) participation incentives from the fact that players give to PMFs supporting some GPGI with no direct contributions even though they will stop doing so as soon as there are direct contributions reaching that GPGI. The 'L' at the end of the function name signifies a 'larger' action space.
-NetCrudeOilImports2017=[-243.1,	414.6,	551.6,		-68.1,		223.2,	157.8,	-202.5,		-923.8,		-116.7,		-261.1,	313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
-CrudeOilImporters2017Normalised=[0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]/sum([0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]);
-CrudeOilExporters2017Normalised=[-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]/(-sum([-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]));
-NetCrudeOilImports2017Normalised=CrudeOilImporters2017Normalised+CrudeOilExporters2017Normalised;
+crude_oil_production_2018=    [398 193  80   138   39   0  432  1496   277 556 676 118]; %in billion barrels. Estimates from data from https://onedrive.live.com/edit.aspx?resid=9054988A1D79A46!10213&app=Excel&wdnd=1&wdPreviousCorrelation=18c602d5%2D0c14%2D49fa%2Db6e4%2D87eaf7498d0d.  Data is aggregated here: https://onedrive.live.com/edit.aspx?cid=09054988a1d79a46&page=view&resid=9054988A1D79A46!10117&parId=9054988A1D79A46!101&app=Excel&wacqt=search
+domestic_oil_consumption_2018=[180 582  511   50   218 159 330   290   267 147 776 312];
+crude_oil_production_normalized=crude_oil_production_2018/sum(crude_oil_production_2018);
+domestic_oil_consumption_normalized=domestic_oil_consumption_2018/sum(domestic_oil_consumption_2018);
+% NetCrudeOilImports2017=[-243.1,	414.6,	551.6,		-68.1,		223.2,	157.8,	-202.5,		-923.8,		-116.7,		-261.1,	313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
+% CrudeOilImporters2017Normalised=[0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]/sum([0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]);
+% CrudeOilExporters2017Normalised=[-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]/(-sum([-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]));
+% NetCrudeOilImports2017Normalised=CrudeOilImporters2017Normalised+CrudeOilExporters2017Normalised;
 ProportionsOfSCC=[0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]/sum([0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]);
 N=length(S(1,:));
 X=size(A);
@@ -89,7 +93,7 @@ else %There is one special case, namely where all participants have the status
     
     
     ResultingAllocations=GPGIsFinal;
-    Yb=transpose(ResultingAllocations)*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds)+sum(1/(1-r)*FreeFunds))*NetCrudeOilImports2017Normalised+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds)+sum(1/(1-r)*FreeFunds));
+    Yb=transpose(ResultingAllocations)*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds)+sum(1/(1-r)*FreeFunds))*(domestic_oil_consumption_normalized-crude_oil_production_normalized)+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds)+sum(1/(1-r)*FreeFunds));
     TaxBurden=sum(transpose(f01+f02+f11+f12+f10+f21+f22+f20))+sum(f01+f02+f11+f12+f10+f21+f22+f20);
     Yc=TaxBurden.*transpose(C);
     Y=Yb-Yc;
@@ -117,7 +121,7 @@ else %There is one special case, namely where all participants have the status
       for i=1:N
         Z(maxind(i))=Z(maxind(i))+Funds(i);
       end
-      Yb=Z*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds))*NetCrudeOilImports2017Normalised+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds));
+      Yb=Z*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds))*(domestic_oil_consumption_normalized-crude_oil_production_normalized)+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds));
       TaxBurden=sum(transpose(f01+f02+f11+f12+f10+f21+f22+f20))+sum(f01+f02+f11+f12+f10+f21+f22+f20);
       Yc=TaxBurden.*transpose(C);
       Y=Yb-Yc-joyOfGivingToGPGI;
@@ -126,7 +130,7 @@ else %There is one special case, namely where all participants have the status
       for i=1:N
         Z(maxind(i))=Z(maxind(i))+(1-r)*Funds(i);
       end
-      Yb=Z*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds))*NetCrudeOilImports2017Normalised+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds));
+      Yb=Z*A+reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions*(sum(PureFunds))*(domestic_oil_consumption_normalized-crude_oil_production_normalized)+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease*ProportionsOfSCC*(sum(PureFunds));
       TaxBurden=sum(transpose(f01+f02+f11+f12+f10+f21+f22+f20))+sum(f01+f02+f11+f12+f10+f21+f22+f20);
       Yc=TaxBurden.*transpose(C);
       Y=Yb-Yc+r*Funds-joyOfGivingToGPGI;
