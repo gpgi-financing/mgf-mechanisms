@@ -2165,6 +2165,34 @@ Latin America benefits greatly from money going to the Forest Carbon Partnership
  get from it.
 \end_layout
 
+\begin_layout Standard
+To summarise: There appear to be three major effects determining the payoffs
+ countries derive from additional money being provided to GPGIs:
+\end_layout
+
+\begin_layout Standard
+1) effects due to the provision of the global public good
+\end_layout
+
+\begin_layout Standard
+2) redistributional effects due to induced price changes
+\end_layout
+
+\begin_layout Standard
+3) informational rents
+\end_layout
+
+\begin_layout Standard
+All of these three effects turn out to be heterogenous across countries
+ and as a result our payoff estimates (which take into account these three
+ effects) exhibit substantial heterogeneity across countries.
+ The two mechanism that we will now define are motivated by the hope that
+ it might be possible to harness this heterogeity to generate participation
+ incentives that arise as participants will be able to affect the allocation
+ of money across GPGIs (in ways determined by the rules of the respective
+ mechanisms).
+\end_layout
+
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -2176,7 +2204,7 @@ Definitions of the two MGF mechanisms
 \end_layout
 
 \begin_layout Standard
-We will now define the three proposed club mechanisms.
+We will now define two new proposals for club mechanisms.
  We shall call the proposals 
 \series bold
 MGF Mechanisms
@@ -2243,19 +2271,58 @@ Throughout this article we take
 
  could be modified over time.
  One posssible procedure would be the following: Participating countries
- could propose that a GPGI be added to the set 
+ could propose that a GPGI 
+\begin_inset Formula $s$
+\end_inset
+
+ be added to the set 
 \begin_inset Formula $S$
 \end_inset
 
 .
  Then all participating countries would cast a vote.
- The proposal would be accepted if the set of countries voting for it comprise
- a percentage of the population of the participating countries that exceeds
- some threshold.
- This threshold could be set as a function of the cumulative voluntary contribut
-ions that this GPGI has previously received.
- Thereby, the incentives to make voluntary contributions to GPGIs could
- be enhanced.
+ These votes could be weighted by population size.
+ The GPGI 
+\begin_inset Formula $s$
+\end_inset
+
+ would be added to the set 
+\begin_inset Formula $S$
+\end_inset
+
+ iff the set of participants voting for the addition of the GPGI 
+\begin_inset Formula $s$
+\end_inset
+
+ comprises at least 50% of the weight of the set of all participants.
+ Alternatively, the weight given to a country could be the sum of its population
+ and some (country-independent) coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ times the aggregate voluntary contributions made by this country to all
+ GPGIs in the 5 years preceding the vote.
+ This would enhance countries' incentives to make voluntary contributions
+ to GPGIs (including not only the GPGIs in 
+\begin_inset Formula $S$
+\end_inset
+
+ but any GPGI recognized as such by some independent commission).
+ Thereby, countries could create new GPGIs through voluntary contributions,
+ knowing that if they perform sufficiently well to attract wide support,
+ it will be added to the set 
+\begin_inset Formula $S$
+\end_inset
+
+ and could receive future funding via the MGF mechanism.
+ The coefficient 
+\begin_inset Formula $\gamma$
+\end_inset
+
+ could be set so that at the time of the introduction of the MGF mechanism
+ half of the aggregate weight of the worlds' countries would be due to the
+ population and half of their aggregate weight would be due to the voluntary
+ contributions.
 \end_layout
 
 \end_inset
@@ -2282,8 +2349,12 @@ The Simple MGF mechanism for the set
 \begin_inset Formula $S$
 \end_inset
 
- of GPGIs defines a club through the following two obligations that participatin
-g countries have to comply with:
+ of GPGIs and the retention rate parameter 
+\begin_inset Formula $r\in[0,1]$
+\end_inset
+
+ defines a club through the following two obligations that participating
+ countries have to comply with:
 \end_layout
 
 \begin_layout Definition
@@ -2334,66 +2405,53 @@ target "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32008L0101"
 \series bold
 the allocation obligation
 \series default
-) Each participating country 
+) As a result of implementing the taxation obligation, each participating
+ country 
 \begin_inset Formula $i$
 \end_inset
 
- must choose among the following two options:
-\end_layout
-
-\begin_layout Definition
-
-\emph on
-option 1: 'be a participant with the right to allocate'
-\end_layout
-
-\begin_layout Definition
-In this case the country 
-\begin_inset Formula $i$
+ collects a certain amount 
+\begin_inset Formula $M_{i}$
 \end_inset
 
- cannot retain any of the tax revenue that it collects.
- It has to allocate the entire tax revenue to GPGIs from 
+ of tax revenue.
+ The country can decide on the propotion 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ of 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ that it wants to allocate to GPGIs.
+ It can allocate the amount 
+\begin_inset Formula $p_{i}M_{i}$
+\end_inset
+
+ in any way to the GPGIs from the set 
 \begin_inset Formula $S$
 \end_inset
 
-.
- It can split the tax revenue in any way over the GPGIs from 
-\begin_inset Formula $S$
+ of eligible GPGIs.
+ Of the amount 
+\begin_inset Formula $(1-p_{i})M_{i}$
 \end_inset
 
-.
-
-\emph on
- 
-\end_layout
-
-\begin_layout Definition
-
-\emph on
-option 2: 
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:Be-a-participant"
-
-\end_inset
-
-'be a participant without the right to allocate'
-\end_layout
-
-\begin_layout Definition
-In this case the country 
+ that country 
 \begin_inset Formula $i$
 \end_inset
 
- can can retain a proportion 
+ does not allocate to GPGIs, it can retain the proportion 
 \begin_inset Formula $r$
 \end_inset
 
- (called the 'retention rate parameter') of the collected tax revenue.
- The other part of the revenue it collects is distributed to the GPGIs in
- proportion to the aggregate contributions from countries that participate
- with the right to allocate.
+ (which is the retention rate parameter of the mechanism).
+ The remaining amount, 
+\begin_inset Formula $(1-r)(1-p_{i})M_{i}$
+\end_inset
+
+ is added to the GPGIs proportionally to the aggregate contributions made
+ to them via the mechanism.
 \end_layout
 
 \begin_layout Standard
@@ -2426,41 +2484,32 @@ To clarify the definition, we now restate it with some notation.
 \end_layout
 
 \begin_layout Standard
-Let us denote by 
+As introduced in the definition, we shall denote by 
 \begin_inset Formula $M_{k}$
 \end_inset
 
  the flow of tax revenue that a participating country collects by taxing
- in accordance with obligation 1).
- Let 
-\begin_inset Formula $Participants_{1}$
+ in accordance with the taxation obligation.
+ Each participant has to choose the proportion 
+\begin_inset Formula $p_{i}\in[0,1]$
 \end_inset
 
-, 
-\begin_inset Formula $Participants_{2}$
-\end_inset
-
- denote the sets of countries that participate and choose option 1 and option
- 2, respectively.
- A participant with the right to allocate 
-\begin_inset Formula $i\in Participants_{1}$
-\end_inset
-
- has to choose how to distribute the flow of money 
-\begin_inset Formula $M_{i}$
+ that he wants to allocate to GPGIs.
+ He also has to choose how to distribute the flow of money 
+\begin_inset Formula $p_{i}M_{i}$
 \end_inset
 
  to the GPGIs.
  In other words, he has to choose numbers 
-\begin_inset Formula $Q_{s}^{i}\in[0,1]$
+\begin_inset Formula $q_{s}^{i}\in[0,1]$
 \end_inset
 
  such that 
-\begin_inset Formula $\sum_{s\in S}Q_{s}^{i}=1$
+\begin_inset Formula $\sum_{s\in S}q_{s}^{i}=1$
 \end_inset
 
  and thereby he allocates the flow 
-\begin_inset Formula $Q_{s}^{i}M_{i}$
+\begin_inset Formula $q_{s}^{i}p_{i}M_{i}$
 \end_inset
 
  to the GPGI 
@@ -2468,26 +2517,45 @@ Let us denote by
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-The money that those in 
-\begin_inset Formula $Participants_{2}$
+ These flows of moneys going to the GPGIs we will call the 
+\begin_inset Quotes eld
 \end_inset
 
- collect but do not retain amounts to 
-\begin_inset Formula $\sum_{k\in Participants_{2}}(1-r)M_{k}$
+direct allocations to the GPGIs
+\begin_inset Quotes erd
 \end_inset
 
 .
- As stated in the description of option 2, this money is allocated to the
- GPGIs in 
+ Of the money 
+\begin_inset Formula $(1-p_{i})M_{i}$
+\end_inset
+
+ that country 
+\begin_inset Formula $i$
+\end_inset
+
+ does not allocate, he retains the amount 
+\begin_inset Formula $r(1-p_{i})M_{i}$
+\end_inset
+
+ for himself.
+\end_layout
+
+\begin_layout Standard
+The amount of money 
+\begin_inset Formula $\sum_{i\in Participants}(1-r)(1-p_{i})M_{i}$
+\end_inset
+
+ is neither given as direct allocations to GPGIs nor retained by participants.
+ The definition of the mechanism stipulates that this money is to be allocated
+ to the GPGIs in 
 \begin_inset Formula $S$
 \end_inset
 
- in proportion to the funding provided through the mechanism to these GPGIs.
+ in proportion to the aggregate direct allocations made to these GPGIs via
+ the mechanism.
  In other words, from the money 
-\begin_inset Formula $\sum_{k\in J_{2}}(1-r)M_{k}$
+\begin_inset Formula $\sum_{i\in Participants}(1-r)(1-p_{i})M_{i}$
 \end_inset
 
  the following amount is allocated to the GPGI 
@@ -2498,7 +2566,7 @@ The money that those in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\frac{\sum_{i\in Participants_{1}}Q_{s}^{i}M_{i}}{\sum_{s\in S}\sum_{i\in Participants_{1}}Q_{s}^{i}M_{i}}\sum_{k\in Participants_{2}}(1-r)M_{k}$
+\begin_inset Formula $\frac{\sum_{i\in Participants}q_{s}^{i}p_{i}M_{i}}{\sum_{s\in S}\sum_{i\in Participant}q_{s}^{i}p_{i}M_{i}}\sum_{i\in Participants}(1-r)(1-p_{i})M_{i}$
 \end_inset
 
 
@@ -2511,9 +2579,13 @@ status open
 
 \begin_layout Plain Layout
 Actually, there is one case that we did not cover in the definition so far:
- What if all participants choose option 2, i.e.
- to participate without right to allocate? The details of how we define
- the rules for this case will turn out to be unimportant.
+ What if all participants choose 
+\begin_inset Formula $q_{i}=0$
+\end_inset
+
+, i.e.
+ if no participant makes any direct allocation to the GPGIs? The details
+ of how we define the rules for this case turn out to be unimportant.
  Here is the definition that was used for the numerical simulations in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -2521,24 +2593,19 @@ reference "sec:Numerical-simulations"
 
 \end_inset
 
-: If all countries participate and choose option 2 then each country can
- retain the proportion 
-\begin_inset Formula $r$
+: If all countries choose 
+\begin_inset Formula $q_{i}=0$
 \end_inset
 
- of the tax revenue it collects and it can allocate the remaining proportion
- 
-\begin_inset Formula $(1-r)$
+ then each country 
+\begin_inset Formula $i$
+\end_inset
+
+ can allocate the amount 
+\begin_inset Formula $(1-r)M_{i}$
 \end_inset
 
  to the GPGIs.
- If not all countries participate and all participants choose option 2 then
- none can retain any of the tax revenue they collect and each has to allocate
- the entire amount that it collects to GPGIs from 
-\begin_inset Formula $S$
-\end_inset
-
-.
 \end_layout
 
 \end_inset
@@ -2548,6 +2615,21 @@ reference "sec:Numerical-simulations"
 
 \begin_layout Standard
 \begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Formally, we can write the strategy space for country 
+\begin_inset Formula $i$
+\end_inset
+
+ as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\text{A_{i}=\{'not\,participate'}\}\text{∪}\{p_{i}:p_{i}\in[0,1]\}\times\{q^{i}\in[0,1]^{S}:\sum_{s\in S}q_{s}^{i}=1\}$
 \end_inset
 
 
@@ -2576,11 +2658,7 @@ To further illustrate the definition, let us compute the flow of tax revenue
 \begin_inset Formula $k$
 \end_inset
 
- and as before we denote by 
-\begin_inset Formula $Participants=Participants_{1}\cup Participants_{2}$
-\end_inset
-
- the set of participants.
+ and as before.
  We have:
 \end_layout
 
@@ -2595,97 +2673,12 @@ M_{i}=x(\sum_{k\in Participants}f_{\text{ik}}+\sum_{k\in I\backslash Participant
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Formally, we can write the strategy space for country 
-\begin_inset Formula $i$
-\end_inset
-
- as follows:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\text{A_{i}=\{'not\,participate','participate\,without\,the\,right\,to\,allocate'}\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-∪{'participate with the right to allocate and allocate the proportions 
-\begin_inset Formula $Q_{i}^{s}$
-\end_inset
-
- of the tax revenue collected to the GPGIs': 
-\begin_inset Formula $\sum_{s}Q_{i}^{s}=1$
-\end_inset
-
-and 
-\begin_inset Formula $Q_{i}^{s}\geq0\forall s$
-\end_inset
-
-} or more compactly as:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $\text{A_{i}=\{'not\,participate','participate\,without\,the\,right\,to\,allocate'}\}$
-\end_inset
-
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-∪{
-\begin_inset Formula $Q_{i}\in$
-\end_inset
-
-
-\begin_inset Formula $\mathbb{R}^{s}$
-\end_inset
-
-:
-\begin_inset Formula $\sum_{s}Q_{i}^{s}=1$
-\end_inset
-
-and 
-\begin_inset Formula $Q_{i}^{s}\geq0\forall s$
-\end_inset
-
-}
-\end_layout
-
 \begin_layout Subsubsection
 A graphical representation of the definition of the Simple MGF mechanism
 \end_layout
 
 \begin_layout Standard
-The MGF mechanism is deffined for countries, each of which can decide whether
+The MGF mechanism is defined for countries, each of which can decide whether
  or not to participate and if so, how to participate.
  However, for the simulations in section 
 \begin_inset CommandInset ref
@@ -2713,14 +2706,10 @@ reference "subsec:A-model-1"
 \end_inset
 
 .
- For this reason, we will use the word 'player' instead of 'country' in
- the diagrams that illustrate the mechanics of the MGF mechanisms.
-\end_layout
-
-\begin_layout Standard
-In the following diagram we provide a graphical representation of the options
- for satisfying the allocation obligation of the Simple MGF Mechanism and
- how the players' choices determine the final allocations: 
+ Depicted in the diagram below is a Nash equilibrium is strategy profile
+ obtained in these simulations for the Simple MGF mechanism.
+ The diagram describes how the final allocations to GPGIs are generated,
+ given the players' strategy profile:
 \end_layout
 
 \begin_layout Frame
@@ -2735,6 +2724,27 @@ In the following diagram we provide a graphical representation of the options
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+On the top of the diagram are displayed the design choices for the mechanism:
+ The set 
+\begin_inset Formula $S$
+\end_inset
+
+ of eligible GPGIs is here taken to be the 6 GPGIs described in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "2 GPGIs"
+
+\end_inset
+
+.
+ The retention rate parameter 
+\begin_inset Formula $r$
+\end_inset
+
+ is set to equal 0.4.
 \end_layout
 
 \begin_layout Standard
@@ -2855,20 +2865,20 @@ Definition of Proposal 3: The MGF mechanism with Proportional Matching Funds
 \end_layout
 
 \begin_layout Standard
-The definition of the 'MGF mechanism with Hierarchical Proportional Matching
- Funds' is obtained by adding a further class of institutions to which those
- participating and choosing option 1 can allocate the tax revenue that they
- collect.
+The definition of the 'MGF mechanism with Proportional Matching Funds' is
+ obtained by adding a further class of institutions to which those participating
+ and choosing option 1 can allocate the tax revenue that they collect.
  In other words: The taxation obligations for participants are identical
  to those in the Simple MGF Mechanism and the allocation obligations are
- modified by adding in option 1 another set of institutions, called 'Hierarchica
-l Proportional Matching Funds' (HPMFs)
+ modified by expanding the set of institutions to which the participants
+ can make direct allocations to also include 'Proportional Matching Funds'
+ (PMFs)
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
 An analogous institution already exists in the realm of private philantrhopy,
- where it is sometimes called 'Proportional Matching Fund' and sometimes
+ where it is sometimes also called 'Proportional Matching Fund' and sometimes
  called 
 \begin_inset CommandInset href
 LatexCommand href
@@ -2893,8 +2903,8 @@ direct allocations
 \end_inset
 
 ).
- However, the country can also give money to the HPMFs.
- An HPMF is defined by the set of GPGIs that it 
+ However, the country can also give money to the PMFs.
+ A PMF is defined by the set of GPGIs that it 
 \begin_inset Quotes eld
 \end_inset
 
@@ -2903,7 +2913,7 @@ supports
 \end_inset
 
 .
- The money that the HPMF receives is allocated to these GPGIs in proportion
+ The money that the PMF receives is allocated to these GPGIs in proportion
  to the direct allocations made to them through the mechanism
 \begin_inset Foot
 status open
@@ -2917,21 +2927,45 @@ i.e.
 \end_inset
 
 .
- As a result, the money in the HPMFs enhances the effects that direct allocation
-s to the GPGIs will have: The greater the direct allocations made to a GPGI,
- the more money from the HPMFs supporting it will we be allocated to it.
+ As a result, the money in the PMFs enhances the effects that direct allocations
+ to the GPGIs will have: The greater the direct allocations made to a GPGI
+ 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, the more money from the PMFs supporting 
+\begin_inset Formula $s$
+\end_inset
+
+ will we be allocated to 
+\begin_inset Formula $s$
+\end_inset
+
+.
  Thus participation incentives for those strongly favoring one GPGI over
  the other GPGIs are increased.
  This strategic benefit suggests that for reaching wide participation it
- might be good to incentivise players to give to HPMFs.
+ might be good to incentivise players to give to PMFs.
  In the definition given below this is achieved by adding the grey money
- (coming from the participants without the right to allocate) to the HPMFs.
+ (coming from the participants without the right to allocate) to the PMFs.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+If players act with foresight, then they might want to give to PMFs even
+ if the grey money was not given to the PMFs.
+ However, we will assume in the simulations that players act myopically.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Before stating a fully general formal definition for the MGF Mechanism with
- Hierarchical Proportional Matching Funds, we will illustrate it with the
- aid of the following diagram:
+   Proportional Matching Funds, we will illustrate it with the aid of the
+ following diagram:
 \end_layout
 
 \begin_layout Standard
@@ -2948,12 +2982,12 @@ Before stating a fully general formal definition for the MGF Mechanism with
 
 \begin_layout Standard
 Here player 1 participates with the right to allocate and gives all the
- money he collects to the HPMF (Hierarchical Proportional Matching Fund)
- for blue and green (i.e.
+ money he collects to the PMF (  Proportional Matching Fund) for blue and
+ green (i.e.
  for CEPI and for the Fund to purchase carbon offset from the Clean Development
  Mechanism).
  Player 2 participates with the right to allocate and gives all the money
- he collects to the HPMF for green and red (i.e.
+ he collects to the PMF for green and red (i.e.
  for the Fund to purchase carbon offset from the Clean Development Mechanism
  and for the Forest Carbon Partnership's Carbon Fund).
  Players 3,4 and 5 give all the tax revenue as direct allocations.
@@ -2961,7 +2995,7 @@ Here player 1 participates with the right to allocate and gives all the
 
 \begin_layout Standard
 In the bottom left corner we collect all the direct allocations to the GPGIs.
- Above that we collect all the direct allocations to the HPMFs.
+ Above that we collect all the direct allocations to the PMFs.
  Above that, we gather all the money (in grey) that is collected by those
  who participate without the right to allocate and that is not retained
  by them.
@@ -2970,15 +3004,15 @@ In the bottom left corner we collect all the direct allocations to the GPGIs.
 \end_layout
 
 \begin_layout Standard
-In the first step, the grey money is distributed to the HPMFs in proportion
- to the direct allocations made to the HPMFs.
+In the first step, the grey money is distributed to the PMFs in proportion
+ to the direct allocations made to the PMFs.
  Graphically, this first step is represented by the first arrow.
  It consists of 
 \begin_inset Quotes eld
 \end_inset
 
-converting the grey money into HPMF money, in proportion to the direct allocatio
-ns made to the HPMFs
+converting the grey money into PMF money, in proportion to the direct allocation
+s made to the PMFs
 \begin_inset Quotes erd
 \end_inset
 
@@ -3011,7 +3045,7 @@ ns made to the HPMFs
 \begin_inset Formula $H_{J}$
 \end_inset
 
- denote the aggregate direct allocations to the HPMF for 
+ denote the aggregate direct allocations to the PMF for 
 \begin_inset Formula $J$
 \end_inset
 
@@ -3020,7 +3054,7 @@ ns made to the HPMFs
 \begin_inset Formula $G$
 \end_inset
 
- the following amount is given to the HPMF for 
+ the following amount is given to the PMF for 
 \begin_inset Formula $J$
 \end_inset
 
@@ -3038,6 +3072,8 @@ ns made to the HPMFs
 \end_inset
 
 , the more say he effectively leaves to the other participants.
+ As a result, this can increase the incentives for the other players to
+ join.
  It makes sense to reward the player for this, which is achieved through
  the simple weighting rule implemented by the formula 
 \begin_inset Formula $\frac{|J|H_{J}}{\sum_{K\subset S:|K|\geq2}|K|H_{K}}G$
@@ -3048,7 +3084,7 @@ ns made to the HPMFs
 
 \begin_layout Standard
 In the second step (represented by the second arrow from the left), these
- amounts are added to the direct allocations to the HPMFs.
+ amounts are added to the direct allocations to the PMFs.
  
 \end_layout
 
@@ -3065,7 +3101,7 @@ We could have added a fourth step, where we would for each GPGI add up all
  However, in the diagram as it is we emphasize the tracability of the money
  that is ensured in the mechanism by construction.
  This might actually be an attractive feature of the mechanism.
- It is in contrast to other mechanism such as normalised gradient addition
+ It is in contrast to other mechanisms such as normalised gradient addition
  
 \begin_inset CommandInset href
 LatexCommand href
@@ -3079,19 +3115,10 @@ target "https://link.springer.com/article/10.1007/s11127-017-0414-3"
 
 \end_inset
 
-) step each HPMF distributes its money to the GPGIs it supports, in proportion
+) step each PMF distributes its money to the GPGIs it supports, in proportion
  to the direct allocations made to these GPGIs.
- The adjective 
-\begin_inset Quotes eld
-\end_inset
-
-Hierarchical
-\begin_inset Quotes erd
-\end_inset
-
- is chosen here to emphasize that each HPMFs takes into account only the
- direct allocations to the GPGIs and not the allocations made by the other
- HPMFs.
+ In particular each PMFs takes into account only the direct allocations
+ to the GPGIs and not the allocations made by the other PMFs.
 \end_layout
 
 \begin_layout Standard
@@ -3104,52 +3131,24 @@ To help clarify the definition, we can write the strategy space for player
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\text{A_{i}=\{'not\,participate','participate\,without\,the\,right\,to\,allocate'}\}$
+\begin_inset Formula $\text{A_{i}=\{'not\,participate'}\}\text{∪}\{p_{i}:p_{i}\in[0,1]\}\times\{q^{i}\in[0,1]^{\mathbb{P}(S)-\emptyset}:\sum_{J\in\mathbb{P}(S)-\emptyset}q_{J}^{i}=1\}$
 \end_inset
 
 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-∪{
-\begin_inset Formula $Q_{i}\in$
-\end_inset
-
-
-\begin_inset Formula $\mathbb{R}^{\mathbb{P}(S)}$
-\end_inset
-
-:
-\begin_inset Formula $\sum_{J\in\mathbb{P}(S)}Q_{i}^{J}=1$
-\end_inset
-
-and 
-\begin_inset Formula $Q_{i}^{J}\geq0\forall s$
-\end_inset
-
-}
 \end_layout
 
 \begin_layout Standard
 Here 
-\begin_inset Formula $\mathbb{P}(S)$
+\begin_inset Formula $\mathbb{P}(S)-\emptyset$
 \end_inset
 
- denotes the set of all proper subsets of the GPGIs.
+ is the set of all non-empty subsets of the GPGIs.
  The interpretation is that for 
 \begin_inset Formula $j\in S$
 \end_inset
 
  we have that 
-\begin_inset Formula $Q_{i}^{\{j\}}$
+\begin_inset Formula $q_{i}^{\{j\}}$
 \end_inset
 
  is the proportion of player 
@@ -3240,28 +3239,27 @@ Then we draw at each step a random player who is given the opportunity to
  We run the algorithm until we reach a Nash equilibrium.The algorithm always
  terminates for CORSIA+, the Simple MGF mechanism and the MGF mechanism
  with All-Encompassing Proportional Matching Funds.
- However, for the MGF mechanism with Hierarchical Proportional Matching
- Funds it often appears to never terminate.
+ However, for the MGF mechanism with   Proportional Matching Funds it often
+ appears to never terminate.
  Since this failure to converge makes an assessment of this mechanism more
  complicated, we will only report the results for the other three mechanisms.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-The following simple modification of the Hierarchical Proportional Matching
- Funds (HPMFs) appears to make the Iterated Best Response Algorithm converge
- to a Nash equilibrium in most cases: A further parameter, called h, is
- introduced.
- Each HPMF first gives a proportion 
+The following simple modification of the   Proportional Matching Funds (PMFs)
+ appears to make the Iterated Best Response Algorithm converge to a Nash
+ equilibrium in most cases: A further parameter, called h, is introduced.
+ Each PMF first gives a proportion 
 \begin_inset Formula $h$
 \end_inset
 
  of its budget to each of the GPGIs that it supports.
- Only after that each HPMF splits its remaining money across the GPGIs that
+ Only after that each PMF splits its remaining money across the GPGIs that
  it supports, in proportion to the aggregate direct allocation the GPGIs
  receive.
  We leave it for future work to compare the performance of the MGF mechanism
- with HPMFs to the performance of the three other mechanisms.
+ with PMFs to the performance of the three other mechanisms.
 \end_layout
 
 \end_inset
@@ -4794,7 +4792,7 @@ First let us compute the reduction in climate change damages.
 \end_inset
 
  percent.
- The total annual carbon 
+ The total annual of emissions 
 \begin_inset CommandInset href
 LatexCommand href
 name "emissions"
@@ -4813,6 +4811,29 @@ target "https://www.pnas.org/content/pnas/114/7/1518.full.pdf"
 
  we assume a social cost of carbon of 
 \begin_inset Formula $\$36$
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The relevant concept of social cost of carbon for our purposes is descriptive:
+ For predicting the evolution of the game, as we will try to to in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Numerical-simulations"
+
+\end_inset
+
+, we need to estimate how governments will in fact evaluate the benefits
+ of climate change mitigation.
+ Whilst the normative arguments against pure time discounting are compelling,
+ it seems more plausible to model countries as agents that use pure time
+ discounting, as done in the RICE model, on which the $36 SCC estimate is
+ based.
+\end_layout
+
 \end_inset
 
 .
@@ -4947,13 +4968,13 @@ We neglect here the possibility that the tax on emissions will lead airlines
 \begin_layout Standard
 By multiplying by the oil change ratio, we obtain the savings for oil consumers
  that this causes through the reduction in the price of oil.
- To obtain the savings for net oil importers, we have to multiply by the
+ To obtain the losses for crude oil producers, we have to multiply by the
  ratio of aggregate net oil imports over aggregate oil consumption, giving
  us:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $savings\,for\,net\,oil\,importers$
+\begin_inset Formula $losses\,for\,crude\,oil\,producers$
 \end_inset
 
 
@@ -5017,15 +5038,17 @@ Plugging in these numbers give that per dollar raised via aviation emissions
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $savings\,for\,net\,oil\,importers=0.0506$
+\begin_inset Formula $losses\,for\,crude\,oil\,producers=0.0506$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-To compute the aggregate redistributive effect for each of the 12 players,
- we use data for net oil exports and imports from 
+These marginal losses for crude oil producers are of course equal to the
+ marginal gains for gains for oil consumers.
+ To compute the aggregate redistributive effect for each of the 12 players,
+ we use data for crude oil production and oil consumption from 
 \begin_inset CommandInset href
 LatexCommand href
 name "Enerdata"
@@ -5072,6 +5095,23 @@ Effects of the money raised for the GPGIs:
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Quotes eld
+\end_inset
+
+payoff estimates
+\begin_inset Quotes erd
+\end_inset
+
+ that we now compute will be based on two types of parameters which we will
+ not determine based on data but instead guess: Firstly, ...
+\end_layout
+
+\begin_layout Standard
+Since 
 \end_layout
 
 \begin_layout Subsubsection
@@ -5153,7 +5193,7 @@ The CDM has been criticised for having large rents (ref).
  protocol.
  Hence informational rents are getting smaller.
  This motivatess the following (admittedly ad hoc) assumption: We assume
- that in the actual CDM 80% of the money ends up being used for the purchasing
+ that in the actual CDM 50% of the money ends up being used for the purchasing
  the global public good of reducing emissions.
  This is illustrated in the following diagram:
 \end_layout
@@ -5193,14 +5233,14 @@ Now let us turn to the effects of the actual emissions reductions.
  The players' payoffs are assumed to be affected in two ways.
  Firstly, the emissions reductions avert some climate change.
  We shall now make the ad hoc assumption that per dollar used to purchase
- emissions reductions 2 dollars of net global benefits arise
+ emissions reductions 2.5 dollars of net global benefits arise
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
 This number is broadly consistent with our assumption that the social cost
  of carbon is $36 per ton of CO2.
- To see this, suppose that the average abatement cost of the projects funded
+ To see this, suppose that the marginal abatement cost of the projects funded
  via the CDM will be $10, in line with the marginal abatement cost curve
  shown above.
  This would imply that the benefit cost ratio would be 3.6.
@@ -5302,33 +5342,18 @@ In other words, since we assume that countries already set their national
 \begin_layout Standard
 The second effect arising from emissions reductions is a redistribution
  from net oil exporters to net oil importers.
- This general equilibrium effect arises because emissions reductions partly
- consist of saving oil, which thus reduces the global demand for oil.
- This reduces the price of oil on the world market, which benefits net oil
- importers and harms net oil exporters.
- We neglect any intertemporal effects and assume that thes redistributional
- effects are proportional to net oil exports and net oil imports.
- Per dollar used to purchase emissions reductions we assume that the net
- oil importers' gain 1 dollar due to the lower oil price.
- 
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-This number is broadly consistent with the results reported in
-\begin_inset CommandInset href
-LatexCommand href
-name "Stoft (2008)"
-target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1300126"
+ From 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:The-global-effects"
 
 \end_inset
 
-.
-\end_layout
-
-\end_inset
-
- 
+ we know what this effect would be if all the emissions reductions were
+ realised through reductions in oil consumption.
+ Based on the data provided in http://www.cdmpipeline.org/cdm-projects-type.htm,
+ I make the preliminary guess that the proportion of the CDM's emissions
+ reductions that are through reduced oil demand is 0.2.
 \end_layout
 
 \begin_layout Subsubsection

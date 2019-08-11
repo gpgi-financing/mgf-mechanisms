@@ -34,7 +34,7 @@ for kk=0:(K-1)
     step=1;
     while flag
       
-      adjustmentcost=0.0000002*(1+0.05*step*(1+0.02*step)); %This adjustmentcost is small. It is introduced mainly to avoid getting a failure to converge that is due to the discretisation of the strategy space.
+      adjustmentcost=0.0000002*(1+0.05*step); %This adjustmentcost is small. It is introduced mainly to avoid getting a failure to converge that is due to the discretisation of the strategy space.
       % % % % % % % % % % % %         outcomeSummaryAtCurrentProfile=outcomeSummaryWithAllEncompassingPMFsL(s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,GPGI_allocation_proportion_required_for_PMF_contribution);
       % % % % % % % % % % % %         moneyRaisedForGPGIsSoFar=moneyRaisedForGPGIsSoFar+outcomeSummaryAtCurrentProfile(2);
       % % % % % % % % % % % %         moneyCollectedSoFar=moneyCollectedSoFar+outcomeSummaryAtCurrentProfile(3);

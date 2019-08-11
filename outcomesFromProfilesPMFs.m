@@ -17,8 +17,8 @@ eventualResultingAllocations=zeros(samplesize,sizeA(1));
 for kk=1:K
   r=(kk-1)/(K-1);
   for i=1:samplesize
-    eventualOutcomeSummary(i,:)=outcomeSummaryWithAllEncompassingPMFsL(eventualProfilesr((3*i-2):(3*i),:,kk),A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
-    eventualResultingAllocations(i,:)=resultingAllocationWithAllEncompassingPMFsL(eventualProfilesr((3*i-2):(3*i),:,kk),A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h);
+    eventualOutcomeSummary(i,:)=outcomeSummaryWithAllEncompassingPMFsL(eventualProfilesr((3*i-2):(3*i),:,kk),A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,GPGI_allocation_proportion_required_for_PMF_contribution);
+    eventualResultingAllocations(i,:)=resultingAllocationWithAllEncompassingPMFsL(eventualProfilesr((3*i-2):(3*i),:,kk),A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,GPGI_allocation_proportion_required_for_PMF_contribution);
   end
   averageAggregatePayoffs(kk)=sum(eventualOutcomeSummary(:,1))/samplesize
   minimalAggregatePayoffs(kk)=min(eventualOutcomeSummary(:,1))
