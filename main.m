@@ -64,7 +64,7 @@ J=10;
 x = 0.2;
 dwlFactor=1;
 samplesize=20;
-maximalNumberOfAdjustments=200;
+maximalNumberOfAdjustments=1000;
 maximalNumberOfRoundsWithoutAnyPlayerJoining=24;
 
 
@@ -77,7 +77,7 @@ comparison
 save v8MGFwithPMFs.mat
 load('v8MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
-x=0.45:1/((K-1)):1;
+x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
 legend(plotSeparate,{'maximal aggregate payoffs','average aggregate payoffs','maximal aggregate money raised for GPGIs','average aggregate money raised for GPGIs','proportion of money collected that is raised for GPGIs','probability of reaching Nash Equilibrium with full participation'})
 xlabel('retention rate parameter', 'FontSize',22)

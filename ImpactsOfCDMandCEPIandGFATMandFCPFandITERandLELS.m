@@ -13,7 +13,7 @@ crude_oil_production_2018=    [398 193  80   138   39   0  432  1496   277 556 6
 domestic_oil_consumption_2018=[180 582  511   50   218 159 330   290   267 147 776 312];
 crude_oil_production_normalized=crude_oil_production_2018/sum(crude_oil_production_2018);
 domestic_oil_consumption_normalized=domestic_oil_consumption_2018/sum(domestic_oil_consumption_2018);
-NetCrudeOilImports2017=   [-243.1, 414.6, 551.6, -68.1, 223.2, 157.8,	-202.5, -923.8,	 -116.7, -261.1, 313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
+%%NetCrudeOilImports2017=   [-243.1, 414.6, 551.6, -68.1, 223.2, 157.8,	-202.5, -923.8,	 -116.7, -261.1, 313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
 %%%NetCrudeOilImports2018=[-251.3,	459.3,	522.7,		-67.8,		226.6,	-149.3,	-202.5,		-964.1,		-116.7,		-258.2,	51.4,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
 %%%NetCrudeOilImports2018=[-251.3, 459.3, 522.7, -67.8, 226.6, 149.3, -175.9,  -964.1,  7.8, -258.2,	51.4, 248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html https://onedrive.live.com/edit.aspx?resid=9054988A1D79A46!10213&app=Excel&wdnd=1&wdPreviousCorrelation=18c602d5%2D0c14%2D49fa%2Db6e4%2D87eaf7498d0d
 %Now we perform some normalisations so as to ensure that total exports
@@ -29,7 +29,7 @@ GDP2017=[0.025272 0.153773 0.237596 0.007672 0.032639 0.061221 0.074382 0.035589
 ProportionsOfSCC=[0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]/sum([0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]);
 
 LELS=[0.3239414	0	0	0.0018	0.34	0	0.06	0	0	0	0	0.2733898]/sum([0.3239414	0	0	0.0018	0.34	0	0.06	0	0	0	0	0.2733898]); % for q\hat=1 and r\hat=0.1
-L=length(NetCrudeOilImports2017);
+L=length(domestic_oil_consumption_normalized);
 %GFATMdisbursements gives the proportions of disbursements of the GFATM.
 GFATMdisbursements=[0.68, 0.02, 0, 0.03, 0.05, 0, 0.04, 0.05, 0, 0.01, 0, 0.12]; %2017-2019 allocation spending: https://www.theglobalfund.org/media/5649/core_overviewofallocations20172019_overview_en.pdf
   %We assume that the payoffs due to money going to the Global Fund to
