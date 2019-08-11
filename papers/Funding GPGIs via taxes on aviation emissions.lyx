@@ -3195,6 +3195,15 @@ name "sec:Numerical-simulations"
 Numerical simulations
 \end_layout
 
+\begin_layout Standard
+For each of the proposed mechanisms we want to predict the outcome that
+ would result if this mechanism was initiated by a given initial set of
+ players.
+ As the initial set of players we will first take the EU and China.
+ Given the history of efforts for price aviation emissions sketeched in
+ section...
+\end_layout
+
 \begin_layout Subsection
 \begin_inset CommandInset label
 LatexCommand label
@@ -3202,69 +3211,127 @@ name "subsec:The-algorithm-used"
 
 \end_inset
 
-The iterated best response algorithm used for simulating the unfolding of
- the games induced by the proposed mechanisms
+The iterated best response algorithm used
 \end_layout
 
 \begin_layout Standard
-We will assume that initially the following players participate
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-This set of players corresponds approximately to the current participants
- in CORSIA.
-\end_layout
-
-\end_inset
-
-: 
-\end_layout
-
-\begin_layout Standard
-Africa, China, EU, Eurasia, Japan, Latin America, Other high income countries,
- other Asia
-\end_layout
-
-\begin_layout Standard
-Moreover, for each of the MGF mechanisms we take the initial strategy profile
- at which we start the algorithm to be the profile where these 9 players
- all participate with the right to allocate and each of them allocates his
- available tax revenue to his preferred GPGI.
+We start with an initial set of participants.
+ The initial action profile consists of each of the initial participants
+ allocating all the tax revenue that they collect (by complying with the
+ taxation obligation) to their most preferred GPGI.
+ A random player is chosen and he is given the opportunity to 
 \end_layout
 
 \begin_layout Standard
 Then we draw at each step a random player who is given the opportunity to
  adjust his strategy to a best response.
- We run the algorithm until we reach a Nash equilibrium.The algorithm always
- terminates for CORSIA+, the Simple MGF mechanism and the MGF mechanism
- with All-Encompassing Proportional Matching Funds.
- However, for the MGF mechanism with   Proportional Matching Funds it often
- appears to never terminate.
- Since this failure to converge makes an assessment of this mechanism more
- complicated, we will only report the results for the other three mechanisms.
+ There are two phases in the algorithm.
+ In the first phase the initial participants discard the option of quitting
+ the mechanism.
+ In other words, when they are given the opportunity to adjust their strategy,
+ they pick the best one amongst all those strategies that involve participating
+ in the mechanism.
+ The algorithm runs until no player wants to adjust their strategy any more.
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-The following simple modification of the   Proportional Matching Funds (PMFs)
- appears to make the Iterated Best Response Algorithm converge to a Nash
- equilibrium in most cases: A further parameter, called h, is introduced.
- Each PMF first gives a proportion 
-\begin_inset Formula $h$
-\end_inset
-
- of its budget to each of the GPGIs that it supports.
- Only after that each PMF splits its remaining money across the GPGIs that
- it supports, in proportion to the aggregate direct allocation the GPGIs
- receive.
- We leave it for future work to compare the performance of the MGF mechanism
- with PMFs to the performance of the three other mechanisms.
+The motivation for this first phase of the algorithm is that it seems a
+ priori plausible that the players initiating the mechanism would have enough
+ patience and foresight to not immediately quit the mechanism again.
+ Instead, they are likely to at least wait and see whether other players
+ want to join.
 \end_layout
 
 \end_inset
 
+ Then the second phase of the algorithm begins.
+ From then onwards the initial participants no longer take the option of
+ quitting off the table.
+ The algorithm is then run until no player wants to adjust their strategy
+ any more, which means that a Nash equilibrium is reached.
+\end_layout
 
+\begin_layout Standard
+In all the simulations run thus far, the algorithm always reached a Nash
+ equilibrium, as long as 
+\begin_inset Formula $r\leq0.7$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $r>0.7$
+\end_inset
+
+, however, the algorithm sometimes did not reach a Nash equilibrium for
+ the MGF mechanism with PMFs.
+ Instead, it appeared to jump around indefinitely in the space of strategy
+ profiles.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+It is well known that iterated best response dynamics can fail to converge,
+ even if there are pure strategy Nash equilibria (
+\begin_inset CommandInset href
+LatexCommand href
+name "Roughgarden 2013"
+target "https://theory.stanford.edu/~tim/f13/l/l16.pdf"
+
+\end_inset
+
+).
+ This is indeed the case here: For 
+\begin_inset Formula $r>0.7$
+\end_inset
+
+ one can show that if all players participate, then no player has an incentive
+ to quit.
+ Since the set of strategies that entail participation is convex, there
+ must therefore exist at least one Nash equilibrium with full participation.
+\end_layout
+
+\end_inset
+
+ For these cases I used a modifed version of the algorithm, where at each
+ step a small positive parameter, called 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+, was slightly increased.
+ At each step, again a random player was given the opportunity to adjust
+ his strategy.
+ However, it was assumed that the player would only actually adjust his
+ strategy if the gain in payoffs exceeds 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+ The algorithm terminates when no player adjusts his strategy anymore.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+At this point, a Epsilon-equilibrium is , by the 
+\begin_inset CommandInset href
+LatexCommand href
+name "definition"
+target "https://en.wikipedia.org/wiki/Epsilon-equilibrium"
+
+\end_inset
+
+ of this solution concept.
+\end_layout
+
+\end_inset
+
+ This algorithm always terminated already for relatively small values of
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -6647,6 +6714,24 @@ target "https://www.sciencedirect.com/science/article/pii/S1574009905030287"
 \end_inset
 
 The Theory of International Environmental Agreements
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Roughgarden 2013"
+target "https://theory.stanford.edu/~tim/f13/l/l16.pdf"
+
+\end_inset
+
+Algorithmic Game Theory Lecture #16: Best-Response Dynamics
 \end_layout
 
 \begin_layout Bibliography
