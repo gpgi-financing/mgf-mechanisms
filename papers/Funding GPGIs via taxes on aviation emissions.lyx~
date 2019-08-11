@@ -1181,6 +1181,53 @@ Here the green strokes near country 1 indicate the flights that country
  1 is obliged to tax and similarly for country 2.
 \end_layout
 
+\begin_layout Standard
+To further illustrate the definition, let us compute the flow of tax revenue
+ 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ that a participating country 
+\begin_inset Formula $i$
+\end_inset
+
+ ends up collecting.
+ We denote by 
+\begin_inset Formula $f_{\text{ik}}$
+\end_inset
+
+ the carbon emissions from international flights from country 
+\begin_inset Formula $i$
+\end_inset
+
+ to country 
+\begin_inset Formula $k$
+\end_inset
+
+ and as before.
+ Let 
+\begin_inset Formula $I$
+\end_inset
+
+ denote the set of all countries and 
+\begin_inset Formula $Participants$
+\end_inset
+
+ the set of all participating countries.
+ We have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M_{i}=x(\sum_{k\in Participants}f_{\text{ik}}+\sum_{k\in I\backslash Participants}(f_{\text{ik}}+f_{\text{ki}}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 The effects of the retention rate parameter 
 \begin_inset Formula $r$
@@ -1612,7 +1659,7 @@ reference "subsec:Overall-comparison-of"
 \begin_inset Formula $G:=\frac{1}{2}\sum_{i\in I}F_{i}$
 \end_inset
 
-
+ and thus
 \family default
 \series default
 \shape default
@@ -1624,7 +1671,35 @@ reference "subsec:Overall-comparison-of"
 \uwave default
 \noun default
 \color inherit
- is the total tax revenue that is collected due to the MGF mechanism.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $xG$
+\end_inset
+
+ is the 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+total tax revenue that is collected due to the MGF mechanism.
  
 \begin_inset Formula $b_{i}$
 \end_inset
@@ -2270,12 +2345,16 @@ Throughout this article we take
 \end_inset
 
  could be modified over time.
- One posssible procedure would be the following: Participating countries
- could propose that a GPGI 
+ One posssible procedure could be the following: At any time participating
+ countries could propose that a GPGI 
 \begin_inset Formula $s$
 \end_inset
 
  be added to the set 
+\begin_inset Formula $S$
+\end_inset
+
+ or removed from the set 
 \begin_inset Formula $S$
 \end_inset
 
@@ -2630,44 +2709,6 @@ Formally, we can write the strategy space for country
 
 \begin_layout Standard
 \begin_inset Formula $\text{A_{i}=\{'not\,participate'}\}\text{∪}\{p_{i}:p_{i}\in[0,1]\}\times\{q^{i}\in[0,1]^{S}:\sum_{s\in S}q_{s}^{i}=1\}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-To further illustrate the definition, let us compute the flow of tax revenue
- 
-\begin_inset Formula $M_{i}$
-\end_inset
-
- that a participating country 
-\begin_inset Formula $i$
-\end_inset
-
- ends up collecting.
- We denote by 
-\begin_inset Formula $f_{\text{ik}}$
-\end_inset
-
- the carbon emissions from international flights from country 
-\begin_inset Formula $i$
-\end_inset
-
- to country 
-\begin_inset Formula $k$
-\end_inset
-
- and as before.
- We have:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-M_{i}=x(\sum_{k\in Participants}f_{\text{ik}}+\sum_{k\in I\backslash Participants}(f_{\text{ik}}+f_{\text{ki}}))
-\end{equation}
-
 \end_inset
 
 
@@ -3232,6 +3273,19 @@ Then we draw at each step a random player who is given the opportunity to
  they pick the best one amongst all those strategies that involve participating
  in the mechanism.
  The algorithm runs until no player wants to adjust their strategy any more.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The motivation for this first phase of the algorithm is that it seems a
+ priori plausible that the players initiating the mechanism would have enough
+ patience and foresight to not immediately quit the mechanism again.
+ Instead, they are likely to at least wait and see whether other players
+ want to join.
+\end_layout
+
+\end_inset
+
  Then the second phase of the algorithm begins.
  From then onwards the initial participants no longer take the option of
  quitting off the table.
@@ -3319,14 +3373,6 @@ target "https://en.wikipedia.org/wiki/Epsilon-equilibrium"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-The motivation for this algorithm is that it seems a priori plausible that
- the players that would initiate the mechanism would have enough patience
- and foresight to not immediately quit the mechanism again.
- Instead, they are likely to at least wait and see whether other players
- want to join.
 \end_layout
 
 \begin_layout Standard
@@ -4205,9 +4251,10 @@ reference "subsec:Results-for-the"
  Against AIDS, TB and Malaria.
  By participating and giving money to this GPGI, African countries can cause
  not just the tax money that they collect to go to this GPGI but also additional
- money that comes from the AEPMF with Global Fund Against AIDS, TB and Malaria,
+ money that comes from the PMF with Global Fund Against AIDS, TB and Malaria,
  CEPI and Forest Carbon Partnership's Carbon Fund, to which the Middle East
  allocates all its tax revenue.
+ 
 \end_layout
 
 \end_inset
@@ -5460,8 +5507,12 @@ target "https://blogs-images.forbes.com/niallmccarthy/files/2014/10/20141020_ITE
 \end_inset
 
  that they make.
- As far as the effects of the expected emssions reductions are concerned,
- the situation is assumed to be identical to the CDM.
+ As far as the expected emssions reductions are concerned, the situation
+ is assumed to be identical to the CDM.
+\end_layout
+
+\begin_layout Standard
+Lastly, we need to make an assumption about 
 \end_layout
 
 \begin_layout Standard

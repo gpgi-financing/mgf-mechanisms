@@ -20,7 +20,6 @@ AggregateBenefitsPerDollarOfCostIncurredFCPF=2.28455;
 TropicalCommodityRentRedistributionFCPF=1/2;
 ProportionOfRentsITER=1/2;
 AggregateMitigationBenefitsPerDollarOfCostITER=2;
-OilRentRedistributionITER=0.5; %This is because the reduction in oil demand will occur later in the future.
 ProportionOfInformationalRentsLELS=0.8;
 dwlFactor=1;
 C=dwlFactor*transpose([0.75 1 0.75 0.75 1 1 0.75 0.75 0.75 1 1 0.75]);
@@ -32,8 +31,9 @@ C=dwlFactor*transpose([0.75 1 0.75 0.75 1 1 0.75 0.75 0.75 1 1 0.75]);
 reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions=0.6*(1-crossRegionalSubstitution)*0.235*1.5; %-0.6 regional elasticity: https://www.iata.org/whatwedo/documents/economics/air_travel_demand.pdf, 1.5 is the oil change ratio from carbonomics
 AggregateMitigationBenefitsDueToKerosineConsumptionDecrease=0.74*3*0.6*(1-crossRegionalSubstitution)*36*859/(855*1000);  %a factor of 0.76, given that 26% of rebound effect according to Stoft(2008), http://stoft.zfacts.com/wp-content/uploads/2008-11_Stoft_Carbonomics.pdf, page 92, a factor of 3=(2+4)/2, since aviation's radiative forcing is 2-4 time that of its CO2 content contribution, according to IPCC: https://en.wikipedia.org/wiki/Environmental_impact_of_aviation#Total_climate_effects. Dividing by 1.2, since taxing aviation and shipping fuel is more focused on oil and gas than CDM (which also substitutes away from coal by supporting renewables).
 AggregateMitigationBenefitsPerDollarOfCostLELS=1.0802*AggregateMitigationBenefitsPerDollarOfCostCDM; %factor of 1.5 since LELS more efficient
-OilRentRedistributionLELS=0.7*AggregateMitigationBenefitsPerDollarOfCostLELS*(0.235)/(36*859/(855*1000)); % firest factor: LELS more efficient, second factor (1.2): LELS more focused on reducing oil (and gas?) subsidies
+OilRentRedistributionLELS=0.7*AggregateMitigationBenefitsPerDollarOfCostLELS*(0.235)/(36*859/(855*1000)); % 
 OilRentRedistributionCDM=0.2*AggregateMitigationBenefitsPerDollarOfCostCDM*(0.235)/(36*859/(855*1000));
+OilRentRedistributionITER=0.1*AggregateMitigationBenefitsPerDollarOfCostITER*(0.235)/(36*859/(855*1000)); %This is because the reduction in oil demand will occur later in the future.
 %The 12 players are the following:
 %Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, other high income countries, Russia, US, other non-OECD Asia
 % The following is the matrix of passenger kilometer flows between these 12 players:
