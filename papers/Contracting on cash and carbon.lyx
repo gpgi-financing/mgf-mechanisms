@@ -1,0 +1,5058 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation landscape
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.1cm
+\topmargin 0.1cm
+\rightmargin 0.1cm
+\bottommargin 0.1cm
+\headheight 0.1cm
+\headsep 0.1cm
+\footskip 0.1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Contracting on Cash and Carbon: mechanisms to reward countries for reducing
+ emissions and paying out universal cash transfers
+\end_layout
+
+\begin_layout Author
+Lennart Stern, Paris School of Economics
+\end_layout
+
+\begin_layout Part*
+
+\emph on
+Introduction
+\end_layout
+
+\begin_layout Standard
+Throughout the article we take the example of tropical forest conservation,
+ in section (ref) we discuss how the proposals and result can be adapted
+ to Carbon Pricing Reward funds.
+\end_layout
+
+\begin_layout Standard
+to do: try to find indirect implementations of optimal mechanism with menu
+ of options
+\end_layout
+
+\begin_layout Standard
+Various types of international mechanisms to reduce tropical deforestation
+ already exist and further types have been proposed.
+ The principal in each of these mechanisms is either a donor country (e.g.
+ Norway) or an international institution (e.g.
+ the Forest Carbon Partnership).
+ In this article we will study how such mechanisms can best contribute to
+ global welfare (in the models global welfare will be a weighted sum of
+ the reduction in deforestation and the aggregate welfare of the people
+ in the jurisdictions with tropical forests).
+ It is for our purposes not important whether the principal is a donor country
+ or an international institution.
+ We will simply refer to `the principal' throughout the article.
+\end_layout
+
+\begin_layout Standard
+An important design choice is whether to contract with governments or with
+ private actors such as companies or individuals.
+ The models developed in 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2957896}"
+target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2957896"
+
+\end_inset
+
+, suggest that it might be more effective to contract with governments.
+ In this article we restrict our attention to mechanisms contracting with
+ governments.
+ These governments can be at any level (national, state, local, municipal
+ (see Cortez et al.
+ 2010) etc.).
+ In the terminology of the UN REDD+ system, such mechanisms are known as
+ `jurisdictional approaches'.
+ Amongst jurisdictional approaches the question arises as to whether the
+ principal should best contract with central or local governments (see Harstad
+ 2017 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.sv.uio.no/econ/personer/vit/bardh/dokumenter/cc.pdf}"
+target "https://www.sv.uio.no/econ/personer/vit/bardh/dokumenter/cc.pdf"
+
+\end_inset
+
+).
+ It seems plausible that to the extent that the arguments that we will give
+ are relevant, they weigh in favor of contracting with local governments.
+ However, we will leave for future work a formal analysis of this question
+ and will throughout this article take the level of governments with which
+ to contract as given.
+\end_layout
+
+\begin_layout Standard
+Another important design choice (Chirouleu-Assouline et al.
+ 2017 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://halshs.archives-ouvertes.fr/halshs-01643656/document}"
+target "https://halshs.archives-ouvertes.fr/halshs-01643656/document"
+
+\end_inset
+
+) is whether to contract on deforestation policies (as for example the Forest
+ Carbon Partnership's Carbon Fund does) or on results (as Norway does with
+ Guyana, the Brazilian state of Acre and Indonesia) or on both deforestation
+ policies and deforestation results simultaneously (see 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3086299}"
+target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3086299"
+
+\end_inset
+
+for an attempt to model the analogous problem that arises for an international
+ institution that contracts by conditioning its reward payments jointly
+ on renewable subsidies (the policies) and the renewable energy produced
+ (the result)).
+ Throughout this article we will assume that the principal contracts exclusively
+ on results.
+ The results can also be applied to the case where the principal contracts
+ exclusively on policies.
+\end_layout
+
+\begin_layout Standard
+A further design choice is whether to tailor contracts to each agent (which
+ we will call a `non-anonymous mechanism') or to propose a menu of contracts
+ to the set of all jurisdictions with tropical forests, who can then chose
+ their preferred option from the menu of contracts (which we will call an
+ `anonymous mechanism').
+ In this article we will apply the models that we will develop to both of
+ these kinds of mechanism.
+\end_layout
+
+\begin_layout Standard
+To our knowledge, all existing international mechanisms to reduce tropical
+ deforestation are non-anonymous.
+ However, this is not to say that anonymous mechanisms might not be implemented
+ in the future.
+ Indeed, anonymous mechanisms already exist in at least one other realm
+ of international cooperation: the World Bank's International Development
+ Association allocates aid to developing countries based on a mathematical
+ formula (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://siteresources.worldbank.org/IDA/Resources/Seminar%20PDFs/73449-1271341193277/PBAIDA16.pdf}"
+target "https://siteresources.worldbank.org/IDA/Resources/Seminar%20PDFs/73449-1271341193277/PBAIDA16.pdf"
+
+\end_inset
+
+).
+ One rationale for this is to solve the Samaritan's dilemma (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://edi.opml.co.uk/wpcms/wp-content/uploads/2016/08/EDI-PF-PAPER-10-Bourguignon-and-Gunning.pdf}"
+target "https://edi.opml.co.uk/wpcms/wp-content/uploads/2016/08/EDI-PF-PAPER-10-Bourguignon-and-Gunning.pdf"
+
+\end_inset
+
+) by making it more credible that the principal implements the mechanism
+ as announced.
+ This credibility rationale seems also relevant to the mechanisms we will
+ consider in this article.
+ A further motivation for studying anonymous mechanisms in our context is
+ given in (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2967170}"
+target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2967170"
+
+\end_inset
+
+), where a treaty is proposed that could build on the existing CORSIA agreement
+ to create a mechanism for financing several international institutions,
+ including one contracting anonymously on reductions in deforestation.
+\end_layout
+
+\begin_layout Standard
+Throughout this article we can interpret the results for both non-anonymous
+ and anonymous mechanisms.
+ Before introducing the question that this article will address, it is helpful
+ to consider an existing non-anonymous mechanism, namely Norway's current
+ contract with Guyana (Busch, Birdsall 2014).
+ It is illustrated in the following graph:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/OneDrive/Documents/norway guyana current.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus Norway pays at a fixed rate per avoided deforestation (measured in
+ avoided CO2 emissions) relative to a pre-established reference level, until
+ some upper bound of payments.
+\end_layout
+
+\begin_layout Standard
+It has been suggested (Busch, Birdsall 2014 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.cgdev.org/publication/assessing-performance-based-payments-forest-conservation-six-successes-four-worries-and}"
+target "https://www.cgdev.org/publication/assessing-performance-based-payments-forest-conservation-six-successes-four-worries-and"
+
+\end_inset
+
+) that Norway could add a clause to the contract that would oblige the governmen
+t of Guyana to pay out as a universal uniform cash transfer to its entire
+ population at least a certain fraction of the money that it receives from
+ Norway.
+ Such a contract is illustrated in the graph below:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/OneDrive/Documents/norway guyana proposed.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The question arises as to whether anything can be gained from this kind
+ of contract as compared to two separate contracts, one rewarding Guyana
+ as a function of its achieved reduction in deforestation and the other
+ rewarding it as a function of the universal cash transfers that it pays
+ out to its population.
+ More precisely: Suppose we initially have a fixed budget with which we
+ optimally contract on deforestation reduction and another fixed budget
+ with which we optimally contract on universal cash transfers.
+ Suppose now we pool the two budgets and simultaneously contract on both
+ deforestation reduction and universal cash transfers.
+ Would it be possible to achieve more on both dimensions (forest conservation
+ and poverty reduction) by contracting simultaneously on the two variables?
+\end_layout
+
+\begin_layout Standard
+Before returning to this question, we note that cash transfers are widely
+ considered to be an effective measure to alleviate poverty (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.givewell.org/international/technical/programs/cash-transfers}"
+target "https://www.givewell.org/international/technical/programs/cash-transfers"
+
+\end_inset
+
+).
+ Making the cash transfers universal has the advantage of eliminating targeting
+ errors, which are large in many existing targeted transfer systems (For
+ example, in India's targeted food subsidy system (called PDS) only 28%
+ of transfers reach the 40% poorest people).
+ 
+\end_layout
+
+\begin_layout Standard
+Moreover, universality reduces the potential for the system to be used for
+ political patronage.
+ Advances in biometric identification technology and in mobile phone technology
+ for transferring money have lowered the cost of introducing a system for
+ universal cash transfers.
+ (Moss et al.
+ 2015).
+ Aid agencies such as the UK Department for International Development have
+ provided financial assistance to targeted cash transfer programs in poor
+ countries (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://icai.independent.gov.uk/html-report/effects-dfids-cash-transfer-programmes-poverty-vulnerability/}"
+target "https://icai.independent.gov.uk/html-report/effects-dfids-cash-transfer-programmes-poverty-vulnerability/"
+
+\end_inset
+
+).
+ These activities can be interpreted as an instance of the aid agency contractin
+g with developing country governments on targeted cash transfers.
+\end_layout
+
+\begin_layout Standard
+Now concerning our question about whether anything can be gained from contractin
+g jointly on deforestation reduction and universal cash transfers, let us
+ first consider what we shall call `first best rationales'.
+ Suppose that Norway is uncertain about whether the government of Guyana
+ is benevolent towards its population or not.
+ Suppose that if the government is benevolent towards its population then
+ it will value highly the universal cash transfers paid out to its population
+ (i.e.
+ receiving reward payments that it has to pay out to its population in the
+ form of universal cash transfers is almost as valuable to the government
+ as receiving money with no further strings attached).
+ Moreover, suppose that any reduction in deforestation that it might achieve
+ will always be done in a way that benefits its population (e.g.
+ through payments for ecosystem services schemes, PES, see Seema Jayachandran
+ 2017).
+ However, suppose that if the government is not benevolent towards its populatio
+n then it will hardly value at all the universal cash transfers paid out
+ to its population.
+ Moreover, suppose that any reduction in deforestation that it might achieve
+ will always be done in a way that adversely affects its population (e.g.
+ by forcefully evicting local populations and completely blocking access
+ to forests 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf}"
+target "http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf"
+
+\end_inset
+
+).
+ Then if the principal (i.e.
+ Norway in our example) could observe the types of the agents (i.e.
+ the governments), it might be optimal to only make the government reduce
+ deforestation if it is benevolent towards its population or at least to
+ make the non-benevolent government reduce its deforestation by less than
+ the benevolent government.
+ 
+\end_layout
+
+\begin_layout Standard
+Now, more realistically, the agents' types are their private information.
+ However, even then the principal can move closer to the first best allocation
+ by contracting jointly on deforestation reduction and universal cash transfers.
+ Indeed, there exist contracts of the form illustrated in figure 3 through
+ which the government of Guyana will only participate in case it is benevolent
+ towards it population.
+\end_layout
+
+\begin_layout Standard
+This first-best rationale is even more striking if we switch from the interpreta
+tion of the mechanism as a non-anonymous one to an anonymous one, as illustrated
+ in the following diagram:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/OneDrive/Documents/anonymous combined mechanism.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here again the contracts depicted allow the principal to induce the more
+ benevolent governments to reduce their deforestation by more, which could,
+ if the first-best rationale is valid, increase global welfare (relative
+ to the situation where the principal contracts separately on the deforestation
+ reduction and the universal cash transfers).
+\end_layout
+
+\begin_layout Standard
+There are views expressed in the literature that would imply that the first
+ best rationale is an important consideration (e.g.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf}"
+target "http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf"
+
+\end_inset
+
+).
+ In fact, concerns about potential adverse effects on local populations
+ from policies to reduce deforestation have led several influential NGOs
+ to oppose the REDD-mechanisms entirely (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://wrm.org.uy/wp-content/uploads/2014/12/REDD-A-Collection-of-Conflict_Contradictions_Lies_expanded.pdf}"
+target "http://wrm.org.uy/wp-content/uploads/2014/12/REDD-A-Collection-of-Conflict_Contradictions_Lies_expanded.pdf"
+
+\end_inset
+
+) However, others have argued that these concerns are mostly based on problems
+ in past REDD projects that contracted with private entrepreneurs or companies
+ and that future jurisdictional REDD contracts would avoid such problems
+ (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://blogs.edf.org/climatetalks/2017/11/29/shoddy-cifor-publication-on-indigenous-peoples-rights-abuses-gets-the-facts-wrong/}"
+target "http://blogs.edf.org/climatetalks/2017/11/29/shoddy-cifor-publication-on-indigenous-peoples-rights-abuses-gets-the-facts-wrong/"
+
+\end_inset
+
+
+\series bold
+,
+\series default
+ see also Busch, Seymour 2016).
+\end_layout
+
+\begin_layout Standard
+We have already argued above that if one beliefs that there are risks of
+ adverse effects on local populations from policies to reduce deforestation
+ then this would provide what we have called a first-best rationale for
+ jointly contracting on deforestation reduction and universal cash transfers.
+ Now let us explore the consequences of a different view.
+ Specifically, let us make the limiting assumption that the impact of deforestat
+ion reduction on the population's welfare is independent of the government's
+ enthusiasm for universal cash transfers.
+ In this case the first best rationale for jointly contracting on deforestation
+ reduction and universal cash transfers disappears.
+ The question arises as to whether there is still something to be gained
+ from contracting with the governments on the two variables simultaneously,
+ given that the governments' types are private information.
+ In other words: Is there a `second-best rationale' for contracting jointly
+ on deforestation reduction and universal cash transfers? To put it again
+ more precisely: For fixed budgets, would it be possible to achieve more
+ on both dimensions (forest conservation and population welfare) by contracting
+ simultaneously on the two variables? We will find that under plausible
+ conditions the answer is yes.
+ Moreover, within the models that we will develop we will be able to give
+ some properties that must hold at the optimal mechanism.
+\end_layout
+
+\begin_layout Definition
+\begin_inset CommandInset label
+LatexCommand label
+name "Consider-any-mechanism"
+
+\end_inset
+
+Consider any mechanism contracting on two variables, 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x^{B}$
+\end_inset
+
+.
+ An allocation satisfies the 
+\series bold
+\emph on
+type-complementarity property
+\series default
+\emph default
+ if the following statements hold: For any two agents with payoffs 
+\begin_inset Formula $v\left(x^{A},x^{B}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{v}\left(x^{A},x^{B}\right)$
+\end_inset
+
+, respectively, with 
+\begin_inset Formula $\frac{\partial v}{\partial x^{A}}=\frac{\partial\tilde{v}}{\partial x^{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial v}{\partial x^{B}}\geq\frac{\partial\tilde{v}}{\partial x^{B}}\ \forall x^{A},x^{B}$
+\end_inset
+
+ we have that at the agents' respective optimal choices 
+\begin_inset Formula $x^{A}\geq\tilde{x}^{A}$
+\end_inset
+
+ and analogously with 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ interchanged.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Interpretation of definition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Consider-any-mechanism"
+
+\end_inset
+
+ for mechanisms contracting on reductions in deforestation and on universal
+ cash transfers: Throughout this article we will interpret
+\emph default
+ 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+ 
+\emph on
+to be the reduction in deforestation and
+\emph default
+ 
+\begin_inset Formula $x^{B}$
+\end_inset
+
+ 
+\emph on
+to be the value of the universal cash transfers.
+ The type-compementarity property means in this context the following: Consider
+ two governments with payoffs that are identical in terms of their costs
+ of reducing deforestation.
+ Then at the optimal mechanism the one that is more enthusiastic about universal
+ cash transfers paid out to its population will reduce deforestation by
+ at least as much as the other.
+ Secondly, for any two agents (i.e.
+ governments) that are identical in terms of their costs of reducing deforestati
+on, the one that has a lower cost associated with reducing deforestation
+ will pay out at least as high universal cash transfers as the other.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop 1 Under-conditions-detailed"
+
+\end_inset
+
+Under conditions detailed in this article, the type-complementarity property
+ must hold at the optimal mechanism.
+\end_layout
+
+\begin_layout Standard
+In the model from Armstrong and Rochet (1999) the type-complementarity property
+ holds.
+ In fact this result is a direct corollary of their complete characterization
+ of the optimal mechanism.
+ The main contribution of the model that we will develop in section 1 is
+ that it extends the model from Armstrong and Rochet by allowing us to take
+ into account that the impact on population welfare of money spent by a
+ government depends on the type of government.
+ It is plausible that governments that value highly universal cash transfers
+ reaching their population are typically more benevolent and will therefore
+ spend marginal money in a way that is more beneficial to their population.
+ Indeed, in the literature on foreign aid (see Deaton 2013) it has been
+ argued that increasing the money at the free disposal of non-benevolent
+ governments even has a negative effect on the expected population welfare
+ by consolidating these regimes.
+ We will see that taking this into account reinforces the second-best rationale
+ for jointly contracting on deforestation reduction and universal cash transfers.
+ Moreover, the type-complementarity property will still always hold at the
+ optimal mechanism.
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop 2Suppose-that-governments'"
+
+\end_inset
+
+Suppose that governments' preferences are quasilinear in money.
+ For the bounded linear contract with an obligation to pay out a percentage
+ of the payments received as universal cash transfers, illustrated in diagram
+ 2, the type-complementarity property holds.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+ denote the amount of deforestation reduction and let 
+\begin_inset Formula $x^{B}$
+\end_inset
+
+ denote the amount of universal cash transfer paid out to the population.
+ Let 
+\begin_inset Formula $t(x^{A}$
+\end_inset
+
+) denote the reward payment that the government receives for its own budget
+ if it reduces deforestation by 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+ and let 
+\begin_inset Formula $x^{B}(t(x^{A}))$
+\end_inset
+
+ denote the amount of universal cash transfers that end up being paid to
+ its population.
+ We can write the government's payoff as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x^{A})=v(x^{A},x^{B}(t(x^{A})))+t(x^{A})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{du}{dx^{A}}=\frac{\partial v}{\partial x^{A}}+\frac{\partial v}{\partial x^{B}}\frac{dx^{B}}{dt}\frac{dt}{dx^{A}}+\frac{dt}{dx^{A}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose that 
+\begin_inset Formula $\frac{\partial v}{\partial x^{A}}=\frac{\partial\tilde{v}}{\partial x^{A}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial v}{\partial x^{B}}\geq\frac{\partial\tilde{v}}{\partial x^{B}}\ \forall x^{A},x^{B}$
+\end_inset
+
+.
+ Denote by 
+\begin_inset Formula $(\tilde{x}^{A},\tilde{x}^{B})$
+\end_inset
+
+ the optimal choice for the type 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+.
+ We compute:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{du}{dx^{A}}_{x^{A}=\tilde{x}^{A}}=\frac{\partial v}{\partial x^{A}}_{x^{A}=\tilde{x}^{A}}+\frac{\partial v}{\partial x^{B}}_{x^{A}=\tilde{x}^{A}}\frac{dx^{B}}{dt}_{x^{A}=\tilde{x}^{A}}\frac{dt}{dx^{A}}_{x^{A}=\tilde{x}^{A}}+\frac{dt}{dx^{A}}_{x^{A}=\tilde{x}^{A}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since by assumption 
+\begin_inset Formula $\tilde{x}^{A}$
+\end_inset
+
+ is an interior solution for the type 
+\begin_inset Formula $\tilde{v}$
+\end_inset
+
+, we have 
+\begin_inset Formula $\frac{d\tilde{u}}{dx^{A}}_{x^{A}=\tilde{x}^{A}}=0$
+\end_inset
+
+, so that we obtain:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{du}{dx^{A}}_{x^{A}=\tilde{x}^{A}}-\frac{d\tilde{u}}{dx^{A}}_{x^{A}=\tilde{x}^{A}}=\frac{\partial v}{\partial x^{B}}_{x^{A}=\tilde{x}^{A}}\frac{dx^{B}}{dt}_{x^{A}=\tilde{x}^{A}}\frac{dt}{dx^{A}}_{x^{A}=\tilde{x}^{A}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is nonnegative, since 
+\begin_inset Formula $\frac{\partial v}{\partial x^{B}}\geq\frac{\partial\tilde{v}}{\partial x^{B}}$
+\end_inset
+
+ by assumption.
+ Hence we deduce that 
+\begin_inset Formula $x^{A}\geq\tilde{x}^{A}$
+\end_inset
+
+, where 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+denotes the optimal choice given 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ The other part of the type-complementarity property follows by a similar
+ argument.
+ 
+\begin_inset Formula $\square\ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Propositions 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop 1 Under-conditions-detailed"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop 2Suppose-that-governments'"
+
+\end_inset
+
+ suggest that introducing the requirement to pay out a fixed percentage
+ of the reward payments received as a universal cash transfer might be a
+ way to move the allocation closer to the optimal one and thereby increase
+ efficiency.
+ In a soon to be finished version of this article this question will be
+ explored in some numerical examples.
+\end_layout
+
+\begin_layout Standard
+Overall, our results suggest that under plausible conditions there is a
+ second-best rationale for contracting jointly on deforestation reductions
+ and universal cash transfers.
+ As we saw, there might also be a first best rationale.
+ Our results suggest that if one starts with separate mechanisms contracting
+ only on deforestation reduction and only on universal cash transfers, respectiv
+ely, then better outcomes in both dimensions, i.e.
+ in deforestation reduction and in the population welfare in the corresponding
+ jurisdictions can be achieved by adding a clause to the deforestation reduction
+ mechanism that would require the government to pay out a certain fraction
+ of the reward payments that it receives as universal cash transfers.
+ 
+\end_layout
+
+\begin_layout Section
+
+\emph on
+An extension to the 2 by 2 types model from Armstrong and Rochet (1999)
+\end_layout
+
+\begin_layout Standard
+We will now study a fairly general model of a principal contracting with
+ a set of agents on 2 variables.
+ It extends the model of Armstrong and Rochet (1999) to allow us to take
+ into account that different types of agents will generate different contributio
+ns to welfare from the spending that they undertake using their available
+ money.
+ In our application this is potentially important: The international institution
+ (the principal) should be less concerned about leaving rents to governments
+ (the agents) that are benevolent towards their population and therefore
+ will spend their available money relatively well than about leaving rents
+ to governments that are less benevolent towards their population and therefore
+ will spend their available money relatively less well.
+\end_layout
+
+\begin_layout Standard
+We will later on assume that the international institution has an exogenous
+ budget.
+ However, to prepare the ground, we will first establish results assuming
+ that the cost of funds for the international institution is exogenous.
+\end_layout
+
+\begin_layout Standard
+The type space is 
+\begin_inset Formula $\left\{ L,H\right\} \times\{L,H\}$
+\end_inset
+
+.
+ The first component of the type describes the `deforestation type' and
+ the second component the `universal cash transfer type'.
+ In our application the superscript 
+\begin_inset Formula $A$
+\end_inset
+
+ refers to deforestation and the superscript 
+\begin_inset Formula $B$
+\end_inset
+
+ refers to cash transfers.
+ If the type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ reduces deforestation by 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+, pays out a universal cash transfer of 
+\begin_inset Formula $x^{B}$
+\end_inset
+
+ to its population and receives the payment 
+\begin_inset Formula $t$
+\end_inset
+
+, then his payoff is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t-c_{i}^{A}\left(x^{A}\right)-x^{B}+g_{j}\ w^{B}(x^{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general 
+\begin_inset Formula $c_{i}^{A}\left(x^{A}\right)$
+\end_inset
+
+ can be interpreted as the 
+\emph on
+subjective
+\emph default
+ net cost that the government incurs from reducing its deforestation by
+ 
+\begin_inset Formula $x^{A}$
+\end_inset
+
+.
+ In other words, it could be different from the monetary cost of reducing
+ deforestation for the government.
+ The monetary cost for the government arises from foregone revenues from
+ forest concessions, from expenditure on law enforcement, etc..
+ The subjective cost might also be affected by political considerations.
+ In fact, the results that we will obtain can be generalized to a model
+ with the general interpretation of 
+\begin_inset Formula $c_{i}^{A}\left(x^{A}\right)$
+\end_inset
+
+ being the subjective cost that the government faces.
+ However, for ease of exposition we shall from now on assume that 
+\begin_inset Formula $c_{i}^{A}\left(x^{A}\right)$
+\end_inset
+
+ is the pure monetary cost arising from reducing deforestation for the governmen
+t.
+\end_layout
+
+\begin_layout Standard
+We will interpret 
+\begin_inset Formula $w^{B}(x^{B})$
+\end_inset
+
+ as the welfare that accrues to the population as a result of the universal
+ cash transfer of 
+\begin_inset Formula $x^{B}$
+\end_inset
+
+.
+ We assume that 
+\begin_inset Formula $g_{H}>g_{L}$
+\end_inset
+
+.
+ The parameter value 
+\begin_inset Formula $g_{H}$
+\end_inset
+
+ can be interpreted as reflecting a relatively benevolent government that
+ values relatively highly its population's welfare.
+ 
+\begin_inset Formula $g_{L}$
+\end_inset
+
+ can be interpreted as corresponding to a government that either values
+ its population's welfare relatively little or that values only the welfare
+ of some subset of its population (or both).
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $m$
+\end_inset
+
+ the change (relative to the situation without any mechanism) in the amount
+ of money that the government has at its disposal after it has paid for
+ the cash transfers and for the measures to reduce deforestation.
+ Let us denote by 
+\begin_inset Formula $X^{A}$
+\end_inset
+
+ the amount by which the government would reduce deforestation in the absence
+ of the mechanism and 
+\begin_inset Formula $X^{B}$
+\end_inset
+
+ the universal cash transfer that the government would pay out to its population
+ in the absence of the mechanism.
+ We have the following identity:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+m=t-x^{B}-c_{i}^{A}(x^{A})-(-X^{B}-c_{i}^{A}\left(X^{A}\right))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We assume that the change in the population's welfare relative to the situation
+ without any mechanism is given by
+\begin_inset space ~
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w^{B}\left(x^{B}\right)-w^{B}\left(X^{B}\right)+b_{\text{ij}}m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is plausible that 
+\begin_inset Formula $b_{\text{iH}}>b_{\text{iL}}\forall i$
+\end_inset
+
+: A government that is more enthusiastic about universal cash transfers
+ (
+\begin_inset Formula $g_{H}>g_{L})$
+\end_inset
+
+ might be more concerned about its population's welfare and thus generates
+ more welfare increases per dollar of additional spending.
+ (More on this in assumption 3 below.)
+\end_layout
+
+\begin_layout Standard
+The principal's objective is a weighted sum of the reduction in deforestation
+ achieved and the welfare of the population:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+objective=z\ x^{A}+w^{B}\left(x^{B}\right)+b_{\text{ij}}m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $z$
+\end_inset
+
+ is the relative weight assigned to reducing deforestation.
+ Of course the principal's objective function is the expectation of what
+ we refer to as 'objective', taken over all types.
+\end_layout
+
+\begin_layout Standard
+Comparing our model with that of Armstrong and Rochet (1999) we note that
+ whilst our model is `more general' in the sense that it introduces the
+ term 
+\begin_inset Formula $b_{\text{ij}}m$
+\end_inset
+
+ capturing the effect of the money at the disposal of the different agents
+ (in our case governments) on welfare, our model is `less general' in the
+ sense that the principal's objective and the agent's objective are related
+ in that both involve 
+\begin_inset Formula $w^{B}\left(x^{B}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The government's informational rent is given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r=t-c_{i}\left(x^{A}\right)-x^{B}+g_{j}\ w^{B}\left(x^{B}\right)-\left(-c_{i}\left(X^{a}\right)-X^{B}+g_{j}\ w^{B}\left(X^{B}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\left(-c_{i}\left(X^{a}\right)-X^{B}+g_{j}\ w^{B}\left(X^{B}\right)\right)$
+\end_inset
+
+ is the utility that the government attains by not participating.
+\end_layout
+
+\begin_layout Standard
+We obtain the identity 
+\begin_inset Formula $m=r-g_{j}\ w\left(x^{B}\right)+g_{j}\ w^{B}\left(X^{B}\right)$
+\end_inset
+
+ that we can plug into the objective to get:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+objective=z\ x^{A}+w^{B}\left(x^{B}\right)+b_{\text{ij}}\left(r-g_{j}\ w^{B}\left(x^{B}\right)+g_{j}\ w^{B}\left(X^{B}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The outside option is exogenous, so we can drop the term 
+\begin_inset Formula $g_{j}\ w^{B}\left(X^{b}\right)$
+\end_inset
+
+ and write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+objective=z\ x^{A}+w^{B}\left(x^{B}\right)+b_{\text{ij}}\left(r-g_{j}\ w_{j}^{B}\left(x^{B}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ the Lagrange multiplier corresponding to the principal's budget constraint.
+ The payment that the agent receives from the principal can be decomposed
+ into two terms.
+ Firstly, there is the amount 
+\begin_inset Formula $c_{i}^{A}\left(x^{A}\right)+x^{B}-g_{j}w^{B}\left(x^{B}\right)-\left(c_{i}^{A}\left(X^{a}\right)+X^{b}-g_{j}\ w^{B}\left(X^{b}\right)\right)$
+\end_inset
+
+ that he requires to be no worse off than he would be by not participating.
+ Secondly, there is the informational rent 
+\begin_inset Formula $r$
+\end_inset
+
+ that he obtains,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $objective\ with\ included\ budget\ cost=$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z\ x^{A}+w^{B}\left(x^{B}\right)+b_{\text{ij}}\left(r-g_{j}\ w^{B}\left(x^{B}\right)\right)-\lambda\left(r+c_{i}^{A}\left(x^{A}\right)+x^{B}-g_{j}w^{B}\left(x^{B}\right)-\left(c_{i}^{A}\left(X^{a}\right)+X^{b}-g_{j}\ w^{B}\left(X^{b}\right)\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, we can drop the term involving the exogenous outside option, 
+\begin_inset Formula $\left(-c_{i}^{A}\left(X^{a}\right)-X^{b}+g_{j}\ w^{B}\left(X^{b}\right)\right)$
+\end_inset
+
+, and thus rewrite this as:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+objective\ with\ included\ budget\ cost=z\ x^{A}+w^{B}\left(x^{B}\right)+\left(b_{\text{ij}}-\lambda\right)\left(r-g_{j}\ w^{B}\left(x^{B}\right)\right)-\lambda\left(c_{i}^{A}\left(x^{A}\right)+x^{B}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In line with the notation in Armstrong and Rochet (1999) we shall denote
+ by 
+\begin_inset Formula $\alpha_{\text{ij}}$
+\end_inset
+
+ the probability of type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+.
+ In the case of a principal contracting with a single government (Such as
+ Norway contracting with Guyana) 
+\begin_inset Formula $\alpha_{\text{ij}}$
+\end_inset
+
+ can be interpreted as the subjective probability that the principal assigns
+ to the agent being of type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+.
+ In the case of an international institution defining an anonymous mechanism
+ in which all the jursidictions participating in REDD+ can participate,
+ 
+\begin_inset Formula $\alpha_{\text{ij}}$
+\end_inset
+
+ can be interpreted as the mass of jurisdictions having type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We now give a definition for which we will give a more general version in
+ section 2:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 0.1
+\begin_inset CommandInset label
+LatexCommand label
+name "def2 Definition-0.1-(in"
+
+\end_inset
+
+
+\series default
+ (in section 1 this definition is used, in section 2 the more general definition
+ from (Armstrong, Rochet 1999) is used)
+\series bold
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta^{A}\left(x^{A}\right):=c_{L}^{A}\left(x^{A}\right)-c_{H}^{A}(x^{A})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta^{B}\left(x^{B}\right):=\left(g_{H}-g_{L}\right)\ w^{B}(x^{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 1.1:
+\series default
+ 
+\begin_inset Formula $\delta^{A}\left(x^{A}\right)=c_{L}^{A}\left(x^{A}\right)-c_{H}^{A}\left(x^{A}\right)$
+\end_inset
+
+ is nonnegative and strictly increasing in 
+\begin_inset Formula $x^{A}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Interpretation: This assumption means that the two types are unambiguously
+ ordered in terms of costs of reducing deforestation and that the difference
+ increases with the amount of deforestation reduction.
+ In order to stick to the notation from Armstrong and Rochet (1999), we
+ have here chosen to designate the agent with the low cost as the `high
+ type'.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 1.2:
+\series default
+ 
+\begin_inset Formula $g_{H}>g_{L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Interpretation: The high type gives more weight to the welfare increase
+ generated through the universal cash transfers for the population.
+ In general this can be interpreted as a measure of how enthusiastic the
+ government is about universal cash transfers.
+ We shall, more specifically, informally assume that the high type is more
+ benevolent towards its population (and is for that reason more enthusiastic
+ about paying out universal cash transfers).
+ This informal assumption will motivate our formal assumption.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 2:
+\series default
+ 
+\begin_inset Formula $\lambda>b_{\text{ij}}\forall i,j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Interpretation: This simply means that the marginal value of money available
+ for the optimal mechanism is higher than that generated by just handing
+ out money to any type.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 3:
+\series default
+ 
+\begin_inset Formula $b_{\text{HL}}=b_{\text{LL}}\leq b_{\text{HH}}=b_{\text{LH}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Interpretation
+\begin_inset space ~
+\end_inset
+
+: It is plausible that the more benevolent governments use money in a way
+ that is more beneficial to the population's welfare.
+ As far as the `ease of reducing deforestation' dimension is concerned,
+ it is not clear how this dimension would be correlated with the benefits
+ of additional government spending for the population welfare.
+ It is therefore natural to assume that these two questions are independent,
+ as we do here.
+\end_layout
+
+\begin_layout Standard
+Based on assumption 3, we define 
+\begin_inset Formula $b_{L}:=b_{\text{HL}}=b_{\text{LL}}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{H}:=b_{\text{HH}}=b_{\text{LH}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For now we will take the Lagrange multiplier 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ as exogenous so as to be able to most clearly state our results.
+ In corollary 2 we will deduce a result for the case where there are exogenous
+ budgets and thus endogenous (shadow) costs of funds.
+\end_layout
+
+\begin_layout Standard
+The principal's overall objective now writes as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+overall\ objective\ with\ included\ budget\ cost=E(\text{z\ }x_{\text{ij}}^{A}-\lambda\ c_{i}^{A}\left(x_{\text{ij}}^{A}\right)+w^{B}\left(x_{\text{ij}}^{B}\right)+\left(b_{j}-\lambda\right)\left(r-g_{j}\ w^{B}\left(x_{\text{ij}}^{B}\right)\right)-\lambda\ x_{\text{ij}}^{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To simplify the exposition, we shall assume that all the optimal mechanisms
+ are unique.
+ (It is straightforward to adapt the propositions to the case where this
+ does not hold.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 1:
+\series default
+ Suppose we have a type space 
+\begin_inset Formula $I$
+\end_inset
+
+ and two direct mechanisms, 
+\begin_inset Formula $\mathcal{M}_{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{M}_{B}$
+\end_inset
+
+, contracting on distinct outcomes.
+ We define 
+\begin_inset Formula $\mathcal{M}_{A}\oplus\mathcal{M}_{B}$
+\end_inset
+
+ to be the direct mechanism that tells type 
+\begin_inset Formula $\tau\in I$
+\end_inset
+
+ to do 
+\begin_inset Formula $\mathcal{M}_{A}(\tau)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{M}_{B}(\tau)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 0.0:
+\series default
+ Let 
+\begin_inset Formula $\mathcal{M}_{A,B}^{\text{first\ b}\text{est}}$
+\end_inset
+
+ denote the optimal joint mechanism (contracting jointly on deforestation
+ reduction and universal cash transfers) when the principal knows each agent's
+ type and 
+\begin_inset Formula $\mathcal{M}_{A}^{\text{first\ best}},\ \mathcal{M}_{B}^{\text{first\ best}}$
+\end_inset
+
+ the optimal separate mechanisms (contracting only on the reduction in deforesta
+tion and only on the universal cash transfer, respectively) when the principal
+ knows each agent's type.
+ We have 
+\begin_inset Formula $\mathcal{M}_{A,B}^{\text{first\ best}}=\mathcal{M}_{A}^{\text{first\ best}}\oplus\mathcal{M}_{B}^{\text{first\ best}}$
+\end_inset
+
+, (assuming that all the optimal mechanisms are unique).
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+overall\ objective\ with\ included\ budget\ cost=E(\text{z\ }x_{\text{ij}}^{A}-\lambda\ c_{i}^{A}\left(x_{\text{ij}}^{A}\right)+w^{B}\left(x_{\text{ij}}^{B}\right)+\left(b_{j}-\lambda\right)\left(r-g_{j}\ w^{B}\left(x_{\text{ij}}^{B}\right)\right)-\lambda\ x_{\text{ij}}^{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The terms involving 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ are 
+\begin_inset Formula $\text{z\ }x_{\text{ij}}^{A}-\lambda\ c_{i}^{A}\left(x_{\text{ij}}^{A}\right)$
+\end_inset
+
+.
+ They do not depend on 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ The terms involving 
+\begin_inset Formula $x_{\text{ij}}^{B}$
+\end_inset
+
+ are 
+\begin_inset Formula $w^{B}\left(x_{\text{ij}}^{B}\right)+\left(b_{j}-\lambda\right)\left(r-g_{j}\ w^{B}\left(x_{\text{ij}}^{B}\right)\right)-\lambda\ x_{\text{ij}}^{B}$
+\end_inset
+
+.
+ They do not depend on 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following proposition shows that even though by Lemma 0.0 under perfect
+ information nothing is gained by contracting jointly on the two dimensions,
+ when the agents' types are private information there is something to be
+ gained, as long as the correlation of the two dimensions is not too strong:
+\end_layout
+
+\begin_layout Proposition
+Suppose all the above assumptions hold.
+ Let 
+\begin_inset Formula $\mathcal{M}_{A}^{*}$
+\end_inset
+
+ denote the optimal direct mechanism contracting on deforestation reduction
+ only, assuming an exogenous cost of funds of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and let 
+\begin_inset Formula $\mathcal{M}_{B}^{\text{*}}$
+\end_inset
+
+ denote the optimal direct mechanism contracting on universal cash transfers
+ only, assuming an exogenous cost of fund of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\mathcal{M}_{A,B}^{\text{* }}$
+\end_inset
+
+ denote the optimal direct mechanism contracting on deforestation reduction
+ only, assuming an exogenous cost of funds of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $\mathcal{M}_{A,B}^{\text{* }}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+iff 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Moreover, if 
+\begin_inset Formula $\rho<\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ then the principal can always, starting from 
+\begin_inset Formula $\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+ increase welfare through some perturbations that increase 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HL}}^{B}$
+\end_inset
+
+, whilst decreasing 
+\begin_inset Formula $x_{\text{LL}}^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{LL}}^{B}$
+\end_inset
+
+ and leaving 
+\begin_inset Formula $x_{\text{HL}}^{A},x_{\text{HH}}^{A},\ x_{\text{LH}}^{B},\ x_{\text{HH}}^{B}$
+\end_inset
+
+ unchanged.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+We will provide 2 arguments.
+ Firstly, we will give a perturbation argument that shows that 
+\begin_inset Formula $\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ is necessary for 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+.
+ This argument demonstrates a perturbation of the claimed type that will
+ increase the principal's objective, starting from the mechanism 
+\begin_inset Formula $\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second part of the proof consists of an adaptation of the reasoning
+ given by Armstrong and Rochet (1999) to establish the equivalence of 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+.
+ It establishes both directions of the claimed equivalence.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Part 1 of proof
+\emph default
+ (showing that 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}\Longrightarrow\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+Consider the allocation achieved by 
+\begin_inset Formula $\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+.
+ We note that we have 
+\begin_inset Formula $x_{\text{LL}}^{A}=x_{\text{LH}}^{A}=x_{L}^{A},x_{\text{LL}}^{B}=x_{\text{HL}}^{B}=x_{L}^{B}$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{L}^{A},x_{L}^{B}$
+\end_inset
+
+ denote the allocations of the low type in the respective dimensions under
+ 
+\begin_inset Formula $\mathcal{M}_{A}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathcal{M}_{B}^{*}$
+\end_inset
+
+, respectively.
+ Now consider the following infinitesimal perturbation: we increase 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{1}{\delta^{A}{}^{'}\left(x_{\text{LH}}^{A}\right)}\text{dx}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HL}}^{B}$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{1}{\delta^{B}{}^{'}\left(x_{\text{LH}}^{B}\right)}\text{dx}$
+\end_inset
+
+ and we decrease 
+\begin_inset Formula $x_{\text{LL}}^{A}$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{1}{\delta^{A}{}^{'}\left(x_{\text{LL}}^{A}\right)}\text{dx}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{LL}}^{B}$
+\end_inset
+
+ by 
+\begin_inset Formula $\frac{1}{\delta^{B}{}^{'}\left(x_{\text{LL}}^{B}\right)}\text{dx}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This decreases the informational rents accruing to the type 
+\begin_inset Formula $\text{LH}$
+\end_inset
+
+ by 
+\begin_inset Formula ${\delta^{B}}^{'}\left(x_{\text{LL}}^{B}\right)\frac{1}{{\delta^{B}}^{'}\left(x_{\text{LL}}^{B}\right)}dx=dx$
+\end_inset
+
+ and the informational rents accruing to the type 
+\begin_inset Formula $\text{HL}$
+\end_inset
+
+ by 
+\begin_inset Formula ${\delta^{A}}^{'}\left(x_{\text{LL}}^{A}\right)\frac{1}{{\delta^{A}}^{'}\left(x_{\text{LL}}^{A}\right)}dx=dx$
+\end_inset
+
+.
+ Indeed, the IC constraint requiring that HH not have an incentive to pretend
+ to be LL is no longer binding.
+ Both the informational rent accruing to LL and the informational rent accruing
+ to HH are unchanged.
+ Overall, the change in rents counts positively as 
+\begin_inset Formula $(\alpha_{\text{HL}}(\lambda-b_{\text{HL}})+\alpha_{\text{LH}}(\lambda-b_{\text{LH}}))dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The direct effect on the principal's objective amounts to:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\left({w_{L}^{A}}^{'}\left(x_{L}^{A}\right)-\lambda{c_{L}^{A}}^{'}\left(x_{L}^{A}\right)\right)+(\alpha_{\text{HL}}\left({w_{L}^{B}}^{'}\left(x_{L}^{B}\right)-\lambda\left(1-g_{L}{w_{L}^{B}}^{'}\left(x_{L}^{B}\right)\right)\right)-\alpha_{\text{LL}}({w_{L}^{B}}^{'}\left(x_{L}^{B}\right)-\lambda\ \left(1-g_{L}{w_{L}^{B}}^{'}\left(x_{L}^{B}\right)\right)\right)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=\left(\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\left({w_{L}^{A}}^{'}\left(x_{L}^{A}\right)-\lambda{c_{L}^{A}}^{'}\left(x_{L}^{A}\right)\right)+(\alpha_{\text{HL}}-\alpha_{\text{LL}})\left({w_{L}^{B}}^{'}\left(x_{L}^{B}\right)-\lambda\left(1-g_{L}{w_{L}^{B}}^{'}\left(x_{L}^{B}\right)\right)\right)\right)\text{dx}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence a necessary condition for 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)\right)dx+\left(\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\left({w_{L}^{A}}^{'}\left(x_{L}^{A}\right)-\lambda{c_{L}^{A}}^{'}\left(x_{L}^{A}\right)\right)+(\alpha_{\text{HL}}-\alpha_{\text{LL}})\left({w_{L}^{B}}^{'}\left(x_{L}^{B}\right)-\lambda\left(1-g_{L}{w_{L}^{B}}^{'}\left(x_{L}^{B}\right)\right)\right)\right)dx\leq0$
+\end_inset
+
+ (E1)
+\end_layout
+
+\begin_layout Standard
+From the optimality of the separate mechanisms, we know that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left({w_{L}^{A}}^{'}\left(x_{L}^{A}\right)-\lambda{c_{L}^{A}}^{'}\left(x_{L}^{A}\right)\right)(\alpha_{\text{LL}}+\alpha_{\text{LH}})=\ (\alpha_{\text{HL}}(\lambda-b_{\text{HL}})+\alpha_{\text{HH}}(\lambda-b_{\text{HH}}))$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left({w_{L}^{B}}^{'}\left(x_{L}^{B}\right)-\lambda\left(1-g_{L}{w_{L}^{B}}^{'}\left(x_{L}^{B}\right)\right)\right)(\alpha_{\text{LL}}+\alpha_{\text{HL}})=\ \left(\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Substituting this into E1 yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\left(\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)\right)}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\left(\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)\right)\left(\alpha_{\text{LL}}^{2}+\alpha_{\text{LH}}\alpha_{\text{HL}}+\alpha_{\text{LL}}\alpha_{\text{LH}}+\alpha_{\text{LL}}\alpha_{\text{HL}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\leq\left(\alpha_{\text{LH}}\alpha_{\text{LL}}+\alpha_{\text{LH}}\alpha_{\text{HL}}-\alpha_{\text{LL}}\alpha_{\text{LL}}-\alpha_{\text{LL}}\alpha_{\text{HL}}\right)\left(\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)\right)+\left(\alpha_{\text{LH}}\alpha_{\text{HL}}+\alpha_{\text{LL}}\alpha_{\text{HL}}-\alpha_{\text{LL}}\alpha_{\text{LL}}-\alpha_{\text{LL}}\alpha_{\text{LH}}\right)\left(\alpha_{\text{LH}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}\left(\lambda-b_{\text{HL}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\left(\alpha_{\text{LH}}\left(\lambda-b_{\text{LH}}\right)+\alpha_{\text{HH}}\left(\lambda-b_{\text{HH}}\right)\right)}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using assumption 3 and employing the notation 
+\begin_inset Formula $b_{L}b_{\text{HL}}=b_{\text{LL}}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{H}b_{\text{HH}}=b_{\text{LH}}$
+\end_inset
+
+, we obtain
+\begin_inset space ~
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}\left(\lambda-b_{L}\right)+\alpha_{\text{LH}}\left(\lambda-b_{H}\right)+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}\left(\lambda-b_{L}\right)+\alpha_{\text{HH}}\left(\lambda-b_{H}\right)}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\left(\alpha_{\text{LH}}\left(\lambda-b_{H}\right)+\alpha_{\text{HH}}\left(\lambda-b_{H}\right)\right)}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}\frac{\lambda-b_{L}}{\lambda-b_{H}}+\alpha_{\text{LH}}+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{L}\right)}{\left(\lambda-b_{H}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}\frac{\lambda-b_{L}}{\lambda-b_{H}}\left(1+\frac{\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)}{\left(\alpha_{\text{LL}}+\alpha_{\text{LH}}\right)}\right)+\alpha_{\text{LH}}+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha_{\text{HL}}+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}}{\alpha_{\text{LL}}+\alpha_{\text{LH}}})\ \frac{b_{H}-b_{L}}{\lambda-b_{H}}+\alpha_{\text{HL}}+\alpha_{\text{LH}}+\left(\alpha_{\text{LH}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{HL}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{LH}}}+\left(\alpha_{\text{HL}}-\alpha_{\text{LL}}\right)\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}+\alpha_{\text{HL}}}\leq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With the help of Mathematica (using the Eliminate command several times),
+ we rewrite this condition as follows with 
+\begin_inset Formula $\rho\alpha_{\text{HH}}\alpha_{\text{LL}}-\alpha_{\text{HL}}\alpha_{\text{LH}}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\square
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Part 2 of proof (showing that 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}\ \Longleftrightarrow\ \rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This proof is a simple adaptation of the reasoning provided by Armstrong
+ and Rochet (1999).
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}=\mathcal{M}_{A}^{*}\oplus\mathcal{M}_{B}^{*}$
+\end_inset
+
+.
+ Then at the optimum all the three downward incentive compatibility constraints
+ for the type 
+\begin_inset Formula $\text{HH}$
+\end_inset
+
+ are binding, as illustrated in the following diagram:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../Downloads/allConstraintsBinding.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In line with the notation from Armstrong and Rochet (1999), let us use define
+ 
+\begin_inset Formula $\delta^{A}\left(x\right)=c_{L}^{A}\left(x\right)-c_{H}^{A}\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta^{B}\left(x\right)=a_{H}w^{B}\left(x\right)-a_{L}w^{B}\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The problem of computing 
+\begin_inset Formula $\mathcal{M}_{A,B}^{*}$
+\end_inset
+
+ can be factored into two steps: In the first step, one can choose the informati
+onal rent 
+\begin_inset Formula $r_{\text{HH}}$
+\end_inset
+
+ that is to accrue to the type 
+\begin_inset Formula $\text{HH}$
+\end_inset
+
+ and in the second step one can choose the values of the contracting variables
+ under that constraint.
+ Let us denote by 
+\begin_inset Formula $\eta_{1},\eta_{2},\eta_{3}$
+\end_inset
+
+ the Lagrange multipliers corresponding respectively to the constraints
+ that 
+\begin_inset Formula $\text{HH}$
+\end_inset
+
+ does not have an incentive to pretend to be 
+\begin_inset Formula $LL,LH,HL$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=\alpha_{\text{HL}}\left(w_{H}^{A}\left({x^{A}}_{\text{HL}}\right)+w_{L}^{B}\left({x^{B}}_{\text{HL}}\right)+(b_{\text{HL}}-\lambda)\left(\delta^{A}(x_{\text{LL}}^{A})-g_{L}w_{L}^{B}\left({x^{B}}_{\text{HL}}\right)\right)-\lambda\left(c_{H}^{A}\left({x^{A}}_{\text{HL}}\right)+x_{\text{HL}}^{B}\right)\right)+\alpha_{\text{LH}}\left(-c_{L}^{A}\left({x^{A}}_{\text{LH}}\right)+w_{H}^{B}\left({x^{B}}_{\text{LH}}\right)+(b_{\text{LH}}-\lambda)\left(\delta^{B}(x_{\text{LL}}^{B})-g_{H}w_{H}^{B}\left({x^{B}}_{\text{LH}}\right)\right)-\lambda\left(c_{L}^{A}\left({x^{A}}_{\text{LH}}\right)+x_{\text{LH}}^{B}\right)\right)+\alpha_{\text{LL}}\left(w_{L}^{A}\left({x^{A}}_{\text{LL}}\right)+w_{L}^{B}\left({x^{B}}_{\text{LL}}\right)+(b_{\text{LL}}-\lambda)\left(-g_{L}w_{L}^{B}\left({x^{B}}_{\text{LL}}\right)\right)-\lambda\left(c_{L}^{A}\left({x^{A}}_{\text{LL}}\right)+x_{\text{LL}}^{B}\right)\right)+\alpha_{\text{HH}}\left(w_{H}^{A}\left({x^{A}}_{\text{HH}}\right)+w_{H}^{B}\left({x^{B}}_{\text{HH}}\right)-\lambda\left(c_{H}^{A}\left({x^{A}}_{\text{HH}}\right)+x_{\text{HH}}^{B}\right)\right)+\eta_{1}\left(\delta^{A}(x_{\text{LL}}^{A})+\delta^{B}(x_{\text{LL}}^{B})\right)+\eta_{2}\left(\delta^{B}\left(x_{\text{LL}}^{B}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)\right)+\eta_{3}(\delta^{A}(x_{\text{LL}}^{A})+\delta^{B}(x_{\text{HL}}^{B}))-(b_{\text{HH}}-\lambda)g_{H}w_{H}^{B}\left({x^{B}}_{\text{HH}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the first step one must choose 
+\begin_inset Formula $r_{\text{HH}}$
+\end_inset
+
+ optimally, anticipating that one will choose optimally in the second step.
+ This requirement is equivalent to the value of increasing 
+\begin_inset Formula $r_{\text{HH}}$
+\end_inset
+
+ in the second stage is equal to 
+\begin_inset Formula $\alpha_{\text{HH}}(b_{\text{HH}}-\lambda)$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula $\eta_{1}+\eta_{2}+\eta_{3}=\alpha_{\text{HH}}(b_{\text{HH}}-\lambda)$
+\end_inset
+
+.
+ In order to be in line with the notation in AC, let us define 
+\begin_inset Formula $\gamma_{k}=\frac{\eta_{k}}{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}$
+\end_inset
+
+.
+ With that we can write the Lagrangian as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L=\alpha_{\text{HL}}\left(w_{H}^{A}\left({x^{A}}_{\text{HL}}\right)+w_{L}^{B}\left({x^{B}}_{\text{HL}}\right)+(b_{\text{HL}}-\lambda)\left(R_{\text{HL}}-g_{L}w_{L}^{B}\left({x^{B}}_{\text{HL}}\right)\right)-\lambda\left(c_{H}^{A}\left({x^{A}}_{\text{HL}}\right)+x_{\text{HL}}^{B}\right)\right)+\alpha_{\text{LH}}\left(-c_{L}^{A}\left({x^{A}}_{\text{LH}}\right)+w_{H}^{B}\left({x^{B}}_{\text{LH}}\right)+(b_{\text{LH}}-\lambda)\left(R_{\text{LH}}-g_{H}w_{H}^{B}\left({x^{B}}_{\text{LH}}\right)\right)-\lambda\left(c_{L}^{A}\left({x^{A}}_{\text{LH}}\right)+x_{\text{LH}}^{B}\right)\right)+\alpha_{\text{LL}}\left(w_{L}^{A}\left({x^{A}}_{\text{LL}}\right)+w_{L}^{B}\left({x^{B}}_{\text{LL}}\right)+b_{\text{LL}}\left(-g_{L}w_{L}^{B}\left({x^{B}}_{\text{LL}}\right)\right)-\lambda\left(c_{L}^{A}\left({x^{A}}_{\text{LL}}\right)+x_{\text{LL}}^{B}-g_{L}w_{L}^{B}\left({x^{B}}_{\text{LL}}\right)\right)\right)+\alpha_{\text{HH}}\left(w_{H}^{A}\left({x^{A}}_{\text{HH}}\right)+w_{H}^{B}\left({x^{B}}_{\text{HH}}\right)+(b_{\text{HH}}-\lambda)\left(\gamma_{1}\left(\delta^{A}(x_{\text{LL}}^{A})+\delta^{B}(x_{\text{LL}}^{B})\right)+\gamma_{2}\left(\delta^{B}\left(x_{\text{LL}}^{B}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)\right)+\gamma_{3}(\delta^{A}(x_{\text{LL}}^{A})+\delta^{B}(x_{\text{HL}}^{B}))-g_{H}w_{H}^{B}\left({x^{B}}_{\text{HH}}\right)\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-\alpha_{\text{HH}}\lambda\left(c_{H}^{A}\left({x^{A}}_{\text{HH}}\right)+x_{\text{HH}}^{B}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $L_{\text{HL}}^{B}$
+\end_inset
+
+ the sum of the terms in 
+\begin_inset Formula $L$
+\end_inset
+
+ that involve 
+\begin_inset Formula $x_{\text{HL}}^{B}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{HL}}^{B}=\alpha_{\text{HL}}\left(w_{L}^{B}\left(x_{\text{HL}}^{B}\right)\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)-\lambda x_{\text{HL}}^{B}\right)+\alpha_{\text{HH}}(b_{\text{HH}}-\lambda)\gamma_{3}\delta^{B}(x_{\text{HL}}^{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $L_{\text{LL}}^{B}$
+\end_inset
+
+ the sum of the terms in 
+\begin_inset Formula $L$
+\end_inset
+
+ that involve 
+\begin_inset Formula $x_{\text{LL}}^{B}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{LL}}^{B}=\alpha_{\text{LH}}(b_{\text{LH}}-\lambda)\delta^{B}(x_{\text{LL}}^{B}\ )+\alpha_{\text{LL}}\left(w_{L}^{B}\left(x_{\text{LL}}^{B}\right)+(b_{\text{LL}}-\lambda)\left(-g_{L}w_{L}^{B}\left(x_{\text{LL}}^{B}\right)\right)-\lambda x_{\text{LL}}^{B}\right)+\alpha_{\text{HH}}(b_{\text{HH}}-\lambda)(\gamma_{1\ }+\gamma_{2})\delta^{B}\left(x_{\text{LL}}^{B}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In order for the line of reasoning from Armstrong and Rochet (1999) to work,
+ we need to reduce the three terms, 
+\begin_inset Formula $w_{L}^{B}\left(x_{\text{HL}}^{B}\right),\ x_{\text{HL}}^{B},\delta^{B}(x_{\text{HL}}^{B})$
+\end_inset
+
+, to just two.
+ Luckily, we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta^{B}\left(x_{\text{HL}}^{B}\right)=g_{H}w^{B}\left(x_{\text{HL}}^{B}\right)-g_{L}w^{B}\left(x_{\text{HL}}^{B}\right)=(g_{H}-g_{L})w^{B}\left(x_{\text{HL}}^{B}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And similarly for 
+\begin_inset Formula $x_{\text{LL}}^{B}$
+\end_inset
+
+, which upon substitution yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{HL}}^{B}=\left(\alpha_{\text{HL}}\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\gamma_{3}\left(g_{H}-g_{L}\right)\right)w^{B}\left(x_{\text{HL}}^{B}\right)-\alpha_{\text{HL}}\lambda x_{\text{HL}}^{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{LL}}^{B}=\left(\left(\alpha_{\text{LH}}\left(b_{\text{LH}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)(\gamma_{1\ }+\gamma_{2})\right)\left(g_{H}-g_{L}\right)+\alpha_{\text{LL}}\left(1+\left(\lambda-b_{\text{LL}}\right)g_{L}\right)\right)w^{B}\left(x_{\text{LL}}^{B}\right)-\alpha_{\text{LL}}\lambda x_{\text{LL}}^{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The optimal choice of 
+\begin_inset Formula $x_{\text{HL}}^{B}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{LL}}^{B}$
+\end_inset
+
+ depend, respectively, only on the ratio of the coefficients multiplying
+ the colored terms.
+ Assuming concavity of 
+\begin_inset Formula $w^{B}$
+\end_inset
+
+, we have that the solution is unique.
+ From 
+\begin_inset Formula $x_{\text{HL}}^{B}=x_{\text{LL}}^{B}$
+\end_inset
+
+ we can now deduce:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\left(\alpha_{\text{HL}}\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\gamma_{3}\left(g_{H}-g_{L}\right)\right)}{\alpha_{\text{HL}}}=\frac{\left(\left(\alpha_{\text{LH}}\left(b_{\text{LH}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)(\gamma_{1\ }+\gamma_{2})\right)\left(g_{H}-g_{L}\right)+a_{\text{LL}}\left(1-\left(b_{\text{LL}}-\lambda\right)g_{L}\right)\right)}{\alpha_{\text{LL}}}$
+\end_inset
+
+ (E1)
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $L_{\text{LH}}^{A}$
+\end_inset
+
+ the sum of the terms in 
+\begin_inset Formula $L$
+\end_inset
+
+ that involve 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{LH}}^{A}=\alpha_{\text{LH}}\left(w_{L}^{A}\left(x_{\text{LH}}^{A}\right)-λc_{L}^{A}\left(x_{\text{LH}}^{A}\right)\right)+\alpha_{\text{HH}}(b_{\text{HH}}-\lambda)\gamma_{2}\delta^{A}\left(x_{\text{LH}}^{A}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $L_{\text{LL}}^{A}$
+\end_inset
+
+ the sum of the terms in 
+\begin_inset Formula $L$
+\end_inset
+
+ that involve 
+\begin_inset Formula $\left(x_{\text{LL}}^{A}\right)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+L_{\text{LL}}^{A}=\alpha_{\text{LL}}\left(w_{L}^{A}\left(x_{\text{LL}}^{A}\right)-\lambda c_{L}^{A}\left(x_{\text{LL}}^{A}\right)\right)+\left(\alpha_{\text{HL}}\left(b_{\text{HL}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(\gamma_{1}+\gamma_{3}\right)\right)\delta^{A}(x_{\text{LL}}^{A})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset Formula $x_{\text{LH}}^{A}=x_{\text{LL}}^{A}$
+\end_inset
+
+ we can now deduce:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\gamma_{2}}{\alpha_{\text{LH}}}=\frac{\left(\alpha_{\text{HL}}\left(b_{\text{HL}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(\gamma_{1}+\gamma_{3}\right)\right)}{\alpha_{\text{LL}}}$
+\end_inset
+
+ (E2)
+\end_layout
+
+\begin_layout Standard
+Using 
+\begin_inset Formula $\gamma_{1}+\gamma_{2}+\gamma_{3}=1$
+\end_inset
+
+ in (E1) yields:
+\begin_inset Formula 
+\begin{multline*}
+\frac{\left(\alpha_{\text{HL}}\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\gamma_{3}\left(g_{H}-g_{L}\right)\right)}{\alpha_{HL}}=\frac{\left(\left(\alpha_{\text{LH}}\left(b_{\text{LH}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)(1-\gamma_{3})\right)\left(g_{H}-g_{L}\right)+a_{\text{LL}}\left(1-\left(b_{\text{LL}}-\lambda\right)g_{L}\right)\right)}{\alpha_{\text{LL}}}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solving for 
+\begin_inset Formula $\gamma_{3}$
+\end_inset
+
+ yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{3}\left(\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(g_{H}-g_{L}\right)}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(g_{H}-g_{L}\right)}{\alpha_{\text{LL}}}\right)=\frac{\left(\alpha_{\text{LH}}\left(b_{\text{LH}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\right)\left(g_{H}-g_{L}\right)+a_{\text{LL}}\left(1-g_{L}\left(b_{\text{LL}}-\lambda\right)\right)}{\alpha_{\text{LL}}}-\frac{\alpha_{\text{HL}}\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)}{\alpha_{\text{HL}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{3}=\frac{\frac{\left(\alpha_{\text{LH}}\left(b_{\text{LH}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\right)\left(g_{H}-g_{L}\right)+a_{\text{LL}}\left(1-g_{L}\left(b_{\text{LL}}-\lambda\right)\right)}{\alpha_{\text{LL}}}-\frac{\alpha_{\text{HL}}\left(1-g_{L}\left(b_{\text{HL}}-\lambda\right)\right)}{\alpha_{\text{HL}}}}{\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(g_{H}-g_{L}\right)}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(g_{H}-g_{L}\right)}{\alpha_{\text{LL}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\gamma_{3}=\frac{\frac{\left(\alpha_{\text{LH}}\frac{\left(\lambda-b_{\text{LH}}\right)}{\left(\lambda-b_{\text{HH}}\right)}+\alpha_{\text{HH}}\right)}{\alpha_{\text{LL}}}-\frac{g_{L}}{\left(g_{H}-g_{L}\right)}\frac{\left(b_{\text{HL}}-b_{\text{LL}}\right)}{\left(\lambda-b_{\text{HH}}\right)}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}$
+\end_inset
+
+ (E3)
+\end_layout
+
+\begin_layout Standard
+Using 
+\begin_inset Formula $\gamma_{1}+\gamma_{2}+\gamma_{3}=1$
+\end_inset
+
+ in (E2) yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\gamma_{2}}{\alpha_{\text{LH}}}=\frac{\left(\alpha_{\text{HL}}\left(b_{\text{HL}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)\left(1-\gamma_{2}\right)\right)}{\alpha_{\text{LL}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LL}}}\right)\gamma_{2}=\frac{\alpha_{\text{HL}}\left(b_{\text{HL}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LL}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{2}=\frac{\frac{\alpha_{\text{HL}}\left(b_{\text{HL}}-\lambda\right)+\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LL}}}}{\left(\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}\left(b_{\text{HH}}-\lambda\right)}{\alpha_{\text{LL}}}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\gamma_{2}=\frac{\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{\text{HL}}\right)}{\left(\lambda-b_{\text{HH}}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}$
+\end_inset
+
+ (E4)
+\end_layout
+
+\begin_layout Standard
+Now plugging E3 and E4 into 
+\begin_inset Formula $\gamma_{1}=1-\gamma_{2}-\gamma_{3}$
+\end_inset
+
+ yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\gamma_{1}=1-\frac{\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{\text{HL}}\right)}{\left(\lambda-b_{\text{HH}}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}-\frac{\frac{\left(\alpha_{\text{LH}}\frac{\left(\lambda-b_{\text{LH}}\right)}{\left(\lambda-b_{\text{HH}}\right)}+\alpha_{\text{HH}}\right)}{\alpha_{\text{LL}}}-\frac{g_{L}}{\left(g_{H}-g_{L}\right)}\frac{\left(b_{\text{HL}}-b_{\text{LL}}\right)}{\left(\lambda-b_{\text{HH}}\right)}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}$
+\end_inset
+
+ (E5)
+\end_layout
+
+\begin_layout Standard
+From now on we will use assumption 3 and denote 
+\begin_inset Formula $b_{L}b_{\text{HL}}=b_{\text{LL}}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{H}b_{\text{HH}}=b_{\text{LH}}$
+\end_inset
+
+.
+ With this we obtain:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{3}=\frac{\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{2}=\frac{\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{L}\right)}{\left(\lambda-b_{H}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{1}=1-\frac{\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{L}\right)}{\left(\lambda-b_{H}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}-\frac{\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From this we see that 
+\begin_inset Formula $\gamma_{3}\in\lbrack0,1\rbrack$
+\end_inset
+
+ and, as long as 
+\begin_inset Formula $b_{L}$
+\end_inset
+
+ is not too small, 
+\begin_inset Formula $\gamma_{2}\in\lbrack0,1\rbrack$
+\end_inset
+
+.
+ Hence we have a separable solution iff 
+\begin_inset Formula $\gamma_{1}\in\lbrack0,1\rbrack$
+\end_inset
+
+ which is true iff
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+-\frac{\frac{\alpha_{\text{HL}}\frac{\left(\lambda-b_{L}\right)}{\left(\lambda-b_{H}\right)}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{LH}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}-\frac{\frac{\alpha_{\text{LH}}+\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}{\frac{\alpha_{\text{HH}}}{\alpha_{\text{HL}}}+\frac{\alpha_{\text{HH}}}{\alpha_{\text{LL}}}}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This condition is equivalent to the claimed one.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 1:
+\series default
+ Suppose assumption 1, 1.2, 2 and 3 hold.
+ Suppose there are two international institutions, one of them contracting
+ with a budget of 
+\begin_inset Formula $M^{A}$
+\end_inset
+
+ with governments on universal cash transfers paid out to their respective
+ populations and the other one contracting with a budget of 
+\begin_inset Formula $M^{B}$
+\end_inset
+
+ with governments on their reductions in deforestation.
+ Suppose that the governments' types are their private information and each
+ of the two institutions has chosen an optimal mechanism.
+ Then a strictly better outcome in both dimensions, i.e.
+ in terms of aggregate reduction in deforestation and in terms of aggregate
+ population welfare, can be achieved by pooling the two budgets and defining
+ a mechanism contracting jointly on the reduction in deforestation and on
+ the universal cash transfers iff
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\rho<\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $\rho\alpha_{\text{LL}}\alpha_{\text{HH}}-\alpha_{\text{LH}}\alpha_{\text{HL}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+We show that the result follows from proposition 1.
+ For that we use the model formulation given in section 2.1 of which the
+ model considered thus far is a special case.
+\end_layout
+
+\begin_layout Standard
+For a given 
+\begin_inset Formula $z,\lambda$
+\end_inset
+
+, consider the outcome obtained as a result of maximizing the objective
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{z\ }u^{A}\left(x^{A}\right)+u^{B}\left(x^{B}\right)-\lambda\ M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose we choose 
+\begin_inset Formula $\lambda,z$
+\end_inset
+
+ such that the expected outcome in both dimensions 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ is the same as under the optimal separate mechanisms with budgets 
+\begin_inset Formula $M^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $M^{B}$
+\end_inset
+
+.
+ Then we know from proposition 1 that if 
+\begin_inset Formula $\rho<\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ we have that 
+\begin_inset Formula $M<M^{A}+M^{B}$
+\end_inset
+
+.
+ But if 
+\begin_inset Formula $M<M^{A}+M^{B}$
+\end_inset
+
+ then there is free money that can be spent to achieve that the outcomes
+ in both dimensions are improved.
+\end_layout
+
+\begin_layout Standard
+Conversely, if 
+\begin_inset Formula $\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ then by proposition 1 we cannot achieve the same results with less money,
+ which is equivalent to saying that we cannot achieve better outcomes in
+ both dimensions with the same amount of money.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Armstrong and Rochet (1999) obtained the condition 
+\begin_inset Formula $\rho\geq\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}$
+\end_inset
+
+, which is necessary and sufficient for there to be nothing to be gained
+ from simultaneously contracting on the two variables.
+ Corollary 1 shows that taking into account the fact that governments more
+ enthusiastic about cash transfers will in expectation also spend marginal
+ money in a more beneficial way leads to a strengthening of the case for
+ contracting simultaneously on the two variables, at least in the following
+ sense: taking into account this consideration leads to a shrinking in the
+ set of parameter values such that nothing is gained by contracting simultaneous
+ly on both variables.
+ To see why this is so, it is sufficient to check that the term 
+\begin_inset Formula $\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ is positive.
+ By assumption 2 we know that 
+\begin_inset Formula $\lambda-b_{H}>0$
+\end_inset
+
+.
+ Moreover, since all the 
+\begin_inset Formula $\alpha_{\text{ij}}$
+\end_inset
+
+ are probabilities, both 
+\begin_inset Formula $\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+ are positive.
+ Hence the larger 
+\begin_inset Formula $b_{H}-b_{L}$
+\end_inset
+
+ (i.e.
+ the larger the difference in the effect of spending by the more benevolent
+ and the less benevolent governments), the smaller (in the sense of set
+ inclusion) the set of distributions of types such that nothing is gained
+ by contracting simultaneously on both variables.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Section 2
+\end_layout
+
+\begin_layout Standard
+In this section we consider a strict generalization of the model from (Armstrong
+, Rochet 1999) that contains the model studied in section 1 as a special
+ case.
+ Throughout this section we adopt and extend the notation used in (Armstrong,
+ Rochet 1999).
+ The agents' utility is assumed to be separable across the two dimensions,
+ the type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ having utility given by:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{i}^{A}\left(x^{A}\right)+u_{j}^{B}\left(x^{B}\right)+t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+when he does 
+\begin_inset Formula $\left(x^{A},x^{B}\right)$
+\end_inset
+
+ and receives the transfer 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 4:
+\series default
+ 
+\begin_inset Formula $u_{i}^{k}\left(0\right)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $u_{i}^{k}$
+\end_inset
+
+ is decreasing.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+(To keep things as in our model from section 1, we have reversed the signs
+ as compared to
+\emph default
+ (Armstrong, Rochet 1999)
+\emph on
+, who assume that the
+\emph default
+ 
+\begin_inset Formula $u_{i}^{k}$
+\end_inset
+
+ 
+\emph on
+are increasing.
+ The problems are isomorphic.)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 2:
+\series default
+ Let us denote by 
+\begin_inset Formula $\delta^{A}\left(x\right)=u_{H}^{A}\left(x\right)-u_{L}^{A}(x)$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta^{B}\left(x\right)=u_{H}^{B}\left(x\right)-u_{L}^{B}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 5:
+\series default
+ 
+\begin_inset Formula $\delta^{A}\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\delta^{B}\left(x\right)$
+\end_inset
+
+ are positive and increasing.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 3:
+\series default
+ We define 
+\emph on
+`incentive diagrams'
+\emph default
+ to be graphs whose nodes are the types and where any two nodes are connected
+ either by a black arrow, a red arrow or a red line.
+ An incentive diagram corresponds to a set of allocations through the following
+ interpretation: A black arrow from type 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+ to type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ means that the incentive compatibility constraint requiring that 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+ not have an incentive to pretend to be type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ is binding.
+ A red arrow from type 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+ to type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ means that the incentive compatibility constraint requiring that 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+ not have an incentive to pretend to be type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ is not binding.
+ A red line between type 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+ and type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ means that no incentive compatibility constraints between the two types
+ are binding.
+ Based on assumption 5 we have an unambiguous ordering of types on each
+ dimension.
+ In the diagram we always put the higher types to the north and east:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will be focusing on our model with the 2 by 2 type space.
+ However, the following Lemma is true for any discrete type space:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 0:
+\series default
+ Suppose the marginal cost of funds for the principal is larger than the
+ marginal contribution to the principal's objective of money at the disposal
+ of any of the types (i.e suppose that assumption 2 holds).
+ Then for any type 
+\begin_inset Formula $(i,j)$
+\end_inset
+
+ there must be a (directed) path of black arrows from 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ to LL.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Suppose there was not.
+ Then let 
+\begin_inset Formula $T$
+\end_inset
+
+ we the set of types that can be reached via directed paths of black arrows
+ from 
+\begin_inset Formula $\text{ij.}$
+\end_inset
+
+ We can decrease the transfers made to all types in 
+\begin_inset Formula $T$
+\end_inset
+
+ by the same small amount, whilst not violating any IC or participation
+ constraints.
+ By assumption 2 this allows us to increase the principal's objective.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 1:
+\series default
+ Any implementable allocation must satisfy 
+\begin_inset Formula $x_{\text{Hj}}^{A}\geq x_{\text{Lj}}^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{jH}}^{B}\geq x_{\text{jL}}^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+The type 
+\begin_inset Formula $\text{Hj}$
+\end_inset
+
+ must at least weakly prefer 
+\begin_inset Formula $(x_{\text{Hj}}^{A},x_{\text{Hj}}^{B},t_{\text{Hj}})$
+\end_inset
+
+ to 
+\begin_inset Formula $(x_{\text{Lj}}^{A},x_{\text{Lj}}^{B},t_{\text{Lj}})$
+\end_inset
+
+, implying that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{H}^{A}\left(x_{\text{Hj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Hj}}^{B}\right)+t_{\text{Hj}}\geq u_{H}^{A}\left(x_{\text{Lj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Lj}}^{B}\right)+t_{\text{Lj}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, the type 
+\begin_inset Formula $\text{Lj}$
+\end_inset
+
+ must at least weakly prefer 
+\begin_inset Formula $(x_{\text{Lj}}^{A},x_{\text{Lj}}^{B},t_{\text{Lj}})$
+\end_inset
+
+ to 
+\begin_inset Formula $(x_{\text{Hj}}^{A},x_{\text{Hj}}^{B},t_{\text{Hj}})$
+\end_inset
+
+, implying that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{L}^{A}\left(x_{\text{Lj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Lj}}^{B}\right)+t_{\text{Lj}}\geq u_{L}^{A}\left(x_{\text{Hj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Hj}}^{B}\right)+t_{\text{Hj}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Adding the two inequalities and simplifying yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta^{A}\left(x_{\text{Hj}}^{A}\right)\geq\delta^{A}\left(x_{\text{Lj}}^{A}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By assumption 5 this implies that 
+\begin_inset Formula $x_{\text{Hj}}^{A}\geq x_{\text{Lj}}^{A}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 1.2:
+\series default
+ Suppose that both the IC constraint requiring that Lj not benefit from
+ pretending to be Hj and the IC constraint requiring that Hj not benefit
+ from pretending to be Lj are binding.
+ Then 
+\begin_inset Formula $x_{\text{Lj}}^{A}=x_{\text{Hj}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+proof
+\end_layout
+
+\begin_layout Standard
+Suppose that both the IC constraint requiring that Lj not benefit from pretendin
+g to be Hj and the IC constraint requiring that Hj not benefit from pretending
+ to be Lj are binding.
+ Then we have:
+\end_layout
+
+\begin_layout Standard
+The type 
+\begin_inset Formula $\text{Hj}$
+\end_inset
+
+ must be indifferent between 
+\begin_inset Formula $(x_{\text{Hj}}^{A},x_{\text{Hj}}^{B},t_{\text{Hj}})$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{\text{Lj}}^{A},x_{\text{Lj}}^{B},t_{\text{Lj}})$
+\end_inset
+
+, implying that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{H}^{A}\left(x_{\text{Hj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Hj}}^{B}\right)+t_{\text{Hj}}=u_{H}^{A}\left(x_{\text{Lj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Lj}}^{B}\right)+t_{\text{Lj}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similarly, the type 
+\begin_inset Formula $\text{Lj}$
+\end_inset
+
+ must be indifferent between 
+\begin_inset Formula $(x_{\text{Lj}}^{A},x_{\text{Lj}}^{B},t_{\text{Lj}})$
+\end_inset
+
+ and 
+\begin_inset Formula $(x_{\text{Hj}}^{A},x_{\text{Hj}}^{B},t_{\text{Hj}})$
+\end_inset
+
+, implying that:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u_{L}^{A}\left(x_{\text{Lj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Lj}}^{B}\right)+t_{\text{Lj}}=u_{L}^{A}\left(x_{\text{Hj}}^{A}\right)+u_{j}^{B}\left(x_{\text{Hj}}^{B}\right)+t_{\text{Hj}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Adding the two equalities and simplifying yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+delta^{A}\left(x_{\text{Hj}}^{A}\right)=\delta^{A}\left(x_{\text{Lj}}^{A}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So that we obtain 
+\begin_inset Formula $x_{\text{Hj}}^{A}=x_{\text{Lj}}^{A}$
+\end_inset
+
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 6:
+\series default
+ The principal's objective function is given as 
+\begin_inset Formula $W\left(x_{\text{LL}}^{A},\ x_{\text{LL}}^{B},x_{\text{LH}}^{A},\ x_{\text{LH}}^{B},x_{\text{HL}}^{A},\ x_{\text{HL}}^{B},x_{\text{HH}}^{A},\ x_{\text{HH}}^{B},\ t_{\text{LL}},\ t_{\text{HL}},\ t_{\text{LH}},\ t_{\text{HH}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 7:
+\series default
+ At the optimal mechanism 
+\begin_inset Formula $\frac{\partial W}{\partial t_{\text{ij}}}<0\ \forall i,j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider the case (of primary interest for us) where the principal faces
+ a budget constraint and where therefore his objective function 
+\begin_inset Formula $W$
+\end_inset
+
+ incorporates the constraint through Lagrange multipliers.
+ In this case assumption 7 simply means that at the optimal mechanism there
+ is better use of marginal funds than handing money to any type.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 2:
+\series default
+ At the optimal mechanism 
+\begin_inset Formula $r_{\text{LL}}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $r_{\text{LL}}>0$
+\end_inset
+
+ then we could uniformly reduce transfers without affecting the incentive
+ compatibility constraints.
+ From assumption 7 we deduce that 
+\begin_inset Formula $\frac{\partial W}{\partial t_{\text{LL}}}+\frac{\partial W}{\partial t_{\text{LH}}}+\frac{\partial W}{\partial t_{\text{HL}}}+\frac{\partial W}{\partial t_{\text{HH}}}<0$
+\end_inset
+
+, so this would increase the principal's objective.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 4:
+\series default
+ Let us denote by 
+\begin_inset Formula $R_{\text{ij}}\left(\text{mn}\right)$
+\end_inset
+
+ the rent that type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ needs to get in order not to have an incentive to pretend to be type 
+\begin_inset Formula $\text{mn}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $r_{\text{ij}}$
+\end_inset
+
+ be the informational rent that type 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ actually gets.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 2:
+\series default
+ 
+\begin_inset Formula $R_{\text{HH}}\left(\text{LL}\right)=\delta^{A}\left(x_{\text{LL}}^{A}\right)+\delta^{B}\left(x_{\text{LL}}^{B}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $R_{\text{HH}}\left(\text{HL}\right)=r_{\text{HL}}+\delta^{B}\left(x_{\text{HL}}^{B}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $R_{\text{HH}}\left(\text{LH}\right)=r_{\text{LH}}+\delta^{A}\left(x_{\text{LH}}^{A}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $R_{\text{HL}}\left(\text{LL}\right)=\delta^{A}\left(x_{\text{LL}}^{A}\right)+r_{\text{LL}}$
+\end_inset
+
+,
+\begin_inset Formula $\ R_{\text{HL}}\left(\text{LH}\right)=\delta^{B}\left(x_{\text{LH}}^{B}\right)-\delta^{A}\left(x_{\text{LH}}^{A}\right)+r_{\text{LH}}$
+\end_inset
+
+ 
+\begin_inset Formula $R_{\text{LH}}\left(\text{LL}\right)=\delta^{B}\left(x_{\text{LL}}^{B}\right)+r_{\text{LL}}$
+\end_inset
+
+, 
+\begin_inset Formula $R_{\text{LH}}\left(\text{HL}\right)=\delta^{B}\left(x_{\text{HL}}^{B}\right)-\delta^{A}\left(x_{\text{HL}}^{A}\right)+r_{\text{HL}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 5:
+\series default
+ Let us denote by 
+\begin_inset Formula $x_{\text{LL}}^{*},\ x_{\text{HL}}^{*},x_{\text{LH}}^{*},x_{\text{HH}}^{*},\ t_{\text{LL}}^{*},\ t_{\text{HL}}^{*},\ t_{\text{LH}}^{*},\ t_{HH}^{*}$
+\end_inset
+
+ the first best allocation, i.e.
+ the optimal allocation where the agents' participation constraints still
+ have to be satisfied but where the principal knows each agent's types and
+ thus does not have to respect the incentive compatibility constraints.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Assumption 8:
+\series default
+ The principal's objective is separable across types in the sense that it
+ can be written as follows 
+\begin_inset Formula $W=\sum_{i,j}^{}{\alpha_{\text{ij}}\left(w_{\text{ij}}^{A}\left(x_{\text{ij}}^{A}\right)+w_{\text{ij}}^{B}\left(x_{\text{ij}}^{B}\right)-\beta_{\text{ij}}t_{\text{ij}}\right)}$
+\end_inset
+
+ where 
+\begin_inset Formula $w_{\text{ij}}^{A},w_{\text{ij}}^{B}$
+\end_inset
+
+ can be any functions and 
+\begin_inset Formula $\beta_{\text{ij}}$
+\end_inset
+
+ is a constant that by assumption 7 is strictly positive.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Remark: In contrast to Armstrong and Rochet (1999), we allow for the possibility
+ that the contribution that
+\emph default
+ 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ 
+\emph on
+makes to the principal's objective depends on
+\emph default
+ 
+\begin_inset Formula $j$
+\end_inset
+
+
+\emph on
+.
+ In our application this is important: It is plausible that for
+\emph default
+ 
+\begin_inset Formula $j=H$
+\end_inset
+
+ 
+\emph on
+a given amount
+\emph default
+ 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ 
+\emph on
+of reduction in deforestation leads to greater population welfare than for
+\emph default
+ 
+\begin_inset Formula $j=L$
+\end_inset
+
+
+\emph on
+.
+ Indeed, if the underlying reason for why the type
+\emph default
+ 
+\begin_inset Formula $j=H$
+\end_inset
+
+ 
+\emph on
+is more enthusiastic about universal cash transfers for its population is
+ that the type is more benevolent than the type
+\emph default
+ 
+\begin_inset Formula $j=L$
+\end_inset
+
+
+\emph on
+, then it is plausible that he will choose ways of reducing deforestation
+ that generate co-benefits for his population than the type
+\emph default
+ 
+\begin_inset Formula $j=H$
+\end_inset
+
+ 
+\emph on
+(who might even choose ways of reducing deforestation that adversely affect
+ the population, e.g.
+ by harshly enforcing prohibitions of slash and burn agriculture).
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 3: 
+\end_layout
+
+\begin_layout Standard
+If there are no arrows arriving at 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ coming somewhere from the east, then 
+\begin_inset Formula $x_{\text{ij}}^{A}\geq{x_{\text{ij}}^{A}}^{*}$
+\end_inset
+
+.
+ If in addition there is a arrow arriving from the west emanating from a
+ node at which the participation constraint is not binding and from which
+ no other arrow emanates then we have 
+\begin_inset Formula $x_{\text{ij}}^{A}>{x_{\text{ij}}^{A}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If there are no arrows arriving at 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ coming somewhere from the west, then 
+\begin_inset Formula $x_{\text{ij}}^{A}\leq{x_{\text{ij}}^{A}}^{*}$
+\end_inset
+
+.
+ If in addition there is a arrow arriving from the west emanating from a
+ node at which the participation constraint is not binding and from which
+ no other arrow emanates then we have 
+\begin_inset Formula $x_{\text{ij}}^{A}<{x_{\text{ij}}^{A}}^{*}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If there are no arrows arriving at 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ coming somewhere from the north, then 
+\begin_inset Formula $x_{\text{ij}}^{B}\geq{x_{\text{ij}}^{B}}^{*}$
+\end_inset
+
+.
+ If in addition there is a arrow arriving from the west emanating from a
+ node at which the participation constraint is not binding and from which
+ no other arrow emanates then we have 
+\begin_inset Formula $x_{\text{ij}}^{B}>{x_{\text{ij}}^{B}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+If there are no arrows arriving at 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ coming from the south, then 
+\begin_inset Formula $x_{\text{ij}}^{B}\leq{x_{\text{ij}}^{B}}^{*}$
+\end_inset
+
+.
+ If in addition there is a arrow arriving from the west emanating from a
+ node at which the participation constraint is not binding and from which
+ no other arrow emanates then we have 
+\begin_inset Formula $x_{\text{ij}}^{B}<{x_{\text{ij}}^{B}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Consider 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ and hold all the other 
+\begin_inset Formula $x_{k,l}^{A}$
+\end_inset
+
+ fixed.
+ In solving the first best problem one considers 
+\begin_inset Formula $w_{\text{ij}}^{A}\left(x_{\text{ij}}^{A}\right)$
+\end_inset
+
+ and the fact that 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ affects the transfer 
+\begin_inset Formula $t_{\text{ij}}$
+\end_inset
+
+ that one has to pay in order to satisfy the participation constraint of
+ the agent 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+.
+ This is similar to the situation in the second best problem, where instead
+ the minimal utility is determined by the informational rents implied by
+ the values of 
+\begin_inset Formula $x_{k,l}^{A}$
+\end_inset
+
+ for the other types.
+ The only difference is that in the second best problem 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ can affect the informational rents that need to be left to the other types.
+\end_layout
+
+\begin_layout Standard
+Increasing 
+\begin_inset Formula $x_{\text{ij}}^{A}$
+\end_inset
+
+ can cause an increase in informational rents only if there is an arrow
+ coming somewhere from the east.
+ Hence if there are no arrows arriving at 
+\begin_inset Formula $\text{ij}$
+\end_inset
+
+ coming somewhere from the east, then 
+\begin_inset Formula $x_{\text{ij}}^{A}\geq{x_{\text{ij}}^{A}}^{*}$
+\end_inset
+
+.
+ By the same reasoning the other 3 claims follow.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 3:
+\series default
+ At the second best allocation we have: 
+\begin_inset Formula $x_{\text{LL}}^{A}\leq{x_{\text{LL}}^{A}}^{*},x_{\text{LL}}^{B}\leq{x_{\text{LL}}^{B}}^{*},x_{\text{HL}}^{A}\geq{x_{\text{HL}}^{A}}^{*},x_{\text{LH}}^{B}\geq{x_{\text{LH}}^{B}}^{*},x_{\text{HH}}^{A}\geq{x_{\text{HH}}^{A}}^{*},x_{\text{HH}}^{B}\geq{x_{\text{HH}}^{B}}^{*}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Lemma 3.2:
+\series default
+ Suppose assumption 2 holds, i.e.
+ suppose that at the optimal mechanism increasing the available budget yields
+ more welfare increase than distributing the money directly to any government.
+ Then 
+\begin_inset Formula $x_{\text{LL}}^{A}<{x_{LL}^{A}}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Increasing 
+\begin_inset Formula $x_{\text{LL}}^{A}$
+\end_inset
+
+ strictly increases all the rents that need to be left to all the other
+ types.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 2:
+\series default
+ Suppose that, 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*},{x_{\text{HH}}^{A}}^{*}\geq{x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+.
+ Then at the second best allocation we have 
+\begin_inset Formula $x_{\text{LH}}^{A}\geq x_{\text{LL}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+proof
+\end_layout
+
+\begin_layout Standard
+Suppose 
+\begin_inset Formula $(x_{\text{LL}}^{A},x_{\text{HL}}^{A},x_{\text{LH}}^{A},x_{\text{HH}}^{A},x_{\text{LL}}^{B},x_{\text{HL}}^{B},x_{\text{LH}}^{B},x_{\text{HH}}^{B})$
+\end_inset
+
+ is the second best solution.
+ For a contradiction, let us suppose that 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{LL}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The following two cases partition the set of cases:
+\end_layout
+
+\begin_layout Standard
+Case 1: 
+\begin_inset Graphics
+	filename ../../../Downloads/LHLL.png
+	scale 30
+
+\end_inset
+
+Case 2:
+\begin_inset Graphics
+	filename ../../../Downloads/LHLLr.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us first consider Case 1.
+ Since we are supposing that 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{LL}}^{A}$
+\end_inset
+
+ we can deduce that 
+\begin_inset Formula $R_{\text{HH}}\left(\text{LL}\right)=\delta^{A}\left(x_{\text{LL}}^{A}\right)+\delta^{B}\left(x_{\text{LL}}^{B}\right)>\delta^{A}\left(x_{\text{LH}}^{A}\right)+\delta^{B}\left(x_{\text{LL}}^{B}\right)=R_{\text{HH}}(LH)$
+\end_inset
+
+.
+ Hence there is no arrow from HH to LH:
+\end_layout
+
+\begin_layout Standard
+Case 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../Downloads/LHLLHH.png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose there was no arrow from HL to LH.
+ Then by Lemma 3 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+ would have to be equal to the first best, (since there would be no IC constrain
+ts that would weigh in favor of lowering 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+, nor any IC constraints that would weigh in favor of increasing 
+\begin_inset Formula $x_{\text{LH}}^{A}$
+\end_inset
+
+).
+ In other words, we would have 
+\begin_inset Formula $x_{\text{LH}}^{A}={x_{\text{LH}}^{A}}^{*}$
+\end_inset
+
+.
+ But by corollary 3 
+\begin_inset Formula $x_{\text{LL}}^{A}\leq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, which by our assumption that 
+\begin_inset Formula ${x_{\text{LL}}^{A}}^{*}\leq{x_{\text{LH}}^{A}}^{*}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x_{\text{LL}}^{A}\leq x_{\text{LH}}^{A}$
+\end_inset
+
+.
+ This is in contradiction to our assumption that 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{LL}}^{A}$
+\end_inset
+
+.
+ Hence we know about case 1:
+\end_layout
+
+\begin_layout Standard
+Case 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../Downloads/LHLLHH (1).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we must have that 
+\begin_inset Formula $r_{\text{HL}}=u_{H}^{B}\left(x_{\text{LL}}^{B}\right)-u_{L}^{B}\left(x_{\text{LL}}^{B}\right)+u_{L}^{B}\left(x_{\text{LH}}^{B}\right)-u_{H}^{B}\left(x_{\text{LH}}^{B}\right)+u_{H}^{A}\left(x_{\text{LH}}^{A}\right)-u_{H}^{A}\left(x_{\text{LH}}^{A}\right)$
+\end_inset
+
+=
+\begin_inset Formula $\delta^{B}\left(x_{\text{LL}}^{B}\right)-\delta^{B}\left(x_{\text{LH}}^{B}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{\text{HL}}\left(\text{LL}\right)=\delta^{A}\left(x_{\text{LL}}^{A}\right)$
+\end_inset
+
+.
+ Therefore we have: 
+\begin_inset Formula $\delta^{B}\left(x_{\text{LL}}^{B}\right)-\delta^{B}\left(x_{\text{LH}}^{B}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)\geq\delta^{A}\left(x_{\text{LL}}^{A}\right)$
+\end_inset
+
+.
+ 
+\emph on
+(To make the proof more readable, we will from now on abbreviate this kind
+ of argument by simply saying `from HL, LH, LL we deduce that
+\emph default
+ 
+\begin_inset Formula $\delta^{B}\left(x_{\text{LL}}^{B}\right)-\delta^{B}\left(x_{\text{LH}}^{B}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)\geq\delta^{A}\left(x_{\text{LL}}^{A}\right)')$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence our assumption 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{LL}}^{A}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x_{\text{LL}}^{B}>x_{\text{LH}}^{B}$
+\end_inset
+
+.
+ But this is a contradiction by Lemma 1.
+\end_layout
+
+\begin_layout Standard
+Hence we can restrict attention to case 2.
+\end_layout
+
+\begin_layout Standard
+Case 2:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../../Downloads/hllhllr
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We know that there must be a directed path of arrows emanating from LH and
+ reaching LL, since otherwise one could decrease the transfers for all the
+ types reachable from LH via a path of black arrows by an equal small amount
+ save money without violating any IC or participation constraints.
+ Hence we have that the union of the following cases is equal to case 2:
+\end_layout
+
+\begin_layout Standard
+Case 2.1: 
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints (1).png
+	scale 30
+
+\end_inset
+
+case 2.2: 
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints (2).png
+	scale 30
+
+\end_inset
+
+ case 2.3:
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints (3).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider first the case 2.1.
+ If there was no arrow from HH to LH, then there would be no arrow landing
+ at LH, so we would have 
+\begin_inset Formula $x_{\text{LH}}^{A}={x_{\text{LH}}^{A}}^{*}$
+\end_inset
+
+.
+ But since all arrows landing at LL come from the east, we must have 
+\begin_inset Formula $x_{\text{LL}}^{A}<{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, which would imply that 
+\begin_inset Formula $x_{\text{LL}}^{A}<x_{\text{LH}}^{A}$
+\end_inset
+
+, since by assumption 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+.
+ But this is in contradiction to our assumption that 
+\begin_inset Formula $x_{\text{LL}}^{A}>x_{\text{LH}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hence we have:
+\end_layout
+
+\begin_layout Standard
+Case 2.1:
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints (4).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we deduce from 
+\begin_inset Formula $HH,LH,HL$
+\end_inset
+
+ that 
+\begin_inset Formula $-\delta^{A}\left(x_{\text{HL}}^{A}\right)+\delta^{A}\left(x_{\text{LH}}^{A}\right)\geq0$
+\end_inset
+
+, implying that 
+\begin_inset Formula $x_{\text{HL}}^{A}\leq x_{\text{LH}}^{A}$
+\end_inset
+
+.
+ Our assumption that 
+\begin_inset Formula $x_{\text{LL}}^{A}>x_{\text{LH}}^{A}$
+\end_inset
+
+ now implies that 
+\begin_inset Formula $x_{\text{LL}}^{A}>x_{\text{HL}}^{A}$
+\end_inset
+
+, which is a contradiction by Lemma 1.
+\end_layout
+
+\begin_layout Standard
+Now consider case 2.2:
+\end_layout
+
+\begin_layout Standard
+Case 2.2: 
+\begin_inset Graphics
+	filename ../../../Downloads/noConstraints (5).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here we know from LH,HH,HL that 
+\begin_inset Formula $-\delta^{A}\left(x_{\text{HH}}^{A}\right)>-\delta^{A}\left(x_{\text{HL}}^{A}\right)$
+\end_inset
+
+i.e.
+ that 
+\begin_inset Formula $x_{\text{HH}}^{A}<x_{\text{HL}}^{A}$
+\end_inset
+
+.
+ But the arrows imply by Lemma 3 that 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq{x_{\text{HH}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HL}}^{A}={x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+, so that from our assumption that 
+\begin_inset Formula ${x_{\text{HH}}^{A}}^{*}\geq{x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ we deduce 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq x_{\text{HL}}^{A}$
+\end_inset
+
+, a contradiction.
+\end_layout
+
+\begin_layout Standard
+Now consider case 2.3:
+\end_layout
+
+\begin_layout Standard
+Case 2.3:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (2).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 
+\begin_inset Formula $\text{LH},\text{HH},\text{LL}$
+\end_inset
+
+ we deduce
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $x_{\text{LL}}^{A}>x_{\text{HH}}^{A}$
+\end_inset
+
+.
+ Using Lemma 3 we deduce that 
+\begin_inset Formula ${x_{\text{HH}}^{A}\geq x_{\text{HH}}^{A}}^{*}\ $
+\end_inset
+
+ and 
+\begin_inset Formula ${x_{\text{LL}}^{A}\leq x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+ .
+ Now our assumption that 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+ implies that 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq x_{\text{LL}}^{A}$
+\end_inset
+
+, a contradiction.
+ 
+\begin_inset Formula $\square\ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 3:
+\series default
+ Suppose that 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*},{x_{\text{HL}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula ${x_{\text{LL}}^{B}}^{*}\leq{x_{\text{HL}}^{B}}^{*}$
+\end_inset
+
+.
+ Then at the optimal mechanism we must have 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq x_{\text{HL}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+Suppose for a contradiction that 
+\begin_inset Formula $x_{\text{HH}}^{A}<x_{\text{HL}}^{A}$
+\end_inset
+
+.
+ Then by our assumption 
+\begin_inset Formula ${x_{\text{HH}}^{A}}^{*}\geq{x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ we need that there must be an arrow arriving at HL from the left.
+ Hence it is sufficient to consider the following two cases:
+\end_layout
+
+\begin_layout Standard
+Case 1: 
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (4).png
+	scale 30
+
+\end_inset
+
+ case 2:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (3).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider first case 1.
+ From LH, HH, HL we deduce 
+\begin_inset Formula $-\delta^{A}\left(x_{\text{HH}}^{A}\right)\leq-\delta^{A}\left(x_{\text{HL}}^{A}\right)$
+\end_inset
+
+, implying that 
+\begin_inset Formula $x_{\text{HL}}^{A}\leq x_{\text{HH}}^{A}$
+\end_inset
+
+, a contradiction.
+ Hence we can restrict attention to case 2.
+\end_layout
+
+\begin_layout Standard
+There must be a path of black arrows from HH to LL, so we have the following
+ two cases to consider :
+\end_layout
+
+\begin_layout Standard
+Case 2.1:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (5).png
+	scale 30
+
+\end_inset
+
+ case 2.2: 
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (6).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us first consider case 2.1.
+ From HH, LL, HL we deduce that 
+\begin_inset Formula $\delta^{A}\left(x_{\text{LL}}^{A}\right)+\delta^{B}\left(x_{\text{LL}}^{B}\right)-\delta^{A}\left(x_{\text{HL}}^{A}\right)\geq\delta^{B}(x_{\text{HL}}^{B})$
+\end_inset
+
+.
+ Since by Lemma 1 we have 
+\begin_inset Formula $x_{\text{HL}}^{A}\geq x_{\text{LL}}^{A}$
+\end_inset
+
+, this implies that 
+\begin_inset Formula $x_{\text{LL}}^{B}\geq x_{\text{HL}}^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+There must be a path of black arrows from LH to LL, so we have the following
+ partition into subcases:
+\end_layout
+
+\begin_layout Standard
+case 2.1.1
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (7).png
+	scale 30
+
+\end_inset
+
+ case 2.1.2:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (8).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Consider first case 2.1.1.
+ Suppose there was a black arrow from HL to LL.
+ Then by Lemma 1.2 we would have 
+\begin_inset Formula $x_{\text{LL}}^{A}=x_{\text{HL}}^{A}$
+\end_inset
+
+.
+ But by Lemma 3.2 we have 
+\begin_inset Formula $x_{\text{LL}}^{A}<{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HL}}^{A}\geq{x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+.
+ This combined with our assumption that 
+\begin_inset Formula ${x_{\text{LL}}^{A}}^{*}\leq{x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ yields 
+\begin_inset Formula $x_{\text{LL}}^{A}<x_{\text{HL}}^{A}$
+\end_inset
+
+, a contradiction.
+ Hence we have no black arrow from HL to LL.
+\end_layout
+
+\begin_layout Standard
+By HH,LL,HL and Lemma 1 we must have 
+\begin_inset Formula $x_{\text{LL}}^{B}\geq x_{\text{HL}}^{B}$
+\end_inset
+
+.
+ By Lemma 3.2 and our assumption that 
+\begin_inset Formula ${x_{\text{LL}}^{B}}^{*}\leq{x_{\text{HL}}^{B}}^{*}$
+\end_inset
+
+this implies that there must be an arrow arriving at HL from above.
+ Hence we must have:
+\end_layout
+
+\begin_layout Standard
+Case 2.1.1:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (9).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By HH,LH,LL we have 
+\begin_inset Formula $x_{\text{LH}}^{A}\leq x_{\text{LL}}^{A}$
+\end_inset
+
+ and by Proposition 2 we have 
+\begin_inset Formula $x_{\text{LH}}^{A}\geq x_{\text{LL}}^{A}$
+\end_inset
+
+.
+ Hence we must have 
+\begin_inset Formula $x_{\text{LH}}^{A}=x_{\text{LL}}^{A}$
+\end_inset
+
+ and:
+\end_layout
+
+\begin_layout Standard
+Case 2.1.1:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (10).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now by HH,LH,HL we must have 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{HL}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+By Lemma 0 we must have a path of black arrows from HL to LL.
+ We already established that there cannot be a black arrow from HL to LL.
+ Our assumption that 
+\begin_inset Formula $x_{\text{HH}}^{B}<x_{\text{HL}}^{B}$
+\end_inset
+
+ implies by Lemma 1.2 that there is no black arrow from HL to HH.
+ Hence we must have:
+\end_layout
+
+\begin_layout Standard
+Case 2.1.1:
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (11).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By HL,LH,LL we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta^{A}\left(x_{\text{LH}}^{A}\right)-\delta^{B}\left(x_{\text{LH}}^{B}\right)-\delta^{A}\left(x_{\text{HL}}^{A}\right)+\delta^{B}\left(x_{\text{LL}}^{B}\right)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But since 
+\begin_inset Formula $x_{\text{LH}}^{A}<x_{\text{HL}}^{A}$
+\end_inset
+
+ this implies that 
+\begin_inset Formula $x_{\text{LL}}^{B}>x_{\text{LH}}^{B}$
+\end_inset
+
+, in contradiction to Lemma 1.
+ 
+\begin_inset Formula $\square\ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 4:
+\series default
+ Suppose that 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*},{x_{\text{HL}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula ${x_{\text{LL}}^{B}}^{*}\leq{x_{HL}^{B}}^{*}$
+\end_inset
+
+.
+ Then we have at the optimal mechanism that 
+\begin_inset Formula $x_{\text{LH}}^{A}\geq x_{\text{LL}}^{A}\ $
+\end_inset
+
+and 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq x_{\text{HL}}^{A}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+This follows from propositions 2 and 3.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 5:
+\series default
+ Suppose that 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*},{x_{\text{HL}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula ${x_{\text{HL}}^{B}}^{*}\geq{x_{\text{LL}}^{B}}^{*},{x_{\text{LH}}^{B}}^{*}\geq{x_{\text{LL}}^{B}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{B}}^{*}\geq x_{\text{LH}}^{B}}^{*}$
+\end_inset
+
+.
+ Then we have at the optimal mechanism that the type-complementarity property
+ holds.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+This follows from corollary 4.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\emph on
+Section 4: Implementation using menus of bounded linear contracts
+\end_layout
+
+\begin_layout Standard
+Suppose an international institution 
+\begin_inset Formula $I_{A}$
+\end_inset
+
+ contracts with 4 countries who are described by the model from section
+ 1.
+ Suppose that initially the institution contracts only on reductions in
+ deforestation under an exogenous budget constraint 
+\begin_inset Formula $m_{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As mentioned in the introduction, bounded linear reward payment schedules
+ are used already today.
+ When contracting with the 2 by 2 types on reductions in deforestation,
+ the international institution can implement the optimal allocation by offering
+ a menu of linear reward payment schedules as illustrated in the following
+ diagram:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../Documents/bounded linear implementation.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Indeed, if the increasing part of the schedule is sufficiently steep, this
+ mechanism amounts essentially to offering a menu of two pairs of reductions
+ in deforestation and transfers, 
+\begin_inset Formula $\{\left(x_{L}^{A},t_{L}^{A}\right),\left(x_{H}^{A},t_{H}^{A}\right)\}$
+\end_inset
+
+ corresponding to the two kinks.R
+\end_layout
+
+\begin_layout Standard
+Now suppose that there is another international institution, 
+\begin_inset Formula $I_{B}$
+\end_inset
+
+, contracting with the same set of four countries, 
+\begin_inset Formula $\{LL,LH,HL,HH\}$
+\end_inset
+
+, on universal cash transfers under a budget constraint of 
+\begin_inset Formula $m_{B}$
+\end_inset
+
+.
+ Consider the problem of finding the mechanism that maximizes aggregate
+ population welfare under the constraint that aggregate deforestation be
+ unchanged.
+ Denote the solution to this problem by 
+\begin_inset Formula $({\hat{x}}_{\text{LL}}^{A},{\hat{x}}_{\text{LH}}^{A},{\hat{x}}_{\text{HL}}^{A},{\hat{x}}_{\text{HH}}^{A},{\hat{x}}_{\text{LL}}^{B},{\hat{x}}_{\text{LH}}^{B},{\hat{x}}_{\text{HL}}^{B},{\hat{x}}_{\text{HH}}^{B},{\hat{t}}_{\text{LL}},{\hat{t}}_{\text{LH}},{\hat{t}}_{\text{HL}},{\hat{t}}_{\text{HH}})$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $\rho<\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}+\frac{b_{H}-b_{L}}{\lambda-b_{H}}\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LH}}+\alpha_{\text{LL}}}\left(1-\alpha_{\text{HH}}+\frac{\alpha_{\text{HL}}\alpha_{\text{LH}}}{\alpha_{\text{LL}}}\right)$
+\end_inset
+
+.
+ Then we can deduce from proposition 1 that 
+\begin_inset Formula $({\hat{x}}_{\text{LL}}^{A},{\hat{x}}_{\text{LH}}^{A},{\hat{x}}_{\text{HL}}^{A},{\hat{x}}_{\text{HH}}^{A},{\hat{x}}_{\text{LL}}^{B},{\hat{x}}_{\text{LH}}^{B},{\hat{x}}_{\text{HL}}^{B},{\hat{x}}_{\text{HH}}^{B})$
+\end_inset
+
+ can be implemented by having the international institution 
+\begin_inset Formula $I_{B}$
+\end_inset
+
+ abandon its previous mechanism and instead offer a certain transfer 
+\begin_inset Formula $\tilde{t}$
+\end_inset
+
+ conditional only on a government having paid out at least 
+\begin_inset Formula ${\hat{x}}_{\text{LL}}^{B}$
+\end_inset
+
+ as a universal cash transfer and contributing the remaining money from
+ 
+\begin_inset Formula $m_{B}$
+\end_inset
+
+ to the international institution 
+\begin_inset Formula $I_{A}$
+\end_inset
+
+, which will use a mechanism corresponding to the following diagram:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename ../../Documents/bounded linear implementation with cash transfers.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Again, the optimal mechanism implemented in this way will have all four
+ countries choose points at the kinks.
+ The overall optimal mechanism is the sum of the mechanism depicted in the
+ diagram and the aid agency's mechanism that consists of paying each government
+ 
+\begin_inset Formula $\tilde{t}$
+\end_inset
+
+ conditional on the government paying out at leas 
+\begin_inset Formula ${\hat{x}}_{\text{LL}}^{B}$
+\end_inset
+
+ as universal cash transfers.
+ Hence the values shown for the part of mechanism depicted in the diagram
+ are related to the values of the overall optimal mechanism as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{\text{LL}}^{A}={\hat{x}}_{\text{LL}}^{A},x_{\text{LH}}^{A}={\hat{x}}_{\text{LH}}^{A},x_{\text{HL}}^{A}={\hat{x}}_{\text{HL}}^{A},x_{\text{HH}}^{A}={\hat{x}}_{\text{HH}}^{A},x_{\text{LL}}^{B}=0,x_{\text{LH}}^{B}={\hat{x}}_{\text{LH}}^{B}-{\hat{x}}_{\text{LL}}^{B},x_{\text{HL}}^{B}={\hat{x}}_{\text{HL}}^{B}-{\hat{x}}_{\text{LL}}^{B},x_{\text{HH}}^{B}={\hat{x}}_{\text{HH}}^{B}-{\hat{x}}_{\text{LL}}^{B},{t_{\text{LL}}=\hat{t}}_{\text{LL}}-\tilde{t},{t_{\text{LH}}=\hat{t}}_{\text{LH}}-\tilde{t},{t_{\text{HL}}=\hat{t}}_{\text{HL}}-\tilde{t},,{t_{\text{HH}}=\hat{t}}_{\text{HH}}-\tilde{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the particular example illustrated in the graph we have 
+\begin_inset Formula $x_{\text{HH}}^{A}=x_{\text{HL}}^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HH}}^{B}=x_{LH}^{B}$
+\end_inset
+
+.
+ In the appendix we give in proposition 3.2 sufficient conditions for this
+ property to hold at the optimal mechanism.
+\end_layout
+
+\begin_layout Standard
+The above analysis illustrates the following opportunity: Suppose there
+ is a mechanism contracting with governments only on reductions in deforestation.
+ Suppose specifically, that there is an international institution defining
+ an anonymous mechanism, implementing this for example through reward payment
+ schedules as illustrated in figure 5.
+ Suppose an aid agency is considering expanding its budget for contracting
+ on cash transfers with governments in the countries with tropical forests.
+ It could instead contribute the corresponding money to the international
+ institution that hitherto only contracted on reductions in deforestation.
+ The aid agency could require the international institution to modify its
+ mechanism along the lines illustrated by the modification from figure 4
+ to figure 5.
+ What we have shown is that there exist such modifications such that a greater
+ gain in aggregate population welfare is achieved whilst the reduction in
+ deforestation is the same.
+ Therefore, the aid agency has an opportunity to purchase greater welfare
+ increases by engaging in this form of moral cooperation than it has if
+ it were to only contract by itself.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Section 5: Numerical simulations
+\end_layout
+
+\begin_layout Standard
+I have not finished the programming yet.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Section 6: Further mathematical questions
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Conjecture:
+\series default
+ The type-complementarity property holds at the optimal mechanism under
+ mild assumptions in versions of the models with m-by-n type spaces for
+ any m and n.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Conclusion
+\end_layout
+
+\begin_layout Standard
+There is a wide range of views on what effects an expansion of the REDD+
+ mechanism would have on the welfare of people in the jurisdictions with
+ tropical forests.
+ Whilst many NGOs support an expansion of the REDD+ mechanism, opposition
+ by other NOGs thinking that such an expansion would adversely affect the
+ welfare of people in the jurisdictions with tropical forests has caused
+ donor governments to not contribute the money that they had promised (Busch,
+ Seymour, 2016).
+ The NGOs all presumably pursue objectives that are some weighted sum of
+ the reduction in deforestation and the welfare of people.
+ They also presumably share the view that since donor countries are rich,
+ increasing their contribution to at least some relatively unambiguous programs
+ like funding universal cash transfers to people in poor countries will
+ increase global welfare.
+\end_layout
+
+\begin_layout Standard
+Acknowledging that these empirical disagreements, the question arises as
+ to what kind of mechanisms could use additional donor money in a way that
+ unambiguously (i.e.
+ under the various empirical views that the different NGOs hold) improves
+ outcomes in both the main outcome dimensions, namely the welfare of people
+ in jurisdictions with tropical forests and the reduction in aggregate deforesta
+tion.
+ One kind of mechanism that could achieve this is that of contracting on
+ reductions in deforestation but requiring the governments receiving the
+ reward payments to pay out a certain fraction of the money received as
+ universal cash transfers to their populations.
+ At the very least, this is a way of achieving compromise.
+ Moreover, in this article we have provided results suggesting that there
+ are also efficiency gains to be achieved from such joint contracting on
+ the two variables.
+ In the introduction we have provided a first best rationale for this, assuming
+ that the pessimistic NGOs are correct.
+ Moreover, we have shown that there is also a second best rationale for
+ joint contracting that applies under plausible assumptions for all the
+ views that the different NGOs hold.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Appendix
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 3.2:
+\series default
+ Suppose that 
+\begin_inset Formula ${x_{\text{LH}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*},{x_{\text{HL}}^{A}}^{*}\geq{x_{\text{LL}}^{A}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{A}}^{*}\geq x_{\text{HL}}^{A}}^{*}$
+\end_inset
+
+ and also 
+\begin_inset Formula ${x_{\text{HL}}^{B}}^{*}\geq{x_{\text{LL}}^{B}}^{*},{x_{\text{LH}}^{B}}^{*}\geq{x_{\text{LL}}^{B}}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula ${{x_{\text{HH}}^{B}}^{*}\geq x_{\text{LH}}^{B}}^{*}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $x_{\text{HH}}^{A}=x_{\text{HL}}^{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{\text{HH}}^{B}=x_{\text{LH}}^{B}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+By proposition 3 we know that 
+\begin_inset Formula $x_{\text{HH}}^{A}\geq x_{\text{HL}}^{A}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For a contradiction, suppose that 
+\begin_inset Formula $x_{\text{HH}}^{A}>x_{\text{HL}}^{A}$
+\end_inset
+
+.
+ Then there must be a black arrow arriving at HH from the left.
+ Also, by LH, HH, HL we cannot have a black arrow from HH to HL.
+ Hence we have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (13).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since there must be a path of black arrows from HH to LL, we must have:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/LHLLHH (12).png
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From HH, HL, LL we deduce that 
+\begin_inset Formula $x_{\text{HL}}^{B}<x_{\text{LL}}^{B}$
+\end_inset
+
+.
+ But proposition 2 applied with A and B swapped tells us that 
+\begin_inset Formula $x_{\text{HL}}^{B}\geq x_{\text{LL}}^{B}$
+\end_inset
+
+, a contradiction.
+ We thus must have 
+\begin_inset Formula $x_{\text{HH}}^{A}=x_{\text{HL}}^{A}.$
+\end_inset
+
+ By symmetry we also deduce that 
+\begin_inset Formula $x_{\text{HH}}^{B}=x_{\text{LH}}^{B}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+References
+\end_layout
+
+\begin_layout Standard
+Chirouleu-Assouline et al.
+ 2017, Designing REDD+ contracts to resolve additionality issues 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://halshs.archives-ouvertes.fr/halshs-01643656/document}"
+target "https://halshs.archives-ouvertes.fr/halshs-01643656/document"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Harstad 2017, Conservation contracts and political regimes
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.sv.uio.no/econ/personer/vit/bardh/dokumenter/cc.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Seema Jayachandran 2017, Cash for Carbon 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://science.sciencemag.org/content/357/6348/267}"
+target "http://science.sciencemag.org/content/357/6348/267"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Armstrong, Rochet (1999) Multi-dimensional screening- A user's guide, 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://econpapers.repec.org/article/eeeeecrev/v_3a43_3ay_3a1999_3ai_3a4-6_3ap_3a959-979.htm}"
+target "https://econpapers.repec.org/article/eeeeecrev/v_3a43_3ay_3a1999_3ai_3a4-6_3ap_3a959-979.htm"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Busch, Seymour (2016) Why Forests? Why Now?: The Science, Economics, and
+ Politics of Tropical Forests and Climate Change, 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.cgdev.org/page/why-forests-why-now-book-and-paper-series}"
+target "https://www.cgdev.org/page/why-forests-why-now-book-and-paper-series"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Busch, Birdsall (2014) Assessing Performance-Based Payments for Forest Conservat
+ion: Six Successes, Four Worries, and Six Possibilities to Explore of the
+ Guyana-Norway Agreement (
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.cgdev.org/publication/assessing-performance-based-payments-forest-conservation-six-successes-four-worries-and}"
+target "https://www.cgdev.org/publication/assessing-performance-based-payments-forest-conservation-six-successes-four-worries-and"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Cortez et al.
+ (2010) A nested approach to REDD 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://theredddesk.org/sites/default/files/resources/pdf/2010/TNC_june_2010_A_nested_approach_to_REDD.pdf}"
+target "http://theredddesk.org/sites/default/files/resources/pdf/2010/TNC_june_2010_A_nested_approach_to_REDD.pdf"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Juan Pablo Sarmiento Barletti and Anne M.
+ Larson (2017), Right abuse allegations in the context of REDD+ readiness
+ and implementation 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf}"
+target "http://www.cifor.org/publications/pdf_files/infobrief/6630-infobrief.pdf"
+
+\end_inset
+
+
+\series bold
+,
+\series default
+ and response to this review article by the Environmental Defense Fund:
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{http://blogs.edf.org/climatetalks/2017/11/29/shoddy-cifor-publication-on-indigenous-peoples-rights-abuses-gets-the-facts-wrong/}"
+target "http://blogs.edf.org/climatetalks/2017/11/29/shoddy-cifor-publication-on-indigenous-peoples-rights-abuses-gets-the-facts-wrong/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Deaton 2013, 
+\begin_inset CommandInset href
+LatexCommand href
+name "Great Escape: Health, Wealth, and the Origins of Inequality"
+target "https://www.amazon.de/Great-Escape-Health-Origins-Inequality/dp/0691165629"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Moss et al.
+ 2015, Oil to cash: Fighting the Resource Curse through Cash Transfers,
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "emph{https://www.cgdev.org/initiative/oil-cash-fighting-resource-curse-through-cash-transfers}"
+target "https://www.cgdev.org/initiative/oil-cash-fighting-resource-curse-through-cash-transfers"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+how can Nash implementation improve upon Bayesian Nash implementation?
+\end_layout
+
+\begin_layout Standard
+1) there is in reality uncertainty about the distribution of types.
+ Parameters of the mechanism could be adjusted over time so as to achieve
+ some pre-specified result for an endogenous variable: e.g.
+ that 90% of players participate.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+settings
+\end_layout
+
+\begin_layout Standard
+actors all small, mechanism anonymous.
+ This implies some local version of the taxation principle.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Given 
+\begin_inset Formula $s_{_{1}}$
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Reframing of MGF: achoring profile: each player does not allocate any money.
+ This gives a budget of (1-r)F.
+ Now each player can give up to 
+\begin_inset Formula $rF_{i}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+step 1: proportional magnification
+\end_layout
+
+\begin_layout Standard
+step 2: scaling up of PMFs with the money not used for step 1
+\end_layout
+
+\begin_layout Standard
+step 3: PMF splitting
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The incentive effects here rely crucially on the fact that the players are
+ of non-negligible size.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+reward payment based mechanism:
+\end_layout
+
+\begin_layout Standard
+First stage: contribution of money
+\end_layout
+
+\begin_layout Standard
+second stage: reward for effort depending on first stage: The larger the
+ first stage contribution, the larger the reward payments (both total and
+ marginal)
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Suppose all players infinitesimal.
+ Using the envelope theorem, we can compute the 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+solution concept modifications:
+\begin_inset Newline newline
+\end_inset
+
+version 1: constant cost of quitting for EU, as long as at least 50% of
+ flights taxed in its absence.
+\end_layout
+
+\begin_layout Standard
+version 2: EU only quits if payoff lower than in the absence of any mechanism:
+ justification: 1) EU has shown to 
+\end_layout
+
+\begin_layout Standard
+version 3: cost of quitting for EU that increases in the number of other
+ participants 0 if only itself participates and 
+\begin_inset Formula $extraCostOfQuittingEU$
+\end_inset
+
+ if all others participate.
+\end_layout
+
+\end_body
+\end_document

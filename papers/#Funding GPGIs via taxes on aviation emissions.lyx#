@@ -4970,7 +4970,9 @@ The carbon tax of 1% of ticket prices thus averts
 \begin_inset Formula $3\cdot\$36\cdot859\cdot10^{6}\cdot1\%\cdot\epsilon_{D}$
 \end_inset
 
- of net climate damages.
+ of net climate damages due to aviation emissions.
+ However, there is a rebound effect due to induced decrease in the price
+ of oil, which according to  .
  Since the 
 \begin_inset CommandInset href
 LatexCommand href
@@ -5075,11 +5077,8 @@ We neglect here the possibility that the tax on emissions will lead airlines
 \end_layout
 
 \begin_layout Standard
-By multiplying by the oil change ratio, we obtain the savings for oil consumers
- that this causes through the reduction in the price of oil.
- To obtain the losses for crude oil producers, we have to multiply by the
- ratio of aggregate net oil imports over aggregate oil consumption, giving
- us:
+By multiplying by the oil change ratio, we obtain the losses for crude oil
+ producers that this causes through the reduction in the price of oil.
 \end_layout
 
 \begin_layout Standard
@@ -5087,23 +5086,7 @@ By multiplying by the oil change ratio, we obtain the savings for oil consumers
 \end_inset
 
 
-\begin_inset Formula $=\frac{aggregate\,net\,oil\,imports}{aggregate\,oil\,consumption}\cdot oil\,change\,ratio\cdot proportion\,of\,cost\,due\,to\,fuel\cdot\epsilon_{D}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-From 
-\begin_inset CommandInset href
-LatexCommand href
-name "Enerdata"
-target "https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html"
-
-\end_inset
-
- we obtain 
-\begin_inset Formula $\frac{aggregate\,net\,oil\,imports}{aggregate\,oil\,consumption}=0.479$
+\begin_inset Formula $=oil\,change\,ratio\cdot proportion\,of\,cost\,due\,to\,fuel\cdot\epsilon_{D}$
 \end_inset
 
 
