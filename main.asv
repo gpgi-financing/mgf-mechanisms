@@ -2,15 +2,15 @@ clear all
 clear
 
 %0)  %  initialactionprofile=[1 1 1 1 1 1 1 1 1 1 1 1];
-%initialactionprofile=[0 1 1 0 0 0 0 0 0 0 0 0];
-initialactionprofile=[1 1 1 1 1 1 1 1 1 1 1 1];
+initialactionprofile=[0 1 1 0 0 0 0 0 0 0 0 0];
+%initialactionprofile=[1 1 1 1 1 1 1 1 1 1 1 1];
 
 %1) Parameters used in the computation of the payoffs
 
 %1.1) parameters that are guessed (not directly derived from data)
 crossRegionalSubstitution=1/2; %Since only regional elasticcity estimates seem to be available, we need to take into account that a reduction in travel in on of our players can lead to som increas
 ProportionOfInformationalRentsCDM=0.5;
-AggregateMitigationBenefitsPerDollarOfCostCDM=2.7772;
+AggregateMitigationBenefitsPerDollarOfCostCDM=2.7815;
 % OilRentRedistributionCDM=0.5;
 ProportionOfRentsCEPI=0;
 AggregateBenefitsCEPI=1.5;
@@ -31,11 +31,11 @@ C=dwlFactor*transpose([0.75 1 0.75 0.75 1 1 0.75 0.75 0.75 1 1 0.75]);
 oil_change_ratio=1.5;
 rebound_effect=0.26;
 reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions=0.6*(1-crossRegionalSubstitution)*0.235*1.5; %-0.6 regional elasticity: https://www.iata.org/whatwedo/documents/economics/air_travel_demand.pdf, 1.5 is the oil change ratio from carbonomics
-AggregateMitigationBenefitsDueToKerosineConsumptionDecrease=0.74*3*0.6*(1-crossRegionalSubstitution)*36*859/(855*1000);  %a factor of 0.74, given that 26% of rebound effect according to Stoft(2008), http://stoft.zfacts.com/wp-content/uploads/2008-11_Stoft_Carbonomics.pdf, page 92, a factor of 3=(2+4)/2, since aviation's radiative forcing is 2-4 time that of its CO2 content contribution, according to IPCC: https://en.wikipedia.org/wiki/Environmental_impact_of_aviation#Total_climate_effects. Dividing by 1.2, since taxing aviation and shipping fuel is more focused on oil and gas than CDM (which also substitutes away from coal by supporting renewables).
-AggregateMitigationBenefitsPerDollarOfCostLELS=1.0802*AggregateMitigationBenefitsPerDollarOfCostCDM; %factor of 1.5 since LELS more efficient
-OilRentRedistributionLELS=0.7*AggregateMitigationBenefitsPerDollarOfCostLELS*(oil_change_ratio*0.235)/(36*859/(855*1000)); % 
-OilRentRedistributionCDM=0.2*AggregateMitigationBenefitsPerDollarOfCostCDM*(oil_change_ratio*0.235)/(36*859/(855*1000));
-OilRentRedistributionITER=0.1*AggregateMitigationBenefitsPerDollarOfCostITER*(oil_change_ratio*0.235)/(36*859/(855*1000)); %This is because the reduction in oil demand will occur later in the future.
+AggregateMitigationBenefitsDueToKerosineConsumptionDecrease=(1-rebound_effect/3)*3*0.6*(1-crossRegionalSubstitution)*36*859/(855*1000);  %a factor of 0.74, given that 26% of rebound effect according to Stoft(2008), http://stoft.zfacts.com/wp-content/uploads/2008-11_Stoft_Carbonomics.pdf, page 92, a factor of 3=(2+4)/2, since aviation's radiative forcing is 2-4 time that of its CO2 content contribution, according to IPCC: https://en.wikipedia.org/wiki/Environmental_impact_of_aviation#Total_climate_effects. Dividing by 1.2, since taxing aviation and shipping fuel is more focused on oil and gas than CDM (which also substitutes away from coal by supporting renewables).
+AggregateMitigationBenefitsPerDollarOfCostLELS=1.0785*AggregateMitigationBenefitsPerDollarOfCostCDM; %factor of 1.5 since LELS more efficient
+OilRentRedistributionLELS=0.4*AggregateMitigationBenefitsPerDollarOfCostLELS*(oil_change_ratio*0.235)/((1-rebound_effect)*36*859/(855*1000)); % 
+OilRentRedistributionCDM=0.1*AggregateMitigationBenefitsPerDollarOfCostCDM*(oil_change_ratio*0.235)/((1-rebound_effect)*36*859/(855*1000));
+OilRentRedistributionITER=0.05*AggregateMitigationBenefitsPerDollarOfCostITER*(oil_change_ratio*0.235)/((1-rebound_effect)*36*859/(855*1000)); %This is because the reduction in oil demand will occur later in the future.
 %The 12 players are the following:
 %Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, other high income countries, Russia, US, other non-OECD Asia
 % The following is the matrix of passenger kilometer flows between these 12 players:
@@ -76,8 +76,8 @@ A=ImpactsOfCDMandCEPIandGFATMandFCPFandITERandLELS(ProportionOfInformationalRent
 
 
 comparison
-save v11MGFwithPMFs.mat
-load('v11MGFwithPMFs.mat')
+save v14MGFwithPMFs.mat
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -89,7 +89,7 @@ title('MGF with PMFs')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11MGFwithPMFs.fig')
+savefig('v14MGFwithPMFs.fig')
 
 
 JOriginal=J;
@@ -97,8 +97,8 @@ J=0;
 POriginal=P;
 P=3;
 comparison
-save v11SimpleMGF.mat
-load('v11SimpleMGF.mat')
+save v14SimpleMGF.mat
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -110,7 +110,7 @@ title('Simple MGF')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11SimpleMGF.fig')
+savefig('v14SimpleMGF.fig')
 
 
 AOriginal=A;
@@ -118,8 +118,8 @@ AA=[0.00001+(A(1,:)+A(4,:))/2;(A(1,:)+A(4,:))/2];
 A=AA;
 initialactionprofile=-initialactionprofile;
 comparison
-save v11CORSIAPlus.mat
-load('v11CORSIAPlus.mat')
+save v14CORSIAPlus.mat
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -131,12 +131,12 @@ title('CORSIA+')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11CORSIAPlus.fig')
+savefig('v14CORSIAPlus.fig')
 
 
 clear all
 clear
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsCORSIAPlus=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -144,12 +144,12 @@ plot(x,maximalAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('maximal aggregate money raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsSimpleMGF=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregateMoneyGivenToGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsMGFwithPMFs=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -161,9 +161,9 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11maximalAggregateMoneyGivenToGPGIs.fig')
+savefig('v14maximalAggregateMoneyGivenToGPGIs.fig')
 
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsCORSIAPlus=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -171,12 +171,12 @@ plot(x,averageAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('expected aggregate payoffs')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsSimpleMGF=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregatePayoffsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsMGFwithPMFs=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -188,10 +188,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11averageAggregatePayoffs.fig')
+savefig('v14averageAggregatePayoffs.fig')
 
 
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsCORSIAPlus=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -199,12 +199,12 @@ plot(x,maximalAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('maximal aggregate payoffs')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsSimpleMGF=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregatePayoffsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsMGFwithPMFs=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -216,10 +216,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11maximalAggregatePayoffs.fig')
+savefig('v14maximalAggregatePayoffs.fig')
 
 
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsCORSIAPlus=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -227,12 +227,12 @@ plot(x,averageAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('expected aggregate money raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsSimpleMGF=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregateMoneyGivenToGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsMGFwithPMFs=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -244,10 +244,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11averageAggregateMoneyGivenToGPGIs.fig')
+savefig('v14averageAggregateMoneyGivenToGPGIs.fig')
 
 clear all
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsCORSIAPlus=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
@@ -255,12 +255,12 @@ plot(x,proportionOfMoneyForGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('proportion of money collected that is raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsSimpleMGF=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
 plot(x,proportionOfMoneyForGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsMGFwithPMFs=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
@@ -273,12 +273,12 @@ for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
 axis([0 1 0 1])
-savefig('v11proportionOfMoneyForGPGIs.fig')
+savefig('v14proportionOfMoneyForGPGIs.fig')
 
 
 
 clear all
-load('v11CORSIAPlus.mat')
+load('v14CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationCORSIAPlus=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
@@ -286,12 +286,12 @@ plot(x,ProbabilityOfFullParticipationCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('probability of reaching full participation')
 hold on
-load('v11SimpleMGF.mat')
+load('v14SimpleMGF.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationSimpleMGF=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
 plot(x,ProbabilityOfFullParticipationSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v14MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationMGFwithPMFs=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
@@ -304,7 +304,7 @@ for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
 axis([0 1 0 1])
-savefig('v11ProbabilityOfFullParticipation.fig')
+savefig('v14ProbabilityOfFullParticipation.fig')
 
 
 
@@ -320,8 +320,8 @@ J=JOriginal;
 P=POriginal;
 A=AOriginal(1:5,:);
 comparison
-save v11MGFwithPMFswithoutCPRF.mat
-load('v11MGFwithPMFswithoutCPRF.mat')
+save v14MGFwithPMFswithoutCPRF.mat
+load('v14MGFwithPMFswithoutCPRF.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -333,8 +333,8 @@ title('MGF with PMFs without the Carbon Pricing Reward Fund')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11MGFwithPMFswithoutCPRF.fig')
-savefig('v11MGFwithPMFswithoutCPRF.fig')
+savefig('v14MGFwithPMFswithoutCPRF.fig')
+savefig('v14MGFwithPMFswithoutCPRF.fig')
 
 %Now we compute the results for the MGF mechanism with PMFs with the full
 %list of GPGIs and with the initial set of participants including Africa,
