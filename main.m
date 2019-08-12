@@ -76,8 +76,8 @@ A=ImpactsOfCDMandCEPIandGFATMandFCPFandITERandLELS(ProportionOfInformationalRent
 
 
 comparison
-save v11MGFwithPMFs.mat
-load('v11MGFwithPMFs.mat')
+save v13MGFwithPMFs.mat
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -89,7 +89,7 @@ title('MGF with PMFs')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11MGFwithPMFs.fig')
+savefig('v13MGFwithPMFs.fig')
 
 
 JOriginal=J;
@@ -97,8 +97,8 @@ J=0;
 POriginal=P;
 P=3;
 comparison
-save v11SimpleMGF.mat
-load('v11SimpleMGF.mat')
+save v13SimpleMGF.mat
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -110,7 +110,7 @@ title('Simple MGF')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11SimpleMGF.fig')
+savefig('v13SimpleMGF.fig')
 
 
 AOriginal=A;
@@ -118,8 +118,8 @@ AA=[0.00001+(A(1,:)+A(4,:))/2;(A(1,:)+A(4,:))/2];
 A=AA;
 initialactionprofile=-initialactionprofile;
 comparison
-save v11CORSIAPlus.mat
-load('v11CORSIAPlus.mat')
+save v13CORSIAPlus.mat
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -131,12 +131,12 @@ title('CORSIA+')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11CORSIAPlus.fig')
+savefig('v13CORSIAPlus.fig')
 
 
 clear all
 clear
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsCORSIAPlus=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -144,12 +144,12 @@ plot(x,maximalAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('maximal aggregate money raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsSimpleMGF=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregateMoneyGivenToGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 maximalAggregateMoneyGivenToGPGIsMGFwithPMFs=maximalAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -161,9 +161,9 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11maximalAggregateMoneyGivenToGPGIs.fig')
+savefig('v13maximalAggregateMoneyGivenToGPGIs.fig')
 
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsCORSIAPlus=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -171,12 +171,12 @@ plot(x,averageAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('expected aggregate payoffs')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsSimpleMGF=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregatePayoffsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 averageAggregatePayoffsMGFwithPMFs=averageAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -188,10 +188,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11averageAggregatePayoffs.fig')
+savefig('v13averageAggregatePayoffs.fig')
 
 
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsCORSIAPlus=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -199,12 +199,12 @@ plot(x,maximalAggregatePayoffsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('maximal aggregate payoffs')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsSimpleMGF=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
 plot(x,maximalAggregatePayoffsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 maximalAggregatePayoffsMGFwithPMFs=maximalAggregatePayoffs;
 x=0:1/((K-1)):1;
@@ -216,10 +216,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11maximalAggregatePayoffs.fig')
+savefig('v13maximalAggregatePayoffs.fig')
 
 
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsCORSIAPlus=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -227,12 +227,12 @@ plot(x,averageAggregateMoneyGivenToGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('expected aggregate money raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsSimpleMGF=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
 plot(x,averageAggregateMoneyGivenToGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 averageAggregateMoneyGivenToGPGIsMGFwithPMFs=averageAggregateMoneyGivenToGPGIs;
 x=0:1/((K-1)):1;
@@ -244,10 +244,10 @@ xlabel('retention rate parameter', 'FontSize',28)
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11averageAggregateMoneyGivenToGPGIs.fig')
+savefig('v13averageAggregateMoneyGivenToGPGIs.fig')
 
 clear all
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsCORSIAPlus=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
@@ -255,12 +255,12 @@ plot(x,proportionOfMoneyForGPGIsCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('proportion of money collected that is raised for GPGIs')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsSimpleMGF=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
 plot(x,proportionOfMoneyForGPGIsSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 proportionOfMoneyForGPGIsMGFwithPMFs=averageMoneyRaisedForGPGIsOverAverageMoneyCollected;
 x=0:1/((K-1)):1;
@@ -273,12 +273,12 @@ for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
 axis([0 1 0 1])
-savefig('v11proportionOfMoneyForGPGIs.fig')
+savefig('v13proportionOfMoneyForGPGIs.fig')
 
 
 
 clear all
-load('v11CORSIAPlus.mat')
+load('v13CORSIAPlus.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationCORSIAPlus=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
@@ -286,12 +286,12 @@ plot(x,ProbabilityOfFullParticipationCORSIAPlus,'LineWidth',14)
 set(gca,'FontSize',20)
 title('probability of reaching full participation')
 hold on
-load('v11SimpleMGF.mat')
+load('v13SimpleMGF.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationSimpleMGF=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
 plot(x,ProbabilityOfFullParticipationSimpleMGF,'LineWidth',14)
-load('v11MGFwithPMFs.mat')
+load('v13MGFwithPMFs.mat')
 outcomesFromProfilesPMFs
 ProbabilityOfFullParticipationMGFwithPMFs=ProbabilityOfReachingNEWithFullParticipation;
 x=0:1/((K-1)):1;
@@ -304,7 +304,7 @@ for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
 axis([0 1 0 1])
-savefig('v11ProbabilityOfFullParticipation.fig')
+savefig('v13ProbabilityOfFullParticipation.fig')
 
 
 
@@ -320,8 +320,8 @@ J=JOriginal;
 P=POriginal;
 A=AOriginal(1:5,:);
 comparison
-save v11MGFwithPMFswithoutCPRF.mat
-load('v11MGFwithPMFswithoutCPRF.mat')
+save v13MGFwithPMFswithoutCPRF.mat
+load('v13MGFwithPMFswithoutCPRF.mat')
 outcomesFromProfilesPMFs
 x=0:1/((K-1)):1;
 plotSeparate=plot(x,maximalAggregatePayoffs,x,averageAggregatePayoffs,x,maximalAggregateMoneyGivenToGPGIs,x,averageAggregateMoneyGivenToGPGIs,x,averageMoneyRaisedForGPGIsOverAverageMoneyCollected,x,ProbabilityOfReachingNEWithFullParticipation,'LineWidth',14)
@@ -333,8 +333,8 @@ title('MGF with PMFs without the Carbon Pricing Reward Fund')
 for idx = 1:length(h.String)
   h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
 end
-savefig('v11MGFwithPMFswithoutCPRF.fig')
-savefig('v11MGFwithPMFswithoutCPRF.fig')
+savefig('v13MGFwithPMFswithoutCPRF.fig')
+savefig('v13MGFwithPMFswithoutCPRF.fig')
 
 %Now we compute the results for the MGF mechanism with PMFs with the full
 %list of GPGIs and with the initial set of participants including Africa,
