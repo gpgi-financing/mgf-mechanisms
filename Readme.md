@@ -72,3 +72,21 @@ maximal_number_of_rounds_without_any_player_joining = 24;
 git clone https://github.com/gpgi-financing/mgf-mechanisms.git
 
 
+## Tips: create a new branch
+
+git checkout -b "name-of-the-branch"
+
+move back to master
+
+git checkout master
+
+move back to my bréanch
+
+git checkout "name-of-the-branch"
+
+to list all the branch:
+
+git branch
+the start * mean the current branch you are in
+
+git push origin "name-of_my-branch"
