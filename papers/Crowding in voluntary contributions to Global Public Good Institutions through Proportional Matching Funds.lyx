@@ -1,0 +1,2813 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Crowding in voluntary contributions to Global Public Good Institutions through
+ Proportional Matching Funds
+\end_layout
+
+\begin_layout Standard
+Abstract:
+\end_layout
+
+\begin_layout Standard
+We 
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+title version 2: a theory of voluntary contributions to global public good
+ institutions
+\end_layout
+
+\begin_layout Standard
+title version 3: Proportional Matching Funds for voluntary contributions
+ to Global Public Good Institutions- more positive than 
+\begin_inset Quotes eld
+\end_inset
+
+revisiting neutrality
+\begin_inset Quotes erd
+\end_inset
+
+ (possible to explain when referencing: voluntary contributions not included
+ in aepmfs, but
+\end_layout
+
+\begin_layout Standard
+What would be the overall impact of instituting mechanisms
+\end_layout
+
+\begin_layout Standard
+If one were to believe the neutrality theorems...
+\end_layout
+
+\begin_layout Standard
+Our first result is that we can empirically reject the theory under which
+ ...
+\end_layout
+
+\begin_layout Standard
+Thus we have reasons to be more optimistic about the potential for new mechanism
+s to actually increase global welfare
+\end_layout
+
+\begin_layout Standard
+We then define a proportional matching fund mechanism...
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "2 GPGIs"
+
+\end_inset
+
+Global Public Good Institutions (GPGIs): 4 examples
+\end_layout
+
+\begin_layout Definition
+(vague) We shall mean by a 'Global Public Good Institution' (GPGI) any instituti
+on that uses money to cause increases in the provision of a particular global
+ public good that it is dedicated to.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+A donor-independent GPGI is a GPGI whose actions only depend on its aggregate
+ budget but not on the vector of donor contributions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+CEPI (The Coalition for Epidemic Preparedness Innovation) (existing since
+ 2017)
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset href
+LatexCommand href
+name "CEPI"
+target "http://www.cepi.org/"
+
+\end_inset
+
+ has so far mostly been focussing on advancing vaccines against known threats.
+ Recently, it has started to also fund new platform technologies with the
+ potential to accelerate the development and manufacture of vaccines against
+ previously unknown pathogens.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The Global Fund to Fight AIDS, TB and Malaria (existing since 2002)
+\end_layout
+
+\begin_layout Example
+This GPGI allocates funding for programs against AIDS, TB and Malaria.
+ Allocations made to countries are 
+\begin_inset CommandInset href
+LatexCommand href
+name "proportional"
+target "https://www.theglobalfund.org/media/5642/fundingmodel_allocations2017-2019detailedexplanation_report_en.pdf?u=636898879780000000"
+
+\end_inset
+
+ to the disease burden for each of the three diseases and to an index of
+ economic capacity calculated based on per capita GDP.
+ The Global Fund works closely together with another GPGI, called UNITAID,
+ which has been financed through 
+\begin_inset CommandInset href
+LatexCommand href
+name "ticket taxes"
+target "http://www.leadinggroup.org/rubrique177.html"
+
+\end_inset
+
+ on international flights since 2006.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The Forest Carbon Partnership's Carbon Fund 
+\begin_inset CommandInset label
+LatexCommand label
+name "FCCP: The-Forest-Carbon"
+
+\end_inset
+
+ (existing since 2011)
+\end_layout
+
+\begin_layout Example
+This 
+\begin_inset CommandInset href
+LatexCommand href
+name "Fund"
+target "https://www.forestcarbonpartnership.org/carbon-fund-0"
+
+\end_inset
+
+ rewards countries with tropical forest as a function of the policies they
+ pursue to conserve their tropical forests.
+ In the future this institution will also condition its payments on results
+ (amount of tropical forests conserved), as Norway already does in bilateral
+ contracts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+ITER (The International Thermonuclear Reactor) (existing since 2007)
+\end_layout
+
+\begin_layout Example
+\begin_inset CommandInset href
+LatexCommand href
+name "ITER"
+target "https://www.iter.org/"
+
+\end_inset
+
+is an international nuclear fusion research and engineering megaproject.
+ Its stated goal is to 
+\begin_inset Quotes eld
+\end_inset
+
+demonstrate the scientific and technological feasibility of fusion energy
+ for peaceful use
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Global Public Good Institutions 
+\begin_inset CommandInset label
+LatexCommand label
+name "4 sec:Global-Public-Good"
+
+\end_inset
+
+financed via voluntary contributions
+\end_layout
+
+\begin_layout Standard
+So far we have been implicitly assuming that the voluntary contributions
+ that countries make to the GPGIs are unaffected by the contributions made
+ via the MCT mechanism.
+ We will later try to better understand how these voluntary contributions
+ might change endogenously in response to changes in financing from other
+ sources such as the MCT mechanism.
+ In preparation for that task we will study the question of how voluntary
+ contributions to a given GPGI will endogenously change in response to a
+ change in an exogenous additional funding for that GPGI.
+ This question is also relevant in its own right, for example for assessing
+ existing proposals to use global resources to finance particular GPGIs,
+ as we will discuss later 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Examples-of-proposals for capturing global resources"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+voluntary contributions to Donor Independent GPGIs
+\end_layout
+
+\begin_layout Standard
+A consequentialist model
+\end_layout
+
+\begin_layout Standard
+The set of all countries is denoted by 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ There is a private good and a set 
+\begin_inset Formula $K$
+\end_inset
+
+ of donor independent GPGIs.
+ Each country 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ chooses its consumption 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ of the private good and its vector 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ of voluntary (monetary) contributions to the GPGIs (where 
+\begin_inset Formula $q_{ik}\geq0$
+\end_inset
+
+ denotes country 
+\begin_inset Formula $i$
+\end_inset
+
+'s contribution to GPGI 
+\begin_inset Formula $k$
+\end_inset
+
+).
+ Country 
+\begin_inset Formula $i$
+\end_inset
+
+'s utility is given by: 
+\begin_inset Formula $u_{i}(c_{i},Q)$
+\end_inset
+
+, where 
+\begin_inset Formula $Q$
+\end_inset
+
+ denotes the vector of aggregate (monetary) contributions.
+ Here the aggregate contribution to the GPGI 
+\begin_inset Formula $k\in K$
+\end_inset
+
+ is given by 
+\begin_inset Formula $Q_{k}=\sum_{i\in I}q_{ik}$
+\end_inset
+
+.
+ Country 
+\begin_inset Formula $i$
+\end_inset
+
+'s budget constraint is that 
+\begin_inset Formula $c_{i}+\sum_{k\in K}q_{ik}\leq y_{i}$
+\end_inset
+
+, where 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ is exogenous.
+ Each country takes the other countries' choices as given and chooses 
+\begin_inset Formula $(c_{i},\{q_{ik},k\in K\})$
+\end_inset
+
+ so as to maximise 
+\begin_inset Formula $u_{i}(c_{i},Q)$
+\end_inset
+
+ under the budget constraint 
+\begin_inset Formula $c_{i}+\sum_{k\in K}q_{ik}\leq y_{i}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "prop:(restatement-of-the"
+
+\end_inset
+
+(restatement of the neutrality theorem from Sandler and Posnett (1991) 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://journals.sagepub.com/doi/pdf/10.1177/109114219101900102"
+
+\end_inset
+
+ in our terminology) Suppose that at the status quo the GPGIs are entirely
+ financed through voluntary contributions.
+ Suppose that each country's payoff from a GPGI is a concave function of
+ the money available for that GPGI.
+ Consider a reform consisting of imposing lump sum taxes on a set of countries
+ each of which voluntarily contributes some money to some GPGI, such that
+ no country is taxed more than its status quo aggregate contribution to
+ GPGIs.
+ Suppose all the money raised through these lump sum taxes is allocated
+ to the GPGIs, with none of the transfers exceeding the total funding at
+ the status quo for any GPGI.
+ Then the reform has no effect.
+\end_layout
+
+\begin_layout Standard
+proof:
+\end_layout
+
+\begin_layout Standard
+Country 
+\begin_inset Formula $i$
+\end_inset
+
+ faces the problem to maximise 
+\begin_inset Formula $u_{i}(c_{i},Q)$
+\end_inset
+
+ subject to the constraint that 
+\begin_inset Formula $c_{i}+\sum_{k\in K}(Q_{k}-(\sum_{j\neq i}q_{jk}+G_{k}))\leq y_{i}-L_{i}$
+\end_inset
+
+with the further constraint that 
+\begin_inset Formula $Q_{k}\geq G_{k}+\sum_{j\neq i}q_{jk}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We can rewrite this problem by eliminating 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+maximise 
+\begin_inset Formula $u_{i}(y_{i}-L_{i}-\sum_{k\in K}(Q_{k}-(\sum_{j\neq i}q_{jk}+G_{k})),Q)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+s.t.
+ 
+\begin_inset Formula $Q_{k}\geq G_{k}+\sum_{j\neq i}q_{jk}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Consider the situation without the transfers, i.e.
+ with 
+\begin_inset Formula $L_{i}=0\forall i$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $(\tilde{q_{ik}})_{i\in I,k\in K}$
+\end_inset
+
+ is a Nash equilibrium.
+ Now consider a global mechanism that consists of contributing 
+\begin_inset Formula $G_{k}$
+\end_inset
+
+ to the GPGI 
+\begin_inset Formula $k$
+\end_inset
+
+, financed by the lump sum taxes 
+\begin_inset Formula $L_{i}\leq y_{i}-\tilde{c_{i}}$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $G_{k}\leq\sum_{i}\tilde{q_{ik}}$
+\end_inset
+
+.
+ Now consider any 
+\begin_inset Formula $(\hat{q_{ik}})_{i\in I,k\in K}$
+\end_inset
+
+ with 
+\begin_inset Formula $\hat{q_{ik}}\geq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{q_{ik}}>0\,iff\,\tilde{q_{ik}}>0$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sum_{i}\hat{q_{ik}}+G_{k}=\sum_{i}\tilde{q_{ik}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{k}\hat{q_{ik}}+L_{i}=\sum_{k}\tilde{q_{ik}}\forall k\in K$
+\end_inset
+
+.
+ Suppose there is a profitable deviation for player 
+\begin_inset Formula $i$
+\end_inset
+
+ from 
+\begin_inset Formula $\hat{q_{ik}}$
+\end_inset
+
+ to 
+\begin_inset Formula $q_{ik}^{*}$
+\end_inset
+
+ .
+ Then by the asssumed convexity of the payoff from 
+\begin_inset Formula $k$
+\end_inset
+
+ for country 
+\begin_inset Formula $i$
+\end_inset
+
+, there would also be a profitable deviation for player 
+\begin_inset Formula $i$
+\end_inset
+
+ from 
+\begin_inset Formula $\tilde{q_{ik}}$
+\end_inset
+
+ consisting of decreasing it marginally.
+\end_layout
+
+\begin_layout Proposition
+(Almost a neutrality theorem)
+\begin_inset CommandInset label
+LatexCommand label
+name "(Almost-a-neutrality"
+
+\end_inset
+
+ Suppose that at the status quo the GPGIs are entirely financed through
+ voluntary contributions.
+ Consider a reform that raises an amount 
+\begin_inset Formula $\text{\ensuremath{F\leq\sum_{i\in I,k\in K}\tilde{q_{ik}}}}$
+\end_inset
+
+ of money from non-contributors (i.e.
+ from countrie that do not contribute to any of the GPGIs) and and allocates
+ this money to the GPGIs in such a way that for each of the GPGI the transfer
+ does not exceed the funding available at the status quo.
+ Let 
+\begin_inset Formula $x$
+\end_inset
+
+ denote the resulting allocation and 
+\begin_inset Formula $J$
+\end_inset
+
+ denote the set of contributors to global public goods at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Then there exists a set of lump sum transfers 
+\begin_inset Formula $\{t_{j}\geq0,j\in J\}$
+\end_inset
+
+ distributing the money 
+\begin_inset Formula $F$
+\end_inset
+
+ to the contributors, i.e.
+ with 
+\begin_inset Formula $\sum_{j\in J}t_{j}=F$
+\end_inset
+
+ such that the resulting allocation is 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+proof
+\begin_inset Newline newline
+\end_inset
+
+The intervention 'raising money for the GPGIs from non-contributors in a
+ lump sum way' can be written as a sum of 'raising money for the GPGIs from
+ contributors in a lump sum way' + 'redistributing money from the non-contributo
+rs to the contributors'.
+ By proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prop:(restatement-of-the"
+
+\end_inset
+
+ the first of these interventions satisfies neutrality.
+\end_layout
+
+\begin_layout Standard
+Let us analyse the MCT mechanism at taxation rate 
+\begin_inset Formula $\text{\ensuremath{x^{\#}}}$
+\end_inset
+
+.
+ To do that, consider starting at 
+\begin_inset Formula $x=0$
+\end_inset
+
+ and increasing the rate to 
+\begin_inset Formula $dx>0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $p$
+\end_inset
+
+ be the proportion of money raised from countries that do not contribute
+ to any GPGIs.
+ Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(Almost-a-neutrality"
+
+\end_inset
+
+ predicts that this is equivalent to some lump sum transfer from the countries
+ that at the status quo do not make any voluntary contributions to GPGIs
+ to countries that at the status quo do make voluntary contributions to
+ some GPGIs.
+ Also, it predicts that it does not matter to which contributor the money
+ is given.
+ Supposing that this transfer does not change the proportion 
+\begin_inset Formula $z$
+\end_inset
+
+ of money that the contributors give to GPGIs, this would mean a dollar
+ raised via the MCT for GPGIs would only result in 
+\begin_inset Formula $pz$
+\end_inset
+
+ dollars of actual increase in funding for GPGIs.
+ Since 
+\begin_inset Formula $z$
+\end_inset
+
+ is smaller than 1% for all countries, this shows that the conclusion is
+ almost as pessimistic as in a situation in which the neutrality theorem
+ applies.
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:A-model-for voluntary"
+
+\end_inset
+
+A model for the game of voluntary contributions to a Global Public Good
+ Institution (GPGI)
+\end_layout
+
+\begin_layout Subsubsection
+A model for the case of Direct Procurement GPGIs
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $I$
+\end_inset
+
+ denotes the set of all countries.
+ Each country 
+\begin_inset Formula $i\in I$
+\end_inset
+
+ chooses the voluntary contribution 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ to the GPGI in question.
+ The GPGI then takes an action 
+\begin_inset Formula $z(Q)$
+\end_inset
+
+.
+ Here we are using that by the definition of Direct Procurement GPGIs, the
+ action 
+\begin_inset Formula $z$
+\end_inset
+
+ of the GPGI depends only on the total money 
+\begin_inset Formula $Q$
+\end_inset
+
+ at its disposal.
+ Country 
+\begin_inset Formula $i$
+\end_inset
+
+'s payoff is: 
+\begin_inset Formula $U_{i}=u_{i}(z(Q))-h_{i}(q_{i})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Microfoundations for the payoff function 
+\begin_inset Formula $U_{i}=u_{i}(x_{i}(Q),x_{-i}(Q))-h_{i}(q_{i})+g_{i}(R_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The benefit 
+\begin_inset Formula $u_{i}(x_{i},x_{-i})$
+\end_inset
+
+ that the player 
+\begin_inset Formula $i$
+\end_inset
+
+ internalises can incorporate pure altruism.
+ In fact, this seems necessary to explain Norway's and Sweden's high contributio
+ns to global public goods.
+ Given that these countries only have populations of 5 million and 10 million,
+ respectively, the partial internalisation of the benefits of global public
+ goods can hardly account for these countries' contributions.
+\end_layout
+
+\begin_layout Standard
+The function 
+\begin_inset Formula $h_{i}(q_{i})$
+\end_inset
+
+ might write as: 
+\begin_inset Formula $h_{i}(q_{i})=c_{i}(q_{i})-s_{i}(q_{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $c_{i}(q_{i})$
+\end_inset
+
+ could represent the net expected political cost.
+ This could on the one hand include both the opportunity cost of public
+ funds and the risk that domestic political forces will discredit the government
+ for some constituencies that would accuse it to not act in the national
+ interest.
+ 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ could include the benefit of earning the support of citizens in favor of
+ altruistic action as well as the diplomatic recognition and reputation
+ internationally.
+ It is then plausible that we have 
+\begin_inset Formula $c_{i}'>0,c_{i}''>0,s_{i}'>0,s_{i}''<0$
+\end_inset
+
+, which would imply that 
+\begin_inset Formula $h_{i}''(q_{i})>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In the litterature modelling the voluntary contributions of states (ref)
+ it is assumed that in their decision how much to voluntarily contribute
+ to GPGIs countries only consider the benefit of marginal funding to the
+ GPGI and the opportunity costs of funds.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Implications-for-the opportunity costs"
+
+\end_inset
+
+ we will see that this would imply that the 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+ is almost perfectly flat on the relevant range.
+ This is why the following proposition will be of interest:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "flat costs"
+
+\end_inset
+
+Suppose that 
+\begin_inset Formula $h_{i}(q_{i})=q_{i}\forall i$
+\end_inset
+
+.
+ Then almost surely only one player contributes money to the GPGI in the
+ first stage of the game.
+\end_layout
+
+\begin_layout Proposition
+proof:
+\end_layout
+
+\begin_layout Proposition
+Consider the marginal benefits 
+\begin_inset Formula $\frac{\partial u_{i}}{\partial Q}$
+\end_inset
+
+ of additional money provided the GPGI in question.
+ Let 
+\begin_inset Formula $S^{*}(i)$
+\end_inset
+
+ be the set of funding levels at which country 
+\begin_inset Formula $i$
+\end_inset
+
+ is indifferent between contributing a bit more or a bit less.
+ Almost surely, each of the 
+\begin_inset Formula $S^{*}(i)$
+\end_inset
+
+ is finite.
+ Hence for any 
+\begin_inset Formula $i,j\in I$
+\end_inset
+
+ almost surely 
+\begin_inset Formula $S^{*}(i)\cap S^{*}(j)=\emptyset$
+\end_inset
+
+.
+ But if 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ are to both contribute at the Nash equilibrium, this can only happen at
+ a 
+\begin_inset Formula $Q\in S^{*}(i)\cap S^{*}(j)$
+\end_inset
+
+, a set that is empty with probability 1.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will in the next subsection see examples of GPGIs for which several countries
+ make voluntary contributions.
+ Proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "flat costs"
+
+\end_inset
+
+ suggests that 
+\begin_inset Formula $h_{i}(q_{i})$
+\end_inset
+
+ must have significant convexity in order for the model to be able to reproduce
+ the observed pattern of voluntary contributions, in which for each GPGI
+ typically a substantial number of countries contributes.
+\end_layout
+
+\begin_layout Subsubsection
+Some Data on financing for global institutions
+\end_layout
+
+\begin_layout Standard
+Here is data for the Coalition for Epidemic Preparedness Innovation 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://documents.worldbank.org/curated/en/311611506132045673/pdf/Coalition-for-Epidemic-preparedness-document-09112017.pdf"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Pictures/cepi pledges.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By adding up all the pledges for each donor, we obtain the following:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Pictures/CEPI donors.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+http://www.globalfundadvocatesnetwork.org/wp-content/uploads/2017/04/PIIS014067361
+6324023.pdf
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Pictures/gavi donors 2000-13.jpg
+	lyxscale 30
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/OneDrive/global fund donors 200-13.jpg
+	lyxscale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+data: https://www.theglobalfund.org/en/government/
+\end_layout
+
+\begin_layout Standard
+Forest Carbon Partnership:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Pictures/Forest Carbon Partnership.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Implications for the countries' opportunity costs of contributing
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Implications-for-the opportunity costs"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We now give an illustrative computation that makes the following basic point:
+ Each government's contribution to each GPGI is a very small fraction of
+ its GPD.
+ Therefore, the marginal opportunity costs of each government's contributions
+ are almost perfectly constant in the relevant range.
+\end_layout
+
+\begin_layout Standard
+Let us denote by 
+\begin_inset Formula $V_{i}(y)$
+\end_inset
+
+ the utility that government 
+\begin_inset Formula $i$
+\end_inset
+
+ gets, given that its GDP is 
+\begin_inset Formula $y$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $h_{i}(q_{i})$
+\end_inset
+
+ consists only of the opportunity cost of the money 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ contributed (as is the case in the models in which the Neutrality Theorem
+ holds (see Sandler (ref)).
+ Then we must have 
+\begin_inset Formula $h_{i}(q_{i})=V_{i}(GDP_{i}-q_{i})$
+\end_inset
+
+, since giving away the amount 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is by equivalent to reducing the GDP by 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ if we assume that the government can levy lump sum taxes.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{h_{i}'(q_{i})-h_{i}'(0)}{h_{i}'(0)}=\frac{V_{i}'(GDP_{i}-q_{i})-V_{i}'(GDP_{i})}{V_{i}'(GDP_{i})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For an illustrative computation, consider the case of the isoealestic utility
+ function for 
+\begin_inset Formula $V_{i}$
+\end_inset
+
+ with elasiticity 1, i.e.
+ consider the case where 
+\begin_inset Formula $V_{i}(GPD_{i})=log(GDP_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{h_{i}'(q_{i})-h_{i}'(0)}{h_{i}'(0)}=\frac{\frac{1}{GDP_{i}-q_{i}}-\frac{1}{GDP_{i}}}{\frac{1}{GDP_{i}}}=\frac{q_{i}}{GDP_{i}-q_{i}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Below we give the numerical values for 
+\begin_inset Formula $\frac{q_{i}}{GDP_{i}-q_{i}}$
+\end_inset
+
+ computed for the example of global institutions that we provided above:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="6">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+country
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2017 GPD
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2017 contribution to CEPI in millions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{contributiontoCEPI}{GDP-contributiontoCEPI}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Norway
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+392052
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,316E-05 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Germany
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3651871
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,286E-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Japan
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4883389
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,119E-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Canada
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1640385
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,829E-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Australia
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1390150
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,439E-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Belgium
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+491672
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,034E-06
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We see that for all countries and all global institutions for which we have
+ given the data here, the ratio 
+\begin_inset Formula $\frac{q_{i}}{GDP_{i}-q_{i}}$
+\end_inset
+
+ is very close to 0.
+ This will still be true for all the other global institutions and for other
+ specifications of how a government's payoff depends on its available money.
+ In other words: If we assume that countries' costs of contributions is
+ determined by their opportunity costs of the money, then we obtain that
+ a constant marginal cost function would be an extremely good approximation.
+\end_layout
+
+\begin_layout Standard
+We have seen 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "flat costs"
+
+\end_inset
+
+ that this would imply that we should expect there to be only one contributing
+ country for each GPGI.
+ However, for the examples we have seen (CEPI, GAVI, Global Fund for AIDS,
+ TB and Malaria, Forest Carbon Partnership) there are always several contributin
+g countries.
+ Thus we can conclude that the function 
+\begin_inset Formula $h_{i}(q_{i})$
+\end_inset
+
+ must contain more components than just the opportunity costs of funds.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Crowding-out-of voluntary contributions"
+
+\end_inset
+
+Crowding out of voluntary contributions
+\end_layout
+
+\begin_layout Standard
+We shall analyse a donor-indpendent GPGI.
+ We shall use the utility specification 
+\begin_inset Formula $U_{i}=u_{i}(M)-h_{i}(q_{i})$
+\end_inset
+
+, where 
+\begin_inset Formula $M$
+\end_inset
+
+ is the total amount of money at the disposal of the GPGI.
+ We will consider the case where 
+\begin_inset Formula $M$
+\end_inset
+
+ is the sum of an external amount 
+\begin_inset Formula $F$
+\end_inset
+
+ and the aggregate voluntary contributions 
+\begin_inset Formula $Q$
+\end_inset
+
+.
+ This specification contains as a special case the model for the Direct
+ Procurement GPGIs that we defined above, 
+\begin_inset Formula $U_{i}=u_{i}(z)-h_{i}(q_{i})$
+\end_inset
+
+, since the action 
+\begin_inset Formula $z$
+\end_inset
+
+ that the GPGI will take will be determined by its available money, 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ It also contains as a special case the specification that we used above
+ for analyzing Reward Payment based GPGIs, namely 
+\begin_inset Formula $U_{i}=u_{i}(x_{i}(M),x_{-i}(M))-h_{i}(q_{i})+g_{i}(R_{i})$
+\end_inset
+
+, since 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ is determined by 
+\begin_inset Formula $M$
+\end_inset
+
+, at least if we assume that there is a unique subgame perfect Nash equilibrium.
+ 
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "Crowding-out for exogenous donation to a given GPGI"
+
+\end_inset
+
+ Consider a GPGI that is financed by an exogenous donation of 
+\begin_inset Formula $F$
+\end_inset
+
+ and by voluntary contributions by governments that are determined as a
+ Nash equilibrium given 
+\begin_inset Formula $F$
+\end_inset
+
+.
+ Denoting the elasticities of marginal benefits and marginal costs by 
+\begin_inset Formula $\epsilon_{u_{i}'}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{h_{i}'}$
+\end_inset
+
+, respectively, and supposing that 
+\begin_inset Formula $\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}\leq1$
+\end_inset
+
+, we obtain: 
+\begin_inset Formula $\frac{dQ}{dF}=\frac{\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}{1-\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Proposition
+proof
+\end_layout
+
+\begin_layout Proposition
+The government of country 
+\begin_inset Formula $i$
+\end_inset
+
+ has payoff 
+\begin_inset Formula $U_{i}=u_{i}(Q+F)-h_{i}(q_{i})$
+\end_inset
+
+.
+ Suppose 
+\begin_inset Formula $i\in Contributors$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $q_{i}$
+\end_inset
+
+ is determined by the FOC, which is: 
+\begin_inset Formula $\frac{dU_{i}}{dq_{i}}=u_{i}'(Q+F)-h_{i}'(q_{i})=0$
+\end_inset
+
+.
+ Differentiating this FOC with respect to F yields:
+\begin_inset Formula $(\frac{dQ}{dF}+1)u_{i}''(Q+F)-\frac{dq_{i}}{dF}h_{i}''(q_{i})=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Now using again the FOC we can rewrite this as: 
+\begin_inset Formula $\frac{dq_{i}}{dF}=(\frac{dQ}{dF}+1)\frac{u_{i}''(Q+F)}{u_{i}'(Q+F)}\frac{h_{i}'(q_{i})}{h_{i}''(q_{i})}=(\frac{dQ}{dF}+1)\frac{u_{i}''(Q+F)(Q+F)}{u_{i}'(Q+F)}\frac{h_{i}'(q_{i})}{h_{i}''(q_{i})q_{i}}\frac{q_{i}}{Q+F}=(\frac{dQ}{dF}+1)\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+Summing over all contributors yields: 
+\begin_inset Formula $\frac{dQ}{dF}=(\frac{dQ}{dF}+1)\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}$
+\end_inset
+
+.
+ From this we deduce: 
+\begin_inset Formula $\frac{dQ}{dF}=\frac{\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}{1-\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let us consider the formula 
+\begin_inset Formula $\frac{dQ}{dF}=\frac{\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}{1-\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}$
+\end_inset
+
+.
+ First consider the case where all the marginal benefits are concave, i.e.
+ where 
+\begin_inset Formula $\epsilon_{u_{i}'}\leq0\forall i\in Contributors$
+\end_inset
+
+ and where all the marginal cost curves are convex, i.e.
+ where 
+\begin_inset Formula $\epsilon_{h_{i}'}\geq\text{0}\forall i\in Contributors$
+\end_inset
+
+.
+ In this case the smaller the elasticities of the marginal costs are, the
+ more crowding out there is.
+ Moreover if all the elasticities of the marginal costs are very close to
+ 0 then 
+\begin_inset Formula $\frac{dQ}{dF}$
+\end_inset
+
+ is close to 
+\begin_inset Formula $-1$
+\end_inset
+
+, meaning that there is close to full crowding out.
+\end_layout
+
+\begin_layout Standard
+Now consider the case where 
+\begin_inset Formula $\epsilon_{u_{i}'}=0\forall i\in Contributors$
+\end_inset
+
+.
+ then we have 
+\begin_inset Formula $\frac{dQ}{dF}=0$
+\end_inset
+
+.
+ In other words: If the curves for the marginal benefit as a function of
+ the available money to the global institution are flat, then the 'naive
+ view' that evaluates the impact of additional funding contributed by a
+ philantropist or raised through international taxes without taking into
+ account the endogenous change in voluntary constributions is correct.
+\end_layout
+
+\begin_layout Standard
+Finally, consider the case where 
+\begin_inset Formula $\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}\in(0,1)$
+\end_inset
+
+.
+ (This can happen if some of the contributors' marginal benefit curves are
+ locally convex around the equilibrium.) In this case we see that there is
+ actually 
+\begin_inset Quotes eld
+\end_inset
+
+crowding in
+\begin_inset Quotes erd
+\end_inset
+
+, as 
+\begin_inset Formula $\frac{dQ}{dF}>0$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}>1$
+\end_inset
+
+ there will even be a discontinuous jump in the equilibrium.
+\end_layout
+
+\begin_layout Standard
+To see why this happens, we note that from the second order conditions we
+ can only establish: 
+\begin_inset Formula $u_{i}''(Q+F)\leq h_{i}''(q_{i})$
+\end_inset
+
+, which using the FOC can be rewritten as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{u_{i}''(Q+F)}{u_{i}'(Q+F)}\leq\frac{h_{i}''(q_{i})}{h_{i}'(q_{i})}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\frac{u_{i}''(Q+F)}{u_{i}'(Q+F)}}{\frac{h_{i}''(q_{i})}{h_{i}'(q_{i})}}\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is not sufficient to ensure that 
+\begin_inset Formula $\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}\leq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "5 sec:Multiple-Cause-Treaties"
+
+\end_inset
+
+Mechanisms for harnessing global revenues for multiple GPGIs
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Examples-of-proposals for capturing global resources"
+
+\end_inset
+
+
+\size normal
+Examples
+\size default
+ of proposals for capturing global resources
+\end_layout
+
+\begin_layout Subsubsection
+Special Drawing Rights
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.un.org/en/development/desa/policy/wess/wess_current/2012wess_overview_en.pdf"
+
+\end_inset
+
+ it is suggested that: 
+\begin_inset Quotes eld
+\end_inset
+
+new international [could be created] through the issuance of special drawing
+ rights (SDRs) by the International Monetary Fund, to be allocated with
+ a bias favoring developing countries or leveraged as development financing
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Revenues-seabed"
+
+\end_inset
+
+Revenues from the ownership of global resources: “royalties” obtained from
+ natural resource extraction beyond territorial limits
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.un.org/en/development/desa/policy/wess/wess_current/2012wess_overview_en.pdf"
+
+\end_inset
+
+ it is suggested that: “royalties” obtained from natural resource extraction
+ beyond territorial limits, such as from the oceans beyond territorial limits,
+ Antarctica or outer space, could be tapped for international development
+ cooperation.
+ As global resources lie outside national jurisdictions, any licensing and
+ payment of royalties would have to involve an international authority that
+ was recognized as the responsible agent for managing the specific commons.
+ While fishing in international waters and other activities in the “commons”
+ might be licensed in this way, only revenues from mining the seabed has
+ thus far been seen as a source of international public revenue.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+How to use the revenue from global resources?
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.un.org/en/development/desa/policy/wess/wess_current/2012wess_overview_en.pdf"
+
+\end_inset
+
+ the authors propose to use the money captured from global resources be
+ used for ODA.
+ We will now define and explore an alternative proposal:
+\end_layout
+
+\begin_layout Subsubsection
+An example of a mechanism leveraging voluntary contributions: The Proportional
+ Matching Fund mechanism (PMF)
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec: PMF"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The Proportional Matching Fund (PMF) would be a newly created global institution
+ that would have a set 
+\begin_inset Formula $J$
+\end_inset
+
+ of 'eligible Global Public Good Institutions'.
+ (For example, 
+\begin_inset Formula $J$
+\end_inset
+
+ could be 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+{CEPI,GlobalFund,The Forest Carbon Partnership's Carbon Fund, the proposed
+ RES-Fund under the auspices of the International Renewable Energy Agency}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+or 
+\begin_inset Formula $J$
+\end_inset
+
+ could encompass all GPGIs.) The PMF would pay out its available money 
+\begin_inset Formula $F$
+\end_inset
+
+ to the GPGIs in 
+\begin_inset Formula $J$
+\end_inset
+
+ in proportion to the voluntary contributions made to the various institutions
+ .
+ In other words, the PMF would each year look at the budget 
+\begin_inset Formula $Q_{j}$
+\end_inset
+
+ of each GPGI 
+\begin_inset Formula $j\in J$
+\end_inset
+
+ and pay to 
+\begin_inset Formula $j$
+\end_inset
+
+ the amount 
+\begin_inset Formula $\frac{Q_{j}}{\sum_{k\in J}Q_{k}}F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+\begin_inset CommandInset label
+LatexCommand label
+name "PMF crowding in and out"
+
+\end_inset
+
+We consider the marginal effect of the first dollar of a newly introduced
+ Proportional Matching Fund with an associated set 
+\begin_inset Formula $J$
+\end_inset
+
+ of eligible GPGIs.
+ Let us assume that at the status quo each GPGI 
+\begin_inset Formula $j\in J$
+\end_inset
+
+ is financed entirely by the voluntary contributions by governments.
+ Moreover, suppose that the profile of contributions is always a Nash equilibriu
+m in the game.
+ Let us denote by 
+\begin_inset Formula $Contributors_{a}(F)$
+\end_inset
+
+ the set of countries making strictly positive voluntary contributions to
+ the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Let us denote by 
+\begin_inset Formula $q_{i,a}(F)$
+\end_inset
+
+ the voluntary contribution of country 
+\begin_inset Formula $i$
+\end_inset
+
+ to the GPGI 
+\begin_inset Formula $a\in J$
+\end_inset
+
+, by 
+\begin_inset Formula $Q_{a}(F):=\sum_{i\in I}q_{i,a}(F)=\sum_{i\in Contributors_{a}(F)}q_{i,a}(F)$
+\end_inset
+
+ the aggregate amount of contributions made to GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+ and by 
+\begin_inset Formula $Q(F):=\sum_{j\in J}Q_{j}(F)$
+\end_inset
+
+ the aggregate amount of contributions made to all GPGIs in total.
+ Let us denote by 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}:=\frac{Q_{a}}{\frac{\partial u_{i}}{\partial Q_{a}}}\frac{\partial^{2}u_{i}}{\partial Q_{a}^{2}}$
+\end_inset
+
+ the elasticity at 
+\begin_inset Formula $F=0$
+\end_inset
+
+ of the marginal benefit of additional funding for the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+ accruing to country 
+\begin_inset Formula $i$
+\end_inset
+
+ and by 
+\series bold
+
+\begin_inset Formula $\epsilon_{h_{i,a}'}:=\frac{q_{i,a}}{\frac{\partial h_{i,a}}{\partial q_{i,a}}}\frac{\partial^{2}h_{i,a}}{\partial q_{i,a}^{2}}$
+\end_inset
+
+ 
+\series default
+the elasticiy at 
+\begin_inset Formula $F=0$
+\end_inset
+
+ of the subjective marginal cost for the government of country 
+\begin_inset Formula $i$
+\end_inset
+
+ of making voluntary contributions to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Suppose that 
+\begin_inset Formula $\epsilon_{h_{i,a}'}>0$
+\end_inset
+
+ Then if 
+\begin_inset Formula $\text{1}\text{+\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q_{a}}\frac{-\epsilon_{u_{i}'}^{a}}{\epsilon_{h_{i,a}'}}}}}>0$
+\end_inset
+
+ we have:
+\end_layout
+
+\begin_layout Proposition
+\begin_inset Formula $\frac{dQ_{a}}{dF}|_{F=0}=\frac{\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q}\left(\epsilon_{u_{i}'}^{a}+\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})\right)\frac{1}{\epsilon_{h_{i,a}'}}}}}{\text{1}\text{+\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q_{a}}\frac{-\epsilon_{u_{i}'}^{a}}{\epsilon_{h_{i,a}'}}}}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proposition
+proof:
+\end_layout
+
+\begin_layout Proposition
+The formula for 
+\begin_inset Formula $\frac{dQ_{a}}{dF}|_{F=0}$
+\end_inset
+
+ was obtained through long computations using Mathematica.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since by definition 
+\begin_inset Formula $\sum_{i\in Contributors_{a}}\frac{q_{ai}}{Q_{a}}=1$
+\end_inset
+
+ , we can deduce from the fact that 
+\begin_inset Formula $\frac{-\epsilon_{u_{i}'}^{a}}{\epsilon_{h_{i,a}'}}\geq-1\forall i\in Contributors_{a}$
+\end_inset
+
+ that the denominator, 
+\begin_inset Formula $\text{1}\text{+\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q_{a}}\frac{-\epsilon_{u_{i}'}^{a}}{\epsilon_{h_{i,a}'}}}}}$
+\end_inset
+
+, is positive.
+ Let us from now on focus on the generic case in which this is strictly
+ positive.
+\end_layout
+
+\begin_layout Standard
+Now consider the expression 
+\begin_inset Formula $\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}}$
+\end_inset
+
+ for 
+\begin_inset Formula $i\in Contributor_{a}$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}=1,$
+\end_inset
+
+ the numerator, 
+\begin_inset Formula $\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}$
+\end_inset
+
+, is a weighted average of the marginal utility that country 
+\begin_inset Formula $i$
+\end_inset
+
+ gets from additional financing for the other GPGIs (i.e.
+ excluding 
+\begin_inset Formula $a$
+\end_inset
+
+), weighted in proportion to the financing that these receive.
+ Since 
+\begin_inset Formula $i\in Contributor_{a}$
+\end_inset
+
+, it is plausible that we have 
+\begin_inset Formula $\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}}\leq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus we see that the sign of 
+\begin_inset Formula $\frac{dQ_{a}}{dF}|_{F=0}$
+\end_inset
+
+ is determined by two forces.
+ Firstly, there is the positive term 
+\begin_inset Formula $\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})$
+\end_inset
+
+, which arises from the fact that the marginal increase of 
+\begin_inset Formula $F$
+\end_inset
+
+ starting from 
+\begin_inset Formula $0$
+\end_inset
+
+ increases country 
+\begin_inset Formula $i$
+\end_inset
+
+'s incentive to voluntarily contribute, since by doing so it can move money
+ to its preferred GPGI, 
+\begin_inset Formula $a$
+\end_inset
+
+, shifting it away from the other GPGIs.
+ The size of this effect is proportional to the proportion of money going
+ to the other GPGIs, 
+\begin_inset Formula $\frac{Q-Q_{a}}{Q}$
+\end_inset
+
+.
+ Secondly, there is the term 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}>0$
+\end_inset
+
+, i.e.
+ if there are increasing marginal benefits accruing to country 
+\begin_inset Formula $i$
+\end_inset
+
+ from money going to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+, then we obtain the conclusion that 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}+\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})>0$
+\end_inset
+
+.
+ Thus in this case there is always 'crowding in' of voluntary contributions
+ to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+ from country 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ We also see that the size of this effect increases in 
+\begin_inset Formula $\frac{1}{\epsilon_{h_{i,a}'}}$
+\end_inset
+
+.
+ Moreover, there is no theoretical bound on how strong the crowding-in can
+ be, as we will prove in corollary below.
+\end_layout
+
+\begin_layout Standard
+Now consider the case where 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}<0$
+\end_inset
+
+, i.e.
+ when there are decreasing marginal benefits accruing to country 
+\begin_inset Formula $i$
+\end_inset
+
+ from money going to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}$
+\end_inset
+
+ is sufficiently negative then there will be crowding out of contributions
+ from country 
+\begin_inset Formula $i$
+\end_inset
+
+ for the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Specifically the condition for there to be crowding out is 
+\begin_inset Formula $\text{\ensuremath{\frac{-\epsilon_{u_{i}'}^{a}}{\frac{Q-Q_{a}}{Q}}>1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}}$
+\end_inset
+
+
+\begin_inset Formula $\forall i\in Contributors_{a}$
+\end_inset
+
+.
+ For the limit we get:
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\lim_{\epsilon_{u_{ai}}^{a}\rightarrow-\infty}\text{\text{\frac{dQ_{a}}{dF}}}=-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This makes sense: If for some country the marginal benefit drops off all
+ of a sudden exactly at the current level of financing for the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+, then the aggregate contribution to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+ cannot increase until country 
+\begin_inset Formula $i$
+\end_inset
+
+'s contribution has been fully crowded out.
+\end_layout
+
+\begin_layout Corollary
+\begin_inset Formula $\sup_{set\,of\,all\,models}min\{\frac{dQ_{a}}{dF}|_{F=0}:a\in J\}=\infty$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Corollary
+proof: Suppose we have any model with corresponding Nash equilibrium such
+ that 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}+\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})>0\forall a\in J\forall i\in Contributor_{a}$
+\end_inset
+
+ at this Nash equilibrium.
+ Let us keep the model to first order unchanged around the Nash equilibrium
+ but multiply all the elasticities by the same factor 
+\begin_inset Formula $\lambda<1$
+\end_inset
+
+.
+ Then the second order conditions for the best responses are still satisfied.
+ Moreover, 
+\begin_inset Formula $\frac{dQ_{a}}{dF}|_{F=0}$
+\end_inset
+
+ increases, since 
+\begin_inset Formula $\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})>0$
+\end_inset
+
+ and we can make this increase arbitrarily large if we choose 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ sufficiently close to 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Which GPGIs should be included in the MCT and the PMF, respectively?
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-GPGI-selection PMF"
+
+\end_inset
+
+The GPGI selection problem for the PMF mechanism
+\end_layout
+
+\begin_layout Standard
+Suppose there is a set of governments who are considering setting up a PMF.
+ Specifically, suppose that they are ready to voluntarily contribute money
+ to this PMF and that there is a chance that by doing so they could acquire
+ recognition for moral leadership that would allow them to get all countries
+ to consider the proposal of allocating the revenues generated from the
+ deep sea resources to the PMF instead of paying them out to countries.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider the decision problem of the set of people who have the opportunity
+ to give advice to these governments that are considering setting up a PMF.
+ Which set of GPGIs should the advisors recommend to be included in the
+ PMF? There are least three important considerations to be taken into account:
+\end_layout
+
+\begin_layout Standard
+1) The global benefit, evaluated from an impartial perspective, that is
+ generated per additional dollar available for the GPGI
+\end_layout
+
+\begin_layout Standard
+2) The crowding out/ crowding in of voluntary contributions to the GPGIs
+\end_layout
+
+\begin_layout Standard
+3) The distribution of payoffs
+\end_layout
+
+\begin_layout Standard
+Consider first the global benefit, evaluated from an impartial perspective.
+ There are strong reasons to think that reducing existential risks could
+ be of enourmous value in expectation (
+\begin_inset CommandInset href
+LatexCommand href
+target "www.existential-risk.org/concept.pdf"
+
+\end_inset
+
+).
+ Global pandemics might be one of the largest existential risks.
+ Advancing research aimed at improving the capacity for the world to quickly
+ develop vaccines when faced with new pathogens could be an effective way
+ to reduce this risk.
+ (
+\begin_inset CommandInset href
+LatexCommand href
+target "https://www.ncbi.nlm.nih.gov/pubmed/28806130"
+
+\end_inset
+
+ This would imply that CEPI might be one of the most valuable GPGIs.
+ This consideration would weigh strongly in favor of including CEPI in the
+ PMF mechanism.
+\end_layout
+
+\begin_layout Standard
+In order to estimate the global benefit that the PMF generates, it is potentiall
+y important to take into account the amount of crowding out/crowding in
+ that takes place.
+ Switching from a regime (that currently appears to be envisaged) where
+ the revenue from the seabed resources from the high sea are paid out to
+ countries to a regime where this money is instead paid out to some GPGI
+ is equivalent to implementing lump sum taxes on countries and giving the
+ money raised to the GPGI.
+ However, as we indicated in the discussion following 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "(Almost-a-neutrality"
+
+\end_inset
+
+, as far as the effect on voluntary contributions is concerned, this is
+ approximately equivalent to considering the money as coming from 'outside',
+ i.e.
+ as being raised from non-contributors, given how small contributions for
+ GPGIs are relative to GDP for any given country (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Implications-for-the opportunity costs"
+
+\end_inset
+
+).
+ Thus proposition 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PMF crowding in and out"
+
+\end_inset
+
+ seems applicable.
+ In particular, the disucssion following 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PMF crowding in and out"
+
+\end_inset
+
+ applies.
+ One general conclusion that we obtained from the formula 
+\begin_inset Formula $\frac{dQ_{a}}{dF}|_{F=0}=\frac{\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q}\left(\epsilon_{u_{i}'}^{a}+\frac{Q-Q_{a}}{Q}(\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}})\right)\frac{1}{\epsilon_{h_{i,a}'}}}}}{\text{1}\text{+\text{\ensuremath{\sum_{i\in Contributors_{a}(0)}\frac{q_{i,a}}{Q_{a}}\frac{-\epsilon_{u_{i}'}^{a}}{\epsilon_{h_{i,a}'}}}}}}$
+\end_inset
+
+ is that the more concave the benefits of the GPGI as a function of its
+ available funding, (i.e.
+ the smaller the
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}$
+\end_inset
+
+), the worse.
+ Thus other things equal, it is better to include GPGIs that do not have
+ strongly diminishing marginal benefits.
+ 
+\end_layout
+
+\begin_layout Standard
+Another consequence of this formula is that it is good if the GPGIs included
+ in the PMG are such that the countries contributing voluntarily strongly
+ prefer one of them over the other, so that 
+\begin_inset Formula $\text{\ensuremath{1}}-\frac{\sum_{b\neq a}\frac{Q_{b}}{Q-Q_{a}}\frac{\partial u_{i}}{\partial Q_{b}}}{\frac{\partial u_{i}}{\partial Q_{a}}}$
+\end_inset
+
+ is large.
+ This might be an important argument for including GPGIs with strongly dispersed
+ payoffs such as a RES-Fund (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "RES-Fund IRENA"
+
+\end_inset
+
+) and/or a Global Fund to reward countries as a function of carbon emissions
+ and carbon taxes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:A-Proposed-Global carbon tax incentive"
+
+\end_inset
+
+) in addition to GPGIs dedicated to preventing global pandemics, such as
+ CEPI, even if the latter score better under criterion 1).
+ 
+\end_layout
+
+\begin_layout Standard
+Thirdly, the distribution of payoffs might affect the probability that the
+ PMF will be adopted for using the revenues from deep sea resources.
+ It is likely important that all countries can be confident that channelling
+ the global revenues to the PMF will end up leading to an equilibirum giving
+ them a higher payoff than under the counterfactual (which appears to entail
+ the paying out the money generated from global resources to all countries).
+\end_layout
+
+\begin_layout Subsection
+The GPGI selection problem for the MCT mechanism
+\end_layout
+
+\begin_layout Standard
+Suppose there is a set of governments who are interested in the MCT proposal.
+ Consider the decision problem of the set of people who have the opportunity
+ to give advice to these governments.
+ Which GPGIs should they recommend as eligible for the MCT? There are least
+ three important considerations to be taken into account:
+\end_layout
+
+\begin_layout Standard
+1) The global benefit, evaluated from an impartial perspective, that is
+ generated per additional dollar available for the GPGI
+\end_layout
+
+\begin_layout Standard
+2) The crowding out/ crowding in of voluntary contributions to the GPGIs
+\end_layout
+
+\begin_layout Standard
+3) The incentives for governments to participate
+\end_layout
+
+\begin_layout Standard
+4) The incentives for governments to choose the status with the right to
+ influence
+\end_layout
+
+\begin_layout Standard
+Concerning 1), the discussion provided in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:The-GPGI-selection PMF"
+
+\end_inset
+
+ applies.
+\end_layout
+
+\begin_layout Standard
+In order to assess 2), the question arises as to how one should model the
+ introduction of the MCT.
+ One approach to modelling this would be as a subgame perfect Nash equilibrium
+ of a two stage game, where in the first stage countries play the game induced
+ by the MCT mechanism and in the second stage countries play the voluntary
+ contribution game.
+ In this case, we should dampen our optimism about the potential of the
+ MCT, to the extent that there is crowding out.
+ This is because in the first stage of the game countries will anticipate
+ the crowding out and thus the benefit that they ascribe to money being
+ directed via the MCT mechanism to a GPGI.
+ To put it more precisely: Suppose the benefit for country 
+\begin_inset Formula $i$
+\end_inset
+
+ per money directed to GPGI 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\begin_inset Formula $\theta_{i}^{k}$
+\end_inset
+
+.
+ Then the relevant payoff in the first stage of the game is actually 
+\begin_inset Formula $(1+\frac{dQ_{k}}{dF})\theta_{i}^{k}$
+\end_inset
+
+.
+ Thus, in this model crowding out would not only lessen the impact of the
+ money raised via the MCT mechanism for the GPGIs, it would also make it
+ less likely that the MCT mechanism would have full (or even any) participation.
+ From the formula 
+\begin_inset Formula $\frac{dQ}{dF}=\frac{\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}{1-\sum_{i\in Contributors}\frac{\epsilon_{u_{i}'}}{\epsilon_{h_{i}'}}\frac{q_{i}}{Q+F}}$
+\end_inset
+
+ (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Crowding-out for exogenous donation to a given GPGI"
+
+\end_inset
+
+) we see that this again provides a rationale for selecting GPGIs whose
+ benefits are not too concave, i.e.
+ for which the 
+\begin_inset Formula $\epsilon_{u_{i}'}$
+\end_inset
+
+ are not too small.
+ Under the alternative modelling approach, where the players simultaneously
+ choose their status and allocation in the MCT and their voluntary contributions
+ there would similarly be crowding out, but this would not directly diminish
+ the participation incentives.
+\end_layout
+
+\begin_layout Standard
+Now let us turn to 3) and 4).
+ 3) is clearly, since participation incentives have to be sufficient, ideally
+ to end up inducing full participation.
+ 4) is important since the more players choose the status with the right
+ to influence, the more money will be raised for GPGIs, which is valuable
+ not only because of its direct benefit but also because this confers more
+ legitimacy to the mechanism.
+\end_layout
+
+\begin_layout Standard
+As far as the participation incentives are concerned, it is good for the
+ set of eligible GPGIs to be such that the players stronlgy prefer some
+ GPGI over the others.
+ In fact, this will be good for both 3) and 4), since it will increase the
+ players' gains from participating with the right to influence.
+ Again, this might be an important argument for including GPGIs with strongly
+ dispersed payoffs such as a RES-Fund (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "RES-Fund IRENA"
+
+\end_inset
+
+) and/or a Global Fund to reward countries as a function of carbon emissions
+ and carbon taxes (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exa:A-Proposed-Global carbon tax incentive"
+
+\end_inset
+
+) in addition to GPGIs dedicated to preventing global pandemics, such as
+ CEPI, even if the latter score better under criterion 1).
+ 
+\end_layout
+
+\begin_layout Standard
+In section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "7 sec:Combining-the-MCT"
+
+\end_inset
+
+ we will explore extensions to the MCT mechanism that could improve the
+ situation in regard to 2), 3) and 4).
+\end_layout
+
+\begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "6 sec:How-to-learn"
+
+\end_inset
+
+How to learn from past data about crowding in and crowding out?
+\end_layout
+
+\begin_layout Standard
+One approach would be to study the few cases where countries have introduced
+ taxes to finance global institutions, for example the case of France in
+ 2006.
+ However, the situation for the countries who introduced the solidarity
+ levy on air tickets might have been quite different: Since few countries
+ participated in the mechanism, introducing the tax and transferring the
+ money to UNITAID was very similar to making a voluntary contribution from
+ the general budget.
+ The governments could thus get diplomatic credit for an act of altruism
+ in a similar way to making a voluntary contribution.
+ Moreover, domestic actors could accuse the government of giving away money
+ without pursuing national interest in just the same way as is the case
+ for voluntary contributions.
+ As we have already pointed out, this would not be the case for a Nash equilibri
+um with full participation under the MCT mechanism.
+ In this case the government would still need to make voluntary contributions
+ to GPGIs in order to get diplomatic recognition for its altruism.
+ Moverover, domestic actors could only accuse it for being too generous
+ on the basis of the amount of the voluntary contribution.
+ The same arguments apply to the case of contributions to GPGIs coming from
+ international seabed resources.
+\end_layout
+
+\begin_layout Standard
+If this line of reasoning is correct, then we cannot rely on the past example
+ of taxes financing GPGIs to learn about crowding in and crowding out.
+ Instead, a more promising approach might be to try to estimate the elasticities
+ in 
+\begin_inset Formula $\epsilon_{u_{i}'}^{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{h_{i}'}^{a}$
+\end_inset
+
+ and then plug the estimates into 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Crowding-out for exogenous donation to a given GPGI"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "PMF crowding in and out"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Empirical estimation of the elasticities 
+\begin_inset Formula $\epsilon_{u_{i,a}'}$
+\end_inset
+
+ and 
+\begin_inset Formula $\epsilon_{h_{i,a}'}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Yet to be done.
+\end_layout
+
+\end_body
+\end_document
