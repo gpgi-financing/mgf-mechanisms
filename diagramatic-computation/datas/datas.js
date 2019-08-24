@@ -47,6 +47,12 @@ const allocations = {
 
   mfComposition is an array of GPGIs that compose the matching fund
 */
+
+
+const strategies = getStrategies()
+
+
+/*
 const strategies = {
   "Africa": {
     fundRepartition: [1, 0, 0],
@@ -130,16 +136,5 @@ const strategies = {
     mfComposition: ["CEPI", "ITER", "CDM"]
   },
 }
-
-
-/*
- utilies is an 2d array that represent for each GPGIs the utlity that get each player for 1$ invested in that particular GPGI
 */
-const utilities = [
-  [0.0905, 0.4231, 0.2975, 0.0025, 0.2499, 0.0668, 0.0921,-0.1175, 0.0289,-0.0592, 0.2097, 0.2494],
-  [0.0379, 0.2307, 0.3564, 0.0115, 0.0490, 0.0918, 0.1116, 0.0534, 0.1023, 0.0297, 0.3656, 0.0601],
-  [0.6800, 0.0200, 0,      0.0300, 0.0500, 0,      0.0400, 0.0500, 0,      0.0100, 0,      0.1200],
-  [0.3193, 0.1254, 0.0575, 0.0084, 0.1356, 0.0031, 0.4513, 0.0965, 0.0224, 0.0048, 0.0342, 0.2509],
-  [0.0788, 0.2689, 0.4118, 0.0008, 0.1988, 0.0723, 0.0435,-0.0252, 0.0800, 0.0244, 0.1908, 0.1550],
-  [0.1712, 0.3757, 0.4288,-0.0347, 0.4834, 0.1117,-0.0315,-0.5170,-0.0444,-0.1601, 0.2682, 0.4488]
-]
+
