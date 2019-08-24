@@ -1,5 +1,5 @@
 function [ Y ] = PayoffsWithHPMFsL(S,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,h)
-extraCostOfQuittingEU=0.1;
+extraCostOfQuittingEU=0.2;
 s=S(1,:);
 p=S(2,:); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
 m=S(3,:); %m(i) is the proportion that i allocates.
@@ -8,10 +8,6 @@ crude_oil_production_2018=    [398 193  80   138   39   0  432  1496   277 556 6
 domestic_oil_consumption_2018=[180 582  511   50   218 159 330   290   267 147 776 312];
 crude_oil_production_normalized=crude_oil_production_2018/sum(crude_oil_production_2018);
 domestic_oil_consumption_normalized=domestic_oil_consumption_2018/sum(domestic_oil_consumption_2018);
-% NetCrudeOilImports2017=[-243.1,	414.6,	551.6,		-68.1,		223.2,	157.8,	-202.5,		-923.8,		-116.7,		-261.1,	313.8,	248.4];  %From https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data.html
-% CrudeOilImporters2017Normalised=[0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]/sum([0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]);
-% CrudeOilExporters2017Normalised=[-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]/(-sum([-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]));
-% NetCrudeOilImports2017Normalised=CrudeOilImporters2017Normalised+CrudeOilExporters2017Normalised;
 ProportionsOfSCC=[0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]/sum([0.11,0.16,0.12,0.01,0.12,0.02,0.07,0.10,0.04,0.01,0.1,0.12]);
 N=length(S(1,:));
 X=size(A);
@@ -58,7 +54,7 @@ else %There is one special case, namely where all participants have the status
     % % % % PMF4s=zeros(x,x,x,x);
     GPGIs=zeros(x,1);
     totalFreeFunds=sum(FreeFunds)+sum((1-r)*(1-m).*PureFunds.*ParticipantsWithInfluence);
-    weightedSum=sum(floor(s).*(1-h*floor(s)).*m.*PureFunds*10.*(s-floor(s))); %This is the weighted sum of the money in the PMFs.
+    weightedSum=sum(floor(s).*(1-h*floor(s)./(1+h*floor(s))).*m.*PureFunds*10.*(s-floor(s))); %This is the weighted sum of the money in the PMFs.
     for i=1:N %Here we add up all the direct allocations to the GPGIs.
       nPMF=floor(s(i));
       if s(i)==1
@@ -67,11 +63,12 @@ else %There is one special case, namely where all participants have the status
         GPGIs(ind(2))=GPGIs(ind(2))+m(i)*(1-p(i))*PureFunds(i);
       end
       if nPMF>1
+          h_proportion=h/(1+nPMF*h);
         [maxvalues, ind] = maxk(A(:,i), nPMF);
         GPGIs(ind(1))=GPGIs(ind(1))+m(i)*p(i)*PureFunds(i)*(1-10*(s(i)-nPMF)); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
         GPGIs(ind(2))=GPGIs(ind(2))+m(i)*(1-p(i))*PureFunds(i)*(1-10*(s(i)-nPMF));
         for k=1:nPMF
-          GPGIs(ind(k))=GPGIs(ind(k))+ h*m(i)*PureFunds(i)*10*(s(i)-nPMF);
+          GPGIs(ind(k))=GPGIs(ind(k))+ h_proportion*m(i)*PureFunds(i)*10*(s(i)-nPMF);
         end
       end
     end
@@ -80,10 +77,11 @@ else %There is one special case, namely where all participants have the status
       for i=1:N
         nPMF=floor(s(i));
         if nPMF>1
+                            h_proportion=h/(1+nPMF*h);
           [maxvalues, ind] = maxk(A(:,i), nPMF);
           sumGPGIs=sum(GPGIs(ind,1));
           for k=1:nPMF
-            GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
+            GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h_proportion*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
           end
         end
       end

@@ -1093,7 +1093,7 @@ Throughout this article we will define all mechanisms in terms of taxes.
 \series bold
 the taxation obligation
 \series default
-s) Each participating country 
+) Each participating country 
 \begin_inset Formula $i\in Participants$
 \end_inset
 
@@ -1135,7 +1135,7 @@ reference "subsec:The-EU's-unilateral"
 \series bold
 the allocation obligation
 \series default
-s) Each participating country 
+) Each participating country 
 \begin_inset Formula $i$
 \end_inset
 
@@ -2169,7 +2169,7 @@ reference "subsec:Effects-of-the"
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/payoffs.png
+	filename C:/Users/DELL/OneDrive/mgf-mechanisms/figures/payoffsFromGPGIs.pdf
 	scale 40
 
 \end_inset
@@ -2412,23 +2412,19 @@ eligible
 \emph default
  for being financed through the mechanism in a way made precise in the definitio
 ns that follow below.
- We denote the set of all countries by 
-\begin_inset Formula $I$
-\end_inset
-
- and the set of all participants to the MGF mechanism by 
-\begin_inset Formula $Participants$
-\end_inset
-
-.
+ 
 \end_layout
 
 \begin_layout Definition
-The Simple MGF mechanism for the set 
+The Simple MGF mechanism for the fixed tax rate 
+\begin_inset Formula $x$
+\end_inset
+
+, the fixed set 
 \begin_inset Formula $S$
 \end_inset
 
- of GPGIs and the retention rate parameter 
+ of GPGIs and the fixed retention rate parameter 
 \begin_inset Formula $r\in[0,1]$
 \end_inset
 
@@ -2441,11 +2437,7 @@ The Simple MGF mechanism for the set
 \series bold
 the taxation obligation
 \series default
-) Each participating country 
-\begin_inset Formula $i\in Participants$
-\end_inset
-
- is required to levy a tax with rate 
+) Each participating country is required to levy a tax with rate 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2549,21 +2541,7 @@ For ease of exposition we have stated the definition here in a static way.
 
 \begin_layout Standard
 To clarify the definition, we now restate it with some notation.
- For the purposes of this article we consider the set 
-\begin_inset Formula $S$
-\end_inset
-
- of eligible GPGIs and the retention rate parameter 
-\begin_inset Formula $r$
-\end_inset
-
- to be design choices for the mechanism.
- We take them to be fixed, i.e.
- we do not allow players to affect them.
-\end_layout
-
-\begin_layout Standard
-As introduced in the definition, we shall denote by 
+ As introduced in the definition, we shall denote by 
 \begin_inset Formula $M_{k}$
 \end_inset
 
@@ -3386,6 +3364,50 @@ We now report the results for the case where the retention rate parameter
 \end_layout
 
 \begin_layout Subsection
+A slight modification of the MGF mechanism with PMFs to avoid biasing the
+ simulation results in its favor
+\end_layout
+
+\begin_layout Standard
+Under the definition of the MGF mechanism with PMFs as we have stated it,
+ the following behaviour often emerges in the simulations: A player 
+\begin_inset Formula $i$
+\end_inset
+
+ joins and gives to a PMF that includes his most preferred GPGI 
+\begin_inset Formula $a\in S$
+\end_inset
+
+, and some other GPGI 
+\begin_inset Formula $b\in S$
+\end_inset
+
+ that so far is not receiving any money.
+ However, this causes player 
+\begin_inset Formula $j$
+\end_inset
+
+, who most prefers 
+\begin_inset Formula $b$
+\end_inset
+
+, to join and give all his tax revenue to 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Once this has happened, player 
+\begin_inset Formula $i$
+\end_inset
+
+ has an incentive to switch to give to the GPGI 
+\begin_inset Formula $a$
+\end_inset
+
+ instead of giving to the GPGI b.
+\end_layout
+
+\begin_layout Subsection
 Results for r=0.2
 \end_layout
 
@@ -3694,7 +3716,8 @@ The expected global welfare achieved by the different mechanisms
 
 \begin_layout Frame
 \begin_inset Graphics
-	filename c75with9participants/averageAggregatePayoffs.png
+	filename v13averageAggregatePayoffs.png
+	lyxscale 60
 	scale 41
 
 \end_inset
@@ -4006,7 +4029,7 @@ ssing Proportional Matching Funds'.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/CORSIAPlus.png
+	filename C:/Users/DELL/OneDrive/mgf-mechanisms/figures/v13CORSIAPlusarranged.png
 	lyxscale 50
 	scale 35
 
@@ -4017,7 +4040,7 @@ ssing Proportional Matching Funds'.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/Simple MGF.png
+	filename C:/Users/DELL/OneDrive/mgf-mechanisms/figures/v13SimpleMGFarranged.png
 	lyxscale 50
 	scale 35
 
@@ -4028,7 +4051,7 @@ ssing Proportional Matching Funds'.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/MGF with AEPMFs.png
+	filename v13MGFwithPMFsarranged.png
 	lyxscale 50
 	scale 35
 
@@ -4047,8 +4070,8 @@ Maximal aggregate payoffs
 
 \begin_layout Frame
 \begin_inset Graphics
-	filename c75with9participants/maximalAggregatePayoffs.png
-	lyxscale 50
+	filename v13maximalAggregatePayoffs.png
+	lyxscale 60
 	scale 41
 
 \end_inset
@@ -4062,7 +4085,8 @@ Average Aggregate Money Raised for GPGIs
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/AverageAggregateMoneyRaisedForGPGIs.png
+	filename v13averageAggregateMoneyGivenToGPGIs.png
+	lyxscale 60
 	scale 40
 
 \end_inset
@@ -4076,7 +4100,7 @@ Maximal Aggregate Money Raised for GPGIs
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/MaximalAggregateMoneyRaisedForGPGIs.png
+	filename v13maximalAggregateMoneyGivenToGPGIs.png
 	lyxscale 60
 	scale 40
 
@@ -4091,9 +4115,10 @@ Probability of reaching a Nash equilibrium with full participation
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/ProbabilityOfReachingANashEquilibriumWithFullParticipation.png
-	lyxscale 40
+	filename v13ProbabilityOfFullParticipation.png
+	lyxscale 60
 	scale 40
+	clip
 
 \end_inset
 
@@ -4112,9 +4137,23 @@ Proportion of money collected that is raised for GPGIs
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename c75with9participants/ProportionOfMoneyCollectedThatIsRaisedForGPGIs.png
-	lyxscale 40
+	filename v13proportionOfMoneyForGPGIs.png
+	lyxscale 60
 	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The effect of removing the Carbon Pricing Reward Fund
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/OneDrive/mgf-mechanisms/figures/v13MGFwithPMFswithoutCPRFarranged.png
+	lyxscale 50
 
 \end_inset
 
@@ -4254,7 +4293,6 @@ reference "subsec:Results-for-the"
  money that comes from the PMF with Global Fund Against AIDS, TB and Malaria,
  CEPI and Forest Carbon Partnership's Carbon Fund, to which the Middle East
  allocates all its tax revenue.
- 
 \end_layout
 
 \end_inset
@@ -4441,7 +4479,7 @@ Let
 \end_inset
 
 {Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, Other
- high income countries, Russia, other Asia} denote the set of players.
+ high income countries, Russia, US, other Asia} denote the set of players.
  For 
 \begin_inset Formula $k\in K$
 \end_inset
@@ -4471,35 +4509,13 @@ U_{k}=\sum_{i\in k}u_{i}=\sum_{i\in k}t_{i}-c_{i}xF_{i}+Y_{i}+b_{i}xG+\sum_{s\in
 \end_layout
 
 \begin_layout Standard
-Throughout we will assume that whilst in the games induced by the mechanisms
- countries coalesce into the 12 blocks given by the set 
+Throughout we will assume that in the games induced by the mechanisms countries
+ coalesce into the 12 blocks given by the set 
 \begin_inset Formula $K$
 \end_inset
 
-, they act individually otherwise.
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-These assumptions might appear inconsistent.
- In 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "8 sec:Conclusion"
-
-\end_inset
-
- we provide reasons for why it is not implausible that for each of the players
- from 
-\begin_inset Formula $K$
-\end_inset
-
- the countries that constitute it overcome their collective action problems
- in the context of the MGF mechanisms.
-\end_layout
-
-\end_inset
-
+, each one of them acting as a unitary player whose payoff is the sum of
+ the payoffs of the countries that constitute it.
  
 \end_layout
 
@@ -4901,7 +4917,7 @@ First let us compute the reduction in climate change damages.
 \end_inset
 
  percent.
- The total annual of emissions 
+ The total annual amount of 
 \begin_inset CommandInset href
 LatexCommand href
 name "emissions"
@@ -4972,7 +4988,20 @@ The carbon tax of 1% of ticket prices thus averts
 
  of net climate damages due to aviation emissions.
  However, there is a rebound effect due to induced decrease in the price
- of oil, which according to  .
+ of oil, which according to 
+\begin_inset CommandInset href
+LatexCommand href
+name "Stoft (2008)"
+target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1300126"
+
+\end_inset
+
+ is 26%.
+ We must therefore multiply by 
+\begin_inset Formula $1-\frac{1}{3}\cdot0.26$
+\end_inset
+
+.
  Since the 
 \begin_inset CommandInset href
 LatexCommand href
@@ -4996,7 +5025,7 @@ y
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $aggregate\,averted\,climate\,change\,damage=\frac{3\cdot\$36\cdot859\cdot10^{6}\cdot\epsilon_{D}}{\$855\cdot10^{9}}=0.108\cdot\epsilon_{D}$
+\begin_inset Formula $aggregate\,averted\,climate\,change\,damage=(1-\frac{1}{3}\cdot0.26)\frac{3\cdot\$36\cdot859\cdot10^{6}\cdot\epsilon_{D}}{\$855\cdot10^{9}}=0.108\cdot\epsilon_{D}$
 \end_inset
 
 
@@ -5027,7 +5056,7 @@ target "https://www.iata.org/whatwedo/documents/economics/air_travel_demand.pdf"
 
 .
  With this we obtain 
-\begin_inset Formula $aggregate\,averted\,climate\,change\,damage=0.0326$
+\begin_inset Formula $aggregate\,averted\,climate\,change\,damage=0.0297$
 \end_inset
 
 .
@@ -5036,80 +5065,18 @@ target "https://www.iata.org/whatwedo/documents/economics/air_travel_demand.pdf"
 \begin_layout Standard
 Now let us compute the redistributive effect that happens due to the change
  in oil prices on the world market.
- Our assumption of an infinitely elastic supply of aviation imples that
- per dollar of tax revenue raised from the taxes on the emissions, the reduction
- in revenue of the aviation industry is 
-\begin_inset Formula $\epsilon_{D}$
-\end_inset
-
- dollars 
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-We neglect here the possibility that the tax on emissions will lead airlines
- to reduce emission in other ways than reducing the number of flights, e.g.
- by increasing load factors.
- Taking into account these effects would lead to larger estimates of 
-\begin_inset Formula $b_{i}(x)$
+ From the above calculation, we already have an estimate for the amount
+ of averted CO2 emissions: 
+\begin_inset Formula $\frac{averted\,tons\,of\,CO_{2}}{\$\,of\,tax\,revenue\,collected}=(1-0.26)\frac{859\cdot10^{6}\cdot\epsilon_{D}}{\$855\cdot10^{9}}$
 \end_inset
 
 .
-\end_layout
-
-\end_inset
-
-, where 
-\begin_inset Formula $\epsilon_{D}$
-\end_inset
-
- is the demand elasticity.
- In order to obtain the reduction in the expenditure on oil for aviation
- fuel, we need to multiply by the proportion of aviation costs due to fuel,
- which gives us:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $proportion\,of\,cost\,due\,to\,fuel\cdot\epsilon_{D}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-By multiplying by the oil change ratio, we obtain the losses for crude oil
- producers that this causes through the reduction in the price of oil.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $losses\,for\,crude\,oil\,producers$
-\end_inset
-
-
-\begin_inset Formula $=oil\,change\,ratio\cdot proportion\,of\,cost\,due\,to\,fuel\cdot\epsilon_{D}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-From 
-\begin_inset CommandInset href
-LatexCommand href
-name "IATA (2018)"
-target "https://www.iata.org/pressroom/facts_figures/fact_sheets/documents/fact-sheet-fuel.pdf"
-
-\end_inset
-
- we take the estimate 
-\begin_inset Formula $proportion\,of\,cost\,due\,to\,fuel=0.235$
+ Now we need to estimate 
+\begin_inset Formula $\frac{loss\,to\,oil\,producers}{averted\,tons\,of\,CO_{2}}=\frac{loss\,to\,oil\,producers}{barrels\,of\,crude\,oil}\frac{barrels\,of\,crude\,oil}{averted\,tons\,of\,CO_{2}}=\frac{dP*Q}{dQ}\frac{barrels\,of\,crude\,oil}{averted\,tons\,of\,CO_{2}}=P\frac{\frac{dP}{P}}{\frac{dQ}{Q}}\frac{barrels\,of\,crude\,oil}{averted\,tons\,of\,CO_{2}}$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-From 
+ 
 \begin_inset CommandInset href
 LatexCommand href
 name "Stoft (2008)"
@@ -5117,20 +5084,53 @@ target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1300126"
 
 \end_inset
 
- we take the estimate 
-\begin_inset Formula $oil\,change\,ratio=1.5$
+ calls 
+\begin_inset Formula $\frac{\frac{dP}{P}}{\frac{dQ}{Q}}$
+\end_inset
+
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+oil change ratio
+\begin_inset Quotes erd
+\end_inset
+
+ and gives 5 estimates for from the literature, ranging from 1.5 to 12.
+ We assume the lowest value, 1.5, (as Stoft does) so as not to risk exaggerating
+ the redistributive effects which turn out to help the performance of the
+ MGF mechanisms.
+ For the oil price 
+\begin_inset Formula $P$
+\end_inset
+
+ we take the 
+\begin_inset CommandInset href
+LatexCommand href
+name "average price during 2018"
+target "https://www.macrotrends.net/1369/crude-oil-price-history-chart"
+
 \end_inset
 
 .
+ 
+\begin_inset Formula $\frac{barrels\,of\,crude\,oil}{averted\,tons\,of\,CO_{2}}$
+\end_inset
+
+ has been 
+\begin_inset CommandInset href
+LatexCommand href
+name "estimated"
+target "http://numero57.net/2008/03/20/carbon-dioxide-emissions-per-barrel-of-crude/"
+
+\end_inset
+
+ to be 3.15.
+ Putting all these estimates together, we obain:
 \end_layout
 
 \begin_layout Standard
-Plugging in these numbers give that per dollar raised via aviation emissions
- taxes we get
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $losses\,for\,crude\,oil\,producers=0.0506$
+\begin_inset Formula $\frac{losses\,for\,crude\,oil\,producers}{\$\,of\,tax\,revenue\,collected}=0.068$
 \end_inset
 
 
@@ -5138,7 +5138,7 @@ Plugging in these numbers give that per dollar raised via aviation emissions
 
 \begin_layout Standard
 These marginal losses for crude oil producers are of course equal to the
- marginal gains for gains for oil consumers.
+ marginal gains for oil consumers.
  To compute the aggregate redistributive effect for each of the 12 players,
  we use data for crude oil production and oil consumption from 
 \begin_inset CommandInset href
@@ -5149,26 +5149,19 @@ target "https://yearbook.enerdata.net/crude-oil/crude-oil-balance-trade-data"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Summing the climate change damage reduction effect and effect via the changes
- in world oil prices gives us the following estimates for 
-\begin_inset Formula $\tilde{b_{k}}:=\sum_{i\in k}b_{i}$
+ By adding these results with the estimates for the effects due to reduced
+ climate change we obtain the global effects 
+\begin_inset Formula $\boldsymbol{b_{i}(x)}$
 \end_inset
 
-, where 
-\begin_inset Formula $k$
-\end_inset
-
- ranges over the 12 players:
+ from the emissions taxes on flights, displayed in the following diagram:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename MGF/AEPMF/aepmf/aepmf2/bEstimates.png
+	filename global effects of taxation of aviation emissions.png
 	lyxscale 50
-	scale 30
+	scale 40
 
 \end_inset
 
@@ -5190,6 +5183,14 @@ Effects of the money raised for the GPGIs:
 \end_layout
 
 \begin_layout Standard
+The GPGIs 
+\end_layout
+
+\begin_layout Standard
+Since one of the question
+\end_layout
+
+\begin_layout Standard
 The 
 \begin_inset Quotes eld
 \end_inset
@@ -5202,8 +5203,167 @@ payoff estimates
  not determine based on data but instead guess: Firstly, ...
 \end_layout
 
+\begin_layout Subsubsection
+Effects per dollar given to the Forest Carbon Partnership's Carbon Fund
+\end_layout
+
 \begin_layout Standard
-Since one of the question
+The Forest Carbon Partnership rewards countries with tropical forests for
+ conserving them.
+ An elaborate methodology has been developed through which reference levels
+ of deforestation are determined.
+ Reward payments are made for reductions in deforestation below the reference
+ levels.
+ If the reference level for a country is set too high, then the country
+ will not respond to the incentives provided.
+ If the reference level is too low, it will dilute the incentives created,
+ since most of the reward payments will pay for efforts that the country
+ would do anyway.
+ Since the countries' costs of reducing deforestation are heterogeneous
+ and their private information, most participating countries will earn informati
+onal rents.
+ In other words: 
+\end_layout
+
+\begin_layout Standard
+Suppose, hypothetically, that the Forest Carbon Partnership had complete
+ infomation about the countries' payoffs.
+ Suppose it wants to achieve a certain profile of results (i.e.
+ an amount of deforestation reduction for each country with tropical forests).
+ Then it could make each country a take-it-or-leave it offer whereby it
+ would receive a certain reward payment iff it achieves the specified results.
+ To achieve the specified result with the lowest possible payments, the
+ Forest Carbon Partnership could taylor the reward payment so as to make
+ the country indifferent between accepting the offer and ignoring it.
+ In reality, the Forest Carbon Partnership has only incomplete information
+ about the countries costs and will therefore inevitably end up paying most
+ countries more than necessary to induce them to respond to the mechanism
+ rather than to ignore it.
+\end_layout
+
+\begin_layout Standard
+However, it is useful to decompose any mechanism contracting under incomplete
+ information as the sum of the mechanism contracting under complete information
+ and achieving the same profile of results without leaving any rents to
+ the participants and a mechanism that consists of only paying out rents.
+ In other words, we can view any actual mechanism as if it first 
+\begin_inset Quotes eld
+\end_inset
+
+purchased the global public good of reducing emissions by contracting under
+ complete information and leaving no rents to the countries
+\begin_inset Quotes erd
+\end_inset
+
+ and then 
+\begin_inset Quotes eld
+\end_inset
+
+paying out rents
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+This is in contrast to the Carbon Pricing Reward Fund proposals, where reference
+ levels are not differentiated across countries.
+ This suggests that we should assume that the Forest Carbon Partnership's
+ Carbon Fund will generate less informational rents than the Carbon Pricing
+ Reward Fund and motivates our ad hoc assumption that per dollar given to
+ this GPGI 0.5 dollar accrue as informational rents.
+\end_layout
+
+\begin_layout Standard
+Again, we can think of an additional dollar as doing a combination two things:
+ Firstly, paying out informational rents and secondly, purchasing the global
+ public good (in this case reducing emission due to tropical deforestation)
+ by compensating the agents in the mechanism (in this case national and
+ local governments) for the costs incurred to increase the provision of
+ the global public good.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/FCP carbon fund.pdf
+	lyxscale 50
+	scale 34
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We make the ad hoc assumption that per dollar used to purchase the global
+ public good of reducing emissions, 2.1 dollars of aggregate benefits are
+ generated globally via averted climate change.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Analogously to the case of the CDM, we assume that the status quo each country
+ chooses its level of forest conservation selfishly optimal, taking into
+ account that it internalises a part of the global effects of climate change
+ mitigation.
+ Thus the net global benefits of an emissions reduction taking place in
+ a given country is equal to the sum of the global effects accruing to all
+ the other countries.
+\end_layout
+
+\end_inset
+
+ The number 2.1 is chosen so as to ensure that the assumptions are favorable
+ to the CORSIA+ mechanism, relative to which we will evaluate the newly
+ proposed MGF mechanisms (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Effects-per-dollar"
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Standard
+There is also a potentially important redistributive general equilibrium
+ effect that we need to take into account: Some of the forest conservation
+ measures that will be taken in response to the incentive payments provided
+ by the Forest Carbon Partnership's Carbon Fund will entail reducing the
+ production of commodities such as palm oil, pulp, paper, timber and soy
+ beans that are produced by the countries with tropical forests.
+ As a result, the world market price of these commodities increases, which
+ benefits the sellers of these commodities.
+ 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset href
+LatexCommand href
+name "Harstad and Mideksa (2017)"
+target "https://academic.oup.com/restud/article-abstract/84/4/1708/3069929"
+
+\end_inset
+
+ point to a countervailing effect that also needs to be taken into account:
+ Higher prices for the commodities driving deforestation makes illeal logging
+ more profitable, thereby making enforcement of conservation more costly.
+\end_layout
+
+\end_inset
+
+ The flip side of this is of course that the buyers of these commodities
+ loose out.
+ We make the ad hoc assumption that per dollar used to purchase emissions
+ reductions, 0.5 dollars of benefits accrue to the sellers.
+ We assume that consumption of these commodities is proportional to GDP
+ and that the production is proportional to the tropical forest cover.
+ We leave it for future work to generate proper estimates using data on
+ all the commodities that drive deforestation.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -5225,7 +5385,7 @@ target "https://www.researchgate.net/figure/Marginal-abatement-cost-curve-in-201
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename MGF/seminar presentation/Marginal-abatement-cost-curve-in-2013-2020-for-registered-CDM-projects-2.png
+	filename Marginal-abatement-cost-curve-in-2013-2020-for-registered-CDM-projects-2.png
 	scale 55
 
 \end_inset
@@ -5292,7 +5452,7 @@ The CDM has been criticised for having large rents (ref).
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename MGF/seminar presentation/Fund for CDM payoffs final diagram.png
+	filename C:/Users/DELL/Downloads/Fund for CDM payoffs final diagram(3)(1)(1).pdf
 	lyxscale 50
 	scale 34
 
@@ -5333,7 +5493,7 @@ status open
 This number is broadly consistent with our assumption that the social cost
  of carbon is $36 per ton of CO2.
  To see this, suppose that the marginal abatement cost of the projects funded
- via the CDM will be $10, in line with the marginal abatement cost curve
+ via the CDM will be $15, in line with the marginal abatement cost curve
  shown above.
  This would imply that the benefit cost ratio would be 3.6.
  However, 
@@ -5445,7 +5605,7 @@ reference "subsec:The-global-effects"
  realised through reductions in oil consumption.
  Based on the data provided in http://www.cdmpipeline.org/cdm-projects-type.htm,
  I make the preliminary guess that the proportion of the CDM's emissions
- reductions that are through reduced oil demand is 0.2.
+ reductions that are through reduced oil demand is 0.1.
 \end_layout
 
 \begin_layout Subsubsection
@@ -5495,12 +5655,20 @@ target "https://blogs-images.forbes.com/niallmccarthy/files/2014/10/20141020_ITE
 \end_layout
 
 \begin_layout Standard
-Lastly, we need to make an assumption about how much 
+Lastly, we need to make an assumption about how much the emissions reduction
+ decrease the revenues for oil producers.
+ The emissions reductions that ITER could cause would happen in several
+ decades, if and when nuclear fusion reactors get deployed.
+ Since the players plausibly discount the future at a large rate, these
+ redistributive effects weigh less heavily in the players' payoffs than
+ the immediate redistributive effects that the CDM induces.
+ Based on this we make the ad hoc assumption that per averted emission ITER
+ causes half as much redistributive effects via the oil price as the CDM.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename MGF/seminar presentation/ITER payoffs final diagram.png
+	filename C:/Users/DELL/Downloads/ITER payoffs (2).pdf
 	lyxscale 50
 	scale 34
 
@@ -5618,7 +5786,7 @@ We will assume that the Carbon Pricing Reward Fund uses the multiplicative
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename MGF/seminar presentation/Multiplicative mechanism   final.png
+	filename C:/Users/DELL/Downloads/Multiplicative mechanism (5).pdf
 	lyxscale 50
 	scale 34
 
@@ -5694,129 +5862,33 @@ reference "subsec:The-global-effects"
  However, we need to adjust this estimate, since part of the emissions reduction
 s that the Carbon Pricing Reward Fund would induce could be in the form
  of reductions in coal and gas consumption.
- We make the ad hoc assumption that we have to multiply our estimate by
- 0.75 in order to get the true value of the oil rent redistribution effect.
-  Unfortnuately, the 
+ In fact, in 2018 the proportion of fossil fuel subsidies given to oil was
+ 40% globally 
 \begin_inset CommandInset href
 LatexCommand href
-name "data"
-target "https://www.imf.org/external/error.htm?URL=http://www.imf.org/external/np/fad/subsidies/data/wpdata.xlsx"
+name "(IAEA 2019)"
+target "https://www.iea.org/weo/energysubsidies/"
 
 \end_inset
 
- used only had the aggregate fossil fuel subsidies and not the subsidies
- for coal, oil and gas separately, so that so far we have not been able
- to compute a proper estimate.
-\end_layout
-
-\begin_layout Subsubsection
-Effects per dollar given to the Forest Carbon Partnership's Carbon Fund
-\end_layout
-
-\begin_layout Standard
-The Forest Carbon Partnership rewards countries with tropical forests for
- conserving them.
- An elaborate methodology has been developed through which reference levels
- of deforestation are determined.
- Reward payments are made for reductions in deforestation below the reference
- levels.
- This is in contrast to the Carbon Pricing Reward Fund proposals, where
- reference levels are not differentiated across countries.
- This suggests that we should assume that the Forest Carbon Partnership's
- Carbon Fund will generate less informational rents than the Carbon Pricing
- Reward Fund and motivates our ad hoc assumption that per dollar given to
- this GPGI 0.5 dollar accrue as informational rents.
-\end_layout
-
-\begin_layout Standard
-Again, we can think of an additional dollar as doing a combination two things:
- Firstly, paying out informational rents and secondly, purchasing the global
- public good (in this case reducing emission due to tropical deforestation)
- by compensating the agents in the mechanism (in this case national and
- local governments) for the costs incurred to increase the provision of
- the global public good.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename MGF/seminar presentation/FCP carbon fund final.png
-	lyxscale 50
-	scale 34
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-We make the ad hoc assumption that per dollar used to purchase the global
- public good of reducing emissions, 2.1 dollars of aggregate benefits are
- generated globally via averted climate change.
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Analogously to the case of the CDM, we assume that the status quo each country
- chooses its level of forest conservation selfishly optimal, taking into
- account that it internalises a part of the global effects of climate change
- mitigation.
- Thus the net global benefits of an emissions reduction taking place in
- a given country is equal to the sum of the global effects accruing to all
- the other countries.
-\end_layout
-
-\end_inset
-
- The number 2.1 is chosen so as to ensure that the assumptions are favorable
- to the CORSIA+ mechanism, relative to which we will evaluate the newly
- proposed MGF mechanisms (see section 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Effects-per-dollar"
-
-\end_inset
-
-).
- 
-\end_layout
-
-\begin_layout Standard
-There is also a potentially important redistributive general equilibrium
- effect that we need to take into account: Some of the forest conservation
- measures that will be taken in response to the incentive payments provided
- by the Forest Carbon Partnership's Carbon Fund will entail reducing the
- production of commodities such as palm oil, pulp, paper, timber and soy
- beans that are produced by the countries with tropical forests.
- As a result, the world market price of these commodities increases, which
- benefits the sellers of these commodities.
+.
+ Based on this, we make the ad hoc assumption that 40% of the emissions
+ reductions induced by the Carbon Pricing Reward Fund are through reductions
+ in oil consumption.
  
 \begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-\begin_inset CommandInset href
-LatexCommand href
-name "Harstad and Mideksa (2017)"
-target "https://academic.oup.com/restud/article-abstract/84/4/1708/3069929"
-
-\end_inset
-
- point to a countervailing effect that also needs to be taken into account:
- Higher prices for the commodities driving deforestation makes illeal logging
- more profitable, thereby making enforcement of conservation more costly.
+A proper estimate would require country-specific elasticity estimates and
+ a theoretical model for how fossil fuel subsidies are set by governments.
+ Lacking both of these elements, I have resorted to this ad hoc estimate
+ of 40%.
 \end_layout
 
 \end_inset
 
- The flip side of this is of course that the buyers of these commodities
- loose out.
- We make the ad hoc assumption that per dollar used to purchase emissions
- reductions, 0.5 dollars of benefits accrue to the sellers.
- We assume that consumption of these commodities is proportional to GDP
- and that the production is proportional to the tropical forest cover.
- We leave it for future work to generate proper estimates using data on
- all the commodities that drive deforestation.
- 
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -5849,9 +5921,9 @@ The Global Fund gives grants for programs agains AIDS, TB and Malaria.
  Of the total amount allocated to each country, at least 15 percent are
  made available as matching offers to encourage countries to make additional
  investments in their response to the three diseases.
- To access the incentive portion of their allocation, countries will need
- to commit to additional co-financing investments over and above previous
- levels of spending.
+ To access the incentive portion of their allocation, countries need to
+ commit to additional co-financing investments over and above previous levels
+ of spending.
  
 \end_layout
 
@@ -5864,7 +5936,7 @@ target "http://www.aidspan.org/fr/node/4766"
 
 \end_inset
 
- these 1:1 matching offers, thereby reaviling that they value a dollar earmarked
+ these 1:1 matching offers, thereby revealing that they value a dollar earmarked
  for these health programs strictly less than a dollar with no strings attached.
  If there were no cross-country externalities, then we would have to conclude
  the aggregate global benefit
@@ -5883,7 +5955,8 @@ global benefit
  we of cause always mean the aggregate payoffs, summed over all countries.
  This revealed preference notion of benefits is the relevant concept when
  it comes to studying the incentives countries have to participate in the
- mechanissm.
+ mechanism.
+ 
 \end_layout
 
 \end_inset
@@ -6019,7 +6092,7 @@ Fund buying up CDM Certificates
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.5009
+1.5
 \end_layout
 
 \end_inset
@@ -6079,7 +6152,7 @@ Forest Carbon Partnership's Carbon Fund
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.5095
+1.5
 \end_layout
 
 \end_inset
@@ -6139,7 +6212,7 @@ Carbon offsets under CORSIA+
 \begin_inset Text
 
 \begin_layout Plain Layout
-1.5052
+1.5
 \end_layout
 
 \end_inset
@@ -6164,17 +6237,18 @@ As explained before, we are assuming that the payoff per dollar raised for
 \end_layout
 
 \begin_layout Section
-Transposition of the MGF mechanisms to alternative tax bases
+Transposition of the MGF mechanisms to other tax bases
 \end_layout
 
 \begin_layout Standard
 We have focused so far on mechanisms based on the taxation of greenhouse
  gas emissions from international aviation.
- However, the mechanism can be transposed to other tax bases:
+ However, the mechanism can be transposed to other tax bases.
+ Here are two such proposals:
 \end_layout
 
 \begin_layout Subsubsection
-Emissions from International Maritime Shipping
+Emissions from Maritime Shipping
 \end_layout
 
 \begin_layout Standard
@@ -6194,30 +6268,89 @@ target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2512747"
 
 ) a proposal has been elaborated that navigates all these constraints and
  appears to be waterproof to evasion problems.
- The MGF mechanisms that we have proposed here can be combined with the
- taxation mechanism defined by by Heine et al.
- (2015).
+ Their proposal entails that the tax liability would be situated with the
+ consignee of the cargo for imports and the consignor of the cargo for exports.
+ The MGF mechanisms could be defined completely analogously to the way we
+ defined it for aviation emissions: The taxation obligation would entail
+ taxing the shipping carbon emissions associated with all exports and also
+ the shipping carbon emissions from imports from non-participating countries.
 \end_layout
 
 \begin_layout Standard
-taxation obligation: tax the 
-\end_layout
-
-\begin_layout Subsubsection
-Luxury goods
-\end_layout
-
-\begin_layout Standard
-Taxes on luxury goods 
+The welfare effects of taxes on the carbon emissions of shipping has been
+ estimated by 
 \begin_inset CommandInset href
 LatexCommand href
-name "have been discussed"
-target "http://www.un.org/en/development/desa/policy/wess/wess_current/2012wess_overview_en.pdf"
+name "Shapiro (2016)"
+target "https://www.aeaweb.org/articles?id=10.1257/pol.20150168"
 
 \end_inset
 
- as a potential source for financing global public goods.
+.
+ Using these estimates, one could run simulations for the maritime-shipping-base
+d MGF mechanisms analogous to the aviation-based MGF mechanism that I have
+ reported in the present article.
+\end_layout
+
+\begin_layout Subsubsection
+precious stones
+\end_layout
+
+\begin_layout Standard
+The trade in gold, diamonds and other precious stones is widely recognised
+ to contribute to violent conflict.
+\end_layout
+
+\begin_layout Standard
+Diamonds continue to fund armed groups, as cases in Angola and DRC show:
+\end_layout
+
+\begin_layout Standard
+https://www.globalwitness.org/en/campaigns/central-african-republic-car/game-of-st
+ones/#chapter-0/section-0
+\end_layout
+
+\begin_layout Standard
+https://www.business-humanrights.org/en/world-diamond-council-alleges-zimbabwean-d
+iamonds-exported-through-so-africa-under-fraudulent-certificates-of-origin-blend
+ed-with-blood-diamonds-from-dem-rep-of-congo-undermining
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Throughout this exposition we have only treated the problem of conflict
+ diamonds in the sense defined in the Kimberley process: 
+\begin_inset Quotes eld
+\end_inset
+
  
+\begin_inset Quotes erd
+\end_inset
+
+.
+ NGOs such as Global Witness have been arguing that the definition of conflict
+ diamonds...
+ In the Kimberley process there would thus be embargoes against all diamonds
+ coming from countries such as ...
+ .
+ The definition of the MGF mechanism (the definition of 
+\begin_inset Quotes eld
+\end_inset
+
+conflict-free
+\begin_inset Quotes erd
+\end_inset
+
+ could be operationalised based on the proposals made by NGOs: https://www.global
+witness.org/en/press-releases/diamond-industry-fails-clean-its-act/)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset href
 LatexCommand href
 name "Ng (1987)"
@@ -6302,6 +6435,478 @@ target "https://www.ifs.org.uk/uploads/mirrleesreview/design/ch7.pdf"
  for Global Public Good Institutions, it is plausible that the mechanism
  would have enough legitimacy so as to allow an exemption to the destination
  principle for it.
+\end_layout
+
+\begin_layout Standard
+The diagram below 
+\end_layout
+
+\begin_layout Standard
+The Simple MGF mechanism 
+\end_layout
+
+\begin_layout Standard
+We denote the set of all countries by 
+\begin_inset Formula $I$
+\end_inset
+
+ and the set of all participants to the MGF mechanism by 
+\begin_inset Formula $Participants$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+The precious-stones-based Simple MGF mechanism for the fixed tax rate 
+\begin_inset Formula $x$
+\end_inset
+
+, the fixed set 
+\begin_inset Formula $S$
+\end_inset
+
+ of GPGIs and the fixed retention rate 
+\begin_inset Formula $r$
+\end_inset
+
+ defines a club through the following three obligations that participating
+ countries have to comply with:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+A further condition for club membership should actually be added here: to
+ comply with existing international mechanisms such as the Kimberley process
+ for diamond certification.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+1.1) (
+\series bold
+the taxation obligation
+\series default
+) 
+\end_layout
+
+\begin_layout Definition
+Participating countries have to apply an ad valorem tax of rate 
+\begin_inset Formula $x$
+\end_inset
+
+ on all sales of goods containing precious stones to consumers and on all
+ exports of goods containing precious stones to non-participating countries.
+ Let 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ denote the tax revenue that the participant 
+\begin_inset Formula $i$
+\end_inset
+
+ collects.
+ Before allocating or retaining money (see the allocation obligation below),
+ each participant has to attribute part of the tax revenue to other countries
+ according to the following procedure:
+\end_layout
+
+\begin_layout Definition
+The amounts 
+\begin_inset Formula $G_{i}$
+\end_inset
+
+, which we can think of as 
+\begin_inset Quotes eld
+\end_inset
+
+the collected money attributed to country 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ is computed as follows: For 
+\end_layout
+
+\begin_layout Definition
+each other participating country 
+\begin_inset Formula $j$
+\end_inset
+
+ that exports to 
+\begin_inset Formula $i$
+\end_inset
+
+ a value 
+\begin_inset Formula $f_{ji}$
+\end_inset
+
+ of diamond products, the amount 
+\begin_inset Formula $xf_{ij}$
+\end_inset
+
+ is deducted from 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ (and added to 
+\begin_inset Formula $M_{j})$
+\end_inset
+
+.
+ Symmetrically, for 
+\end_layout
+
+\begin_layout Definition
+each other participating country 
+\begin_inset Formula $j$
+\end_inset
+
+ that imports from 
+\begin_inset Formula $i$
+\end_inset
+
+ a value 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+ of diamond products, the amount 
+\begin_inset Formula $xf_{ij}$
+\end_inset
+
+ is added to 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+ (and deducted from
+\begin_inset Formula $M_{j})$
+\end_inset
+
+.
+ Moreover, all the tax revenue that country 
+\begin_inset Formula $i$
+\end_inset
+
+ collects from sales to consumers from 
+\begin_inset Formula $j$
+\end_inset
+
+ is attributed to county 
+\begin_inset Formula $j$
+\end_inset
+
+, in line with the spirit of the destination principle.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+see https://www.ifs.org.uk/uploads/mirrleesreview/design/ch7.pdf 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+1.2) (
+\series bold
+the attribution obligation
+\series default
+)
+\end_layout
+
+\begin_layout Definition
+1.2.1) (trade based reattribution) Let 
+\begin_inset Formula $i,j$
+\end_inset
+
+ be participants and let 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+ be the value of exports from country 
+\begin_inset Formula $i$
+\end_inset
+
+ to country 
+\begin_inset Formula $j$
+\end_inset
+
+ of goods containing precious stones .
+ Country 
+\begin_inset Formula $j$
+\end_inset
+
+ now has to attribute the amount 
+\begin_inset Formula $xf_{ij}$
+\end_inset
+
+ to country 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+1.2.2) (consumer sales based reattribution) Let 
+\begin_inset Formula $i,j$
+\end_inset
+
+ be participants and let 
+\begin_inset Formula $g_{ij}$
+\end_inset
+
+ be the value of sales made in country 
+\begin_inset Formula $i$
+\end_inset
+
+ to consumers who are residents in country 
+\begin_inset Formula $j$
+\end_inset
+
+ of goods containing precious stones.
+ Country 
+\begin_inset Formula $i$
+\end_inset
+
+ now has to attribute the amount 
+\begin_inset Formula $x(g_{ij}-\sum_{k\in Participants}f_{ki}\frac{g_{ij}}{\sum_{l\in I}g_{il}})$
+\end_inset
+
+ to country 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+As a result, the amount 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ of money attributed to country 
+\begin_inset Formula $i$
+\end_inset
+
+ is:
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula $A_{i}=M_{i}-x\sum_{k\in Participants}f_{ki}+x\sum_{k\in Participants}f_{ik}+x(g_{ij}-\sum_{k\in Participants}f_{ki}\frac{g_{ij}}{\sum_{k\in I}g_{ik}})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+2) (
+\series bold
+the allocation obligation
+\series default
+) (analogous to the allocation obligation in the aviation-based MGF mechanisms,
+ but with each player disposing of the attributed money, 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+, instead of the tax revenue collected, 
+\begin_inset Formula $M_{i}$
+\end_inset
+
+.) Each country 
+\begin_inset Formula $i$
+\end_inset
+
+ can dispose of the money 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ attributed to him, according to the following rules: The country can decide
+ on the propotion 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ of 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ that it wants to allocate to GPGIs.
+ It can allocate the amount 
+\begin_inset Formula $p_{i}A_{i}$
+\end_inset
+
+ in any way to the GPGIs from the set 
+\begin_inset Formula $S$
+\end_inset
+
+ of eligible GPGIs.
+ Of the amount 
+\begin_inset Formula $(1-p_{i})A_{i}$
+\end_inset
+
+ that country 
+\begin_inset Formula $i$
+\end_inset
+
+ does not allocate to GPGIs, it can retain the proportion 
+\begin_inset Formula $r$
+\end_inset
+
+ (which is the retention rate parameter of the mechanism).
+ The remaining amount, 
+\begin_inset Formula $(1-r)(1-p_{i})A_{i}$
+\end_inset
+
+ is added to the GPGIs proportionally to the aggregate contributions made
+ to them via the mechanism.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is the motivation for the definition of the attribution obligation:
+ The rationale for attributing the tax revenue 
+\begin_inset Formula $xg_{ij}$
+\end_inset
+
+ to country 
+\begin_inset Formula $i$
+\end_inset
+
+ is that it makes the mechanism conform with the spirit of the destination
+ principle 
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+see https://www.ifs.org.uk/uploads/mirrleesreview/design/ch7.pdf 
+\end_layout
+
+\end_inset
+
+: On the basis of the destination principle, it is It mimicks the the standard
+ current practice where country 
+\begin_inset Formula $i$
+\end_inset
+
+ reimburses non-residents the taxes paid on goods in country 
+\begin_inset Formula $i$
+\end_inset
+
+ upon returning to their country of residence, where they have to then declare
+ their purchase and pay taxes.
+ It is However, the amount 
+\begin_inset Formula $xf_{ij}$
+\end_inset
+
+ has already been attributed to 
+\begin_inset Formula $i$
+\end_inset
+
+ due to the trade based reattribution.
+ To 
+\begin_inset Quotes eld
+\end_inset
+
+undo this double-attribution to 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, we effectively cancel the fraction 
+\begin_inset Formula $\frac{g_{ij}}{\sum_{k}g_{kj}}$
+\end_inset
+
+ of the trade based reattribution of 
+\begin_inset Formula $xf_{ij}$
+\end_inset
+
+ to 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+If we had complete information, then we could cancel the trade based reattributi
+on to 
+\begin_inset Formula $i$
+\end_inset
+
+ of the flow from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+ of the goods that end up being sold in 
+\begin_inset Formula $j$
+\end_inset
+
+ to consumers that are residents in 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Since this information will not be available, we effectively assume that
+ the proportion of the value 
+\begin_inset Formula $f_{ij}$
+\end_inset
+
+ that corresponds to these goods (i.e.
+ the ones ending up being sold to consumers that are residents in 
+\begin_inset Formula $i$
+\end_inset
+
+) is equal to the proportion of the overall consumer sales in country 
+\begin_inset Formula $j$
+\end_inset
+
+ made to consumers that are residents in country 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The diagram below illustrates the definition:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename C:/Users/DELL/Downloads/diamonds taxation obligation complete (1) (1)(4).pdf
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -6669,7 +7274,7 @@ target "https://www.ifs.org.uk/uploads/mirrleesreview/design/ch7.pdf"
 
 \end_inset
 
- Implementation of VAT, chapter 7 of Tax by Design, The Mirrlees Review
+, Implementation of VAT, chapter 7 of Tax by Design, The Mirrlees Review
 \end_layout
 
 \begin_layout Bibliography
@@ -6687,7 +7292,7 @@ target "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5649642/"
 
 \end_inset
 
-The Relationship Between the Normalized Gradient Addition Mechanism and
+, The Relationship Between the Normalized Gradient Addition Mechanism and
  Quadratic Voting
 \end_layout
 
@@ -6706,7 +7311,7 @@ target "https://scholarship.law.berkeley.edu/cgi/viewcontent.cgi?referer=https:/
 
 \end_inset
 
- Quadratic Voting and the Public Good: Introduction
+, Quadratic Voting and the Public Good: Introduction
 \end_layout
 
 \begin_layout Bibliography
@@ -6724,7 +7329,7 @@ target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656"
 
 \end_inset
 
- Liberal Radicalism: A Flexible Design For Philanthropic Matching Funds
+, Liberal Radicalism: A Flexible Design For Philanthropic Matching Funds
 \end_layout
 
 \begin_layout Bibliography
@@ -6781,6 +7386,63 @@ target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2512747"
  A Regional Solution for a Transnational Problem? - A Mechanism to Unilaterally
  Tax Maritime Emissions While Satisfying Extraterritoriality, Tax Competition
  and Political Constraints
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Shapiro (2016)"
+target "https://www.aeaweb.org/articles?id=10.1257/pol.20150168"
+
+\end_inset
+
+,Trade Costs, CO2, and the Environment
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+
+\begin_inset CommandInset href
+LatexCommand href
+name "Stoft (2009)"
+target "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1438182"
+
+\end_inset
+
+ Flexible Global Carbon Pricing: A Backward-Compatible Upgrade for the Kyoto
+ Protocol
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -1,10 +1,24 @@
-  % %Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, other high income countries, Russia, US, other non-OECD Asia
-% bar(categorical({'Africa', 'China', 'EU', 'Eurasia', 'India', 'Japan'}),transpose(A(:,1:6)))
-% legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund')
-% [h, ~, plots] = legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund');
-% for idx = 1:length(h.String)
-%     h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
-% end
+%  Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, other high income countries, Russia, US, other non-OECD Asia
+bar(categorical({'Africa', 'China', 'EU', 'Eurasia', 'India', 'Japan'}),transpose(A(:,1:6)))
+legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund')
+[h, ~, plots] = legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund');
+for idx = 1:length(h.String)
+    h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
+end
+grid on
+  ax = gca; % current axes
+  ax.FontSize = 18;
+
+
+%  Africa, China, EU, Eurasia, India, Japan, Latin America, Middle East, other high income countries, Russia, US, other non-OECD Asia
+bar(categorical({'Latin \newline America', 'Middle \newline East', 'Other \newline High \newline Income', 'Russia', 'US', 'Zother \newline Asia'}),transpose(A(:,7:12)))
+legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund')
+[h, ~, plots] = legend('Clean Development \newline Mechanism (CDM)','Coalition for \newline Epidemic Preparedness \newline Innovation (CEPI)','Global Fund for \newline AIDS, TB and Malaria','Forest Carbon Partnerships \newline Carbon Fund', 'International \newline Thermonuclear \newline Reactor (ITER)', 'Carbon Pricing \newline Reward Fund');
+for idx = 1:length(h.String)
+    h.String{idx} = ['\color[rgb]{' num2str(plots(idx).Color) '} ' h.String{idx}]
+end
+  ax = gca; % current axes
+  ax.FontSize = 18;
 
 
   bar(categorical({'Africa', 'China', 'EU', 'Eurasia', 'India', 'Japan','Latin America', 'Middle East', 'Other High Income', 'Russia', 'US', 'zother Asia'}),transpose(A))
@@ -15,12 +29,20 @@
 bar_handle = bar(transpose(A),'grouped');
 grid on
 
+
+
+
+
+
+
+
 set(bar_handle(1),'FaceColor','r')
 set(bar_handle(2),'FaceColor','g')
 set(bar_handle(3),'FaceColor','c')
 set(bar_handle(4),'FaceColor','b')
 set(bar_handle(5),'FaceColor','p')
 set(bar_handle(6),'FaceColor','r')
+grid on
 
 CrudeOilImporters2017Normalised=[0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]/sum([0,	414.6,	551.6,		0,		223.2,	157.8,	0,		0,		0,		0,	313.8,	248.4]);
 CrudeOilExporters2017Normalised=[-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]/(-sum([-243.1,	0,	0,		-68.1,		0,	0,	-202.5,		-923.8,		-116.7,		-261.1,	0,	0]));

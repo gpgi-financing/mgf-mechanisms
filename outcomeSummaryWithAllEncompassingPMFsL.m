@@ -61,9 +61,10 @@ else
     %Now we compute the money reaching the different PMFs
     GPGIs=zeros(x,1);
     totalFreeFunds=sum(FreeFunds)+sum((1-r)*(1-m).*PureFunds.*ParticipantsWithInfluence);
-    weightedSum=sum(floor(s).*(1-h*floor(s)).*m.*PureFunds*10.*(s-floor(s)));
+    weightedSum=sum(floor(s).*(1-h*floor(s)./(1+h*floor(s))).*m.*PureFunds*10.*(s-floor(s)));
     for i=1:N %Here we add up all the direct allocations to the GPGIs.
       nPMF=floor(s(i));
+                h_proportion=h/(1+nPMF*h);
       if s(i)==1
         [maxvalues, ind] = maxk(A(:,i), 2);
         GPGIs(ind(1))=GPGIs(ind(1))+m(i)*p(i)*PureFunds(i);
@@ -74,7 +75,7 @@ else
         GPGIs(ind(1))=GPGIs(ind(1))+m(i)*p(i)*PureFunds(i)*(1-10*(s(i)-nPMF)); %p(i) is the proportion of the money not given to PMFs given directly to the most preferred GPGI.
         GPGIs(ind(2))=GPGIs(ind(2))+m(i)*(1-p(i))*PureFunds(i)*(1-10*(s(i)-nPMF));
         for k=1:nPMF
-          GPGIs(ind(k))=GPGIs(ind(k))+ h*m(i)*PureFunds(i)*10*(s(i)-nPMF);
+          GPGIs(ind(k))=GPGIs(ind(k))+ h_proportion*m(i)*PureFunds(i)*10*(s(i)-nPMF);
         end
       end
     end
@@ -82,11 +83,12 @@ else
     if weightedSum>0
       for i=1:N
         nPMF=floor(s(i));
+                  h_proportion=h/(1+nPMF*h);
         if nPMF>1
           [maxvalues, ind] = maxk(A(:,i), nPMF);
           sumGPGIs=sum(GPGIs(ind,1));
           for k=1:nPMF
-            GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
+            GPGIsFinal(ind(k))=GPGIsFinal(ind(k))+(1-h_proportion*nPMF)*10*(s(i)-nPMF)*m(i)*PureFunds(i)*(1+nPMF/weightedSum*totalFreeFunds)*GPGIs(ind(k))/sumGPGIs;
           end
         end
       end

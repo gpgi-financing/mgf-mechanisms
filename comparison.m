@@ -13,7 +13,7 @@ eventualOutcomesr=zeros(samplesize,9,K);
 % K = number_of_step_for_discretization_of_retention_rate
 
 for kk=0:(K-1)
-  r=kk/(K-1);
+  r=0.4+kk/(K-1);
   eventualProfiles=zeros(3*samplesize,N);
   eventualOutcomes=zeros(samplesize,9); %In this matrix we will keep track of the eventual outcomes for the different random paths starting from the randomly sampled initial action profiles.
   initialProfiles=zeros(samplesize,N);
@@ -33,8 +33,10 @@ for kk=0:(K-1)
     moneyCollectedSoFar=0;
     step=1;
     while flag
-      
-      adjustmentcost=0.0000002*(1+0.05*step*(1+0.02*step)); %This adjustmentcost is small. It is introduced mainly to avoid getting a failure to converge that is due to the discretisation of the strategy space.
+      fixed_adjustmentcost=0.0000002;
+      linear_adjustmentcost=0.00000001;
+      quadratic_adjustmentcost=0.000000002;
+      adjustmentcost=fixed_adjustmentcost+linear_adjustmentcost*step+quadratic_adjustmentcost*step^2; %This adjustmentcost is small. It is introduced mainly to avoid getting a failure to converge that is due to the discretisation of the strategy space.
       % % % % % % % % % % % %         outcomeSummaryAtCurrentProfile=outcomeSummaryWithAllEncompassingPMFsL(s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease,GPGI_allocation_proportion_required_for_PMF_contribution);
       % % % % % % % % % % % %         moneyRaisedForGPGIsSoFar=moneyRaisedForGPGIsSoFar+outcomeSummaryAtCurrentProfile(2);
       % % % % % % % % % % % %         moneyCollectedSoFar=moneyCollectedSoFar+outcomeSummaryAtCurrentProfile(3);
@@ -176,7 +178,7 @@ for kk=0:(K-1)
         s
         aFI=[0,0];
 
-        eventualOutcomes(z,:)=[numberOfActionProfileChanges 0 0 numberOfParticipants 0 0 -1 moneyRaisedForGPGIsSoFar/step moneyCollectedSoFar/step]; %In the last column we record a -1 for the fact that we have not arrived at a NE.
+        eventualOutcomes(z,:)=[numberOfActionProfileChanges 0 0 numberOfParticipants 0 0 -1 moneyRaisedForGPGIsSoFar/step adjustmentcost]; %In the last column we record a -1 for the fact that we have not arrived at a NE.
         eventualProfiles(3*z-2,:)=s(1,:);
         eventualProfiles(3*z-1,:)=s(2,:);
         eventualProfiles(3*z,:)=s(3,:);
@@ -273,7 +275,7 @@ for kk=0:(K-1)
           s
           aFI=[0 0]
           %aFI=aggregateForceOfIncentivesToDeviateAllEncompassingPMFs(delta,s,A,F,C,r,R,reductionInOilRevenuesPerDollarRaisedViaTaxesOnFlightEmissions,AggregateMitigationBenefitsDueToKerosineConsumptionDecrease);
-          eventualOutcomes(z,:)=[numberOfActionProfileChanges 0 numberOfParticipants 0 sum(ParticipantsWithInfluence) 0 1 moneyRaisedForGPGIsSoFar/step moneyCollectedSoFar/step]; %The 1 in the last column records that we have reached a NE.
+          eventualOutcomes(z,:)=[numberOfActionProfileChanges 0 numberOfParticipants 0 sum(ParticipantsWithInfluence) 0 1 moneyRaisedForGPGIsSoFar/step adjustmentcost]; %The 1 in the last column records that we have reached a NE.
           eventualProfiles(3*z-2,:)=s(1,:);
           eventualProfiles(3*z-1,:)=s(2,:);
           eventualProfiles(3*z,:)=s(3,:);
