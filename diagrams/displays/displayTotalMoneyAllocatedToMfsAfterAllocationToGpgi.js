@@ -1,10 +1,8 @@
-function displayFinalRepartition(x, y, isVertical) {
+function displayTotalMoneyAllocatedToMfsAfterAllocationToGpgi(x, y, isVertical) {
   const mfs = getMfs();
   const totalProportionMoneyNotDirectlyAllocated = getTotalProportionMoneyNotDirectlyAllocated();
   const totalDirectlyAllocatedMoneyRepartition = getTotalDirectlyAllocatedMoneyRepartition();
   const totalProportionMoneyInitiallyAllocatedToMfs = getTotalProportionMoneyInitiallyAllocatedToMfs()
-
-  const finalAllocation = Object.assign({}, totalDirectlyAllocatedMoneyRepartition);
 
   mfs.forEach(mf => {
     const mfComposition = mf.mfComposition;
@@ -17,23 +15,21 @@ function displayFinalRepartition(x, y, isVertical) {
 
     for (var i = 0; i < nbOfGpgis; i += 1) {
       const gpgi = mfComposition[i];
+      const color = gpgis[gpgi];  
       const proportionMoneyDirectlyAllocatedToCurrentGpgi = totalDirectlyAllocatedMoneyRepartition[gpgi];
 
-      const proportionMoneyOfMfAllocatedToCurrentGpgi = proportionMoneyAllocatedToMf * proportionMoneyDirectlyAllocatedToCurrentGpgi / totalProportionMoneyDirectlyAllocatedToGpgisOfMf;
-      finalAllocation[gpgi] += proportionMoneyOfMfAllocatedToCurrentGpgi;
+      const proportionMoneyOfMfAllocatedToCurrentGpgi =  proportionMoneyAllocatedToMf * proportionMoneyDirectlyAllocatedToCurrentGpgi / totalProportionMoneyDirectlyAllocatedToGpgisOfMf;
+      const lengthMoneyOfMfAllocatedToCurrentGpgi = totalScale * proportionMoneyOfMfAllocatedToCurrentGpgi;
+      fill(color);
+      drawRect(x, y, widthRect, lengthMoneyOfMfAllocatedToCurrentGpgi, isVertical);
+      if (isVertical)
+        y += lengthMoneyOfMfAllocatedToCurrentGpgi;
+      else
+        x += lengthMoneyOfMfAllocatedToCurrentGpgi;
     }
-  })
-
-
-  Object.keys(finalAllocation).forEach(gpgi => {
-    const color = gpgis[gpgi];
-    const proportionMoneyAllocatedToCurrentGpgi = finalAllocation[gpgi];
-    const lengthMoneyAllocatedToCurrentGpgi = totalScale * proportionMoneyAllocatedToCurrentGpgi;
-    fill(color);
-    drawRect(x, y, widthRect , lengthMoneyAllocatedToCurrentGpgi, isVertical);
     if (isVertical)
-      y += lengthMoneyAllocatedToCurrentGpgi + 10;
+      y += 10;
     else
-      x += lengthMoneyAllocatedToCurrentGpgi + 10;
+      x += 10;
   })
 }
