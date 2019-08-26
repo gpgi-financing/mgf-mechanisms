@@ -8,12 +8,12 @@
   CPRF: Carbon Pricing Reward Fund
 */
 const gpgis = {
-  CDM: "#0099ff",
-  CEPI: "#ff6600",
-  GFATBM: "#ffff00",
-  FCPCF: "#21529c",
-  ITER: "#33cc33",
-  CPRF: "#66ccff"
+  CDM: "#518FCB",
+  CEPI: "#00244F",
+  GFATBM: "#CC381C",
+  FCPCF: "#5B9E3C",
+  ITER: "#FDBB34",
+  CPRF: "#784C27"
 }
 
 
@@ -47,8 +47,6 @@ const allocations = {
 
   mfComposition is an array of GPGIs that compose the matching fund
 */
-
-
 const strategies = getStrategies()
 
 
