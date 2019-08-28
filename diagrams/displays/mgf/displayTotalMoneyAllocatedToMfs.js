@@ -4,7 +4,7 @@ function displayTotalMoneyAllocatedToMfs(x, y, isVertical) {
   const totalProportionMoneyInitiallyAllocatedToMfsWeighted = getTotalProportionMoneyInitiallyAllocatedToMfsWeighted()
 
   fill("#111111")
-  textSize(17 );
+  textSize(17);
   textAlign(LEFT, BOTTOM);
   text('Total allocations to PMFs', x + 5, y - 4);
 

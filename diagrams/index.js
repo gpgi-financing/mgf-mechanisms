@@ -1,14 +1,4 @@
 
-let canvasLength;
-let canvasHeight;
-
-if (currentMecanism === "corsia+") {
-  canvasLength = 1000
-  canvasHeight = 450
-} else {
-  canvasLength = 1600
-  canvasHeight = 900
-}
 
 function setup() {
   var canvas = createCanvas(canvasLength, canvasHeight);
@@ -35,28 +25,30 @@ function showDiagramCorsiaPlus() {
 }
 
 function showDiagramSimpleMgf() {
-  displayAllocations(450, 100, false);
-  displayStrategies(450, 200, false);
+  drawLegend(1150, 50)
+  displayAllocations(50, 120, false);
+  displayStrategies(50, 180, false);
 
-  displayTotalMoneyNotDirectlyAllocated(400, 400, false);
-  displayTotalMoneyDirectlyAllocated(400, 500, false);
+  displayTotalMoneyNotDirectlyAllocated(450, 400, false);
+  displayTotalMoneyDirectlyAllocated(450, 500, false);
 
   let s = 'Distribution of non-allocated money to the GPGIs proportionnally to the direct allocation to made to these GPGIs';
   fill("#111111")
   textSize(17);
   textAlign(CENTER, TOP);
-  text(s, 640, 280, 220, 200);
-  displayArrow(680, 450, false)
+  text(s, 690, 280, 220, 200);
+  displayArrow(730, 450, false)
 
-  displaySimpleMgfIndirectAllocationGpgis(850, 400, false);
-  displayTotalMoneyDirectlyAllocated(850, 500, false);
+  displaySimpleMgfIndirectAllocationGpgis(900, 400, false);
+  displayTotalMoneyDirectlyAllocated(900, 500, false);
 
-  displaySimpleMgfFinalRepartition(500, 650, false);
+  displaySimpleMgfFinalRepartition(550, 650, false);
 }
 
 function showDiagramMgf() {
-  displayAllocations(450, 100, false);
-  displayStrategies(450, 200, false);
+  drawLegend(1150, 50)
+  displayAllocations(50, 120, false);
+  displayStrategies(50, 180, false);
 
   displayTotalMoneyNotDirectlyAllocated(50, 400, false);
   displayTotalMoneyInitiallyAllocatedToMfs(50, 500, false);
@@ -94,6 +86,6 @@ function showDiagramMgf() {
   displayTotalMoneyAllocatedToMfsAfterAllocationToGpgi(1250, 450, false);
   displayTotalMoneyDirectlyAllocated(1250, 600, false);
 
-  displayMgfFinalRepartition(550, 750, false);
+  displayMgfFinalRepartition(500, 750, false);
 }
 

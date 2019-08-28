@@ -40,5 +40,5 @@ function displayMgfFinalRepartition(x, y, isVertical) {
   fill("#111111")
   textSize(22);
   textAlign(LEFT, BOTTOM);
-  text('Final repartition', x + 5, y + widthRect - 4);
+  text('Final allocation', x + 5, y + widthRect - 4);
 }

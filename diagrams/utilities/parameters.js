@@ -5,9 +5,20 @@ const mecanism = [
   "mgf"
 ]
 
-const currentMecanism = "corsia+"
+const currentMecanism = "simple-mgf"
 
-const retentionRate = 0.3;
+let canvasLength;
+let canvasHeight;
+
+if (currentMecanism === "corsia+") {
+  canvasLength = 1000
+  canvasHeight = 450
+} else {
+  canvasLength = 1600
+  canvasHeight = 900
+}
+
+const retentionRate = 0.4;
 const totalScale = 400;
 const widthRect = 30;
 
@@ -40,6 +51,15 @@ const gpgis = {
   CPRF: "#784C27"
 }
 
+const gpgisName = {
+  CDM: "Clean Development Mechanism",
+  CEPI: "Coalition for Epidemic Preparedness Innovation", // "#20246"
+  GFATBM: "Global Fund for AIDS, TB and Malaria",
+  FCPCF: "Forest Carbon Partnerships Carbon Fund",
+  ITER: "International Thermonuclear Reactor",
+  CPRF: "Carbon Pricing Reward Fund"
+}
+
 const colorCorsiaGpgi = "#569683"
 
 /*
@@ -54,8 +74,8 @@ const allocations = {
   "Japan": 0.0323,
   "Latin America": 0.0562,
   "Middle East": 0.0939,
-  "Other High Income Countries": 0.0659,
+  "Other High Income": 0.0659,
   "Russia": 0.0156,
   "US": 0.1366,
-  "Other Non-OECD Asia": 0.1524
+  "Other Asia": 0.1524
 }

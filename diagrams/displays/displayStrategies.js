@@ -1,5 +1,7 @@
 
 function displayStrategies(x , y, isVertical) {
+  const length = 820;
+  const space = (length - totalScale) / 12;
   Object.keys(strategies).forEach(player => {
     const allocation = allocations[player];
     const lengthAllocation = totalScale * allocation;
@@ -64,9 +66,9 @@ function displayStrategies(x , y, isVertical) {
         x += lengthMoneyAllocatedToMf;
     }
     if (isVertical)
-      y += 10;
+      y += space;
     else 
-      x += 10;
+      x += space;
   }) 
 
   fill("#111111")
