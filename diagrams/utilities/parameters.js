@@ -5,14 +5,14 @@ const mecanism = [
   "mgf"
 ]
 
-const currentMecanism = "simple-mgf"
+const currentMecanism = "mgf"
 
 let canvasLength;
 let canvasHeight;
 
 if (currentMecanism === "corsia+") {
-  canvasLength = 1000
-  canvasHeight = 450
+  canvasLength = 1350
+  canvasHeight = 650
 } else {
   canvasLength = 1600
   canvasHeight = 900

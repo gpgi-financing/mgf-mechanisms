@@ -111,8 +111,8 @@ const participations = {
   "Japan": true,
   "Latin America": true,
   "Middle East": true,
-  "Other High Income Countries": true,
+  "Other High Income": true,
   "Russia": true,
   "US": true,
-  "Other Non-OECD Asia": true
+  "Other Asia": true
  }

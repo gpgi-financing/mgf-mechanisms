@@ -18,9 +18,10 @@ function setup() {
 }
 
 function showDiagramCorsiaPlus() {
-  displayAllocations(150, 100, false);
-  displayCorsiaAllocations(150, 200, false);
-  displayCorsiaFinalRepartition(250, 300, false);
+  drawLegendCorsia(830, 50)
+  displayAllocations(150, 320, false);
+  displayCorsiaAllocations(150, 400, false);
+  displayCorsiaFinalRepartition(550, 500, false);
 
 }
 
