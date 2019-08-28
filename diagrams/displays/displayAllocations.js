@@ -7,4 +7,9 @@ function displayAllocations(x , y, isVertical) {
     else
       x += lengthAllocation + 10;
   }) 
+
+  fill("#111111")
+  textSize(22);
+  textAlign(LEFT, BOTTOM);
+  text('Tax revenues collected', x + 5, y + widthRect - 4);
 }

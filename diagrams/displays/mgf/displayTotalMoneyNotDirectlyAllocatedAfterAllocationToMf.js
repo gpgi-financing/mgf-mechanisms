@@ -2,7 +2,12 @@
 function displayTotalMoneyNotDirectlyAllocatedAfterAllocationToMf(x, y, isVertical) {
   const mfs = getMfs();
   const totalProportionMoneyNotDirectlyAllocated = getTotalProportionMoneyNotDirectlyAllocated();
-  const totalProportionMoneyInitiallyAllocatedToMfs = getTotalProportionMoneyInitiallyAllocatedToMfs()
+  const totalProportionMoneyInitiallyAllocatedToMfsWeighted = getTotalProportionMoneyInitiallyAllocatedToMfsWeighted()
+
+  fill("#111111")
+  textSize(17 );
+  textAlign(LEFT, BOTTOM);
+  text('Indirect allocations to PMFs', x + 5, y - 4);
 
   mfs.forEach(mf => {
     const mfComposition = mf.mfComposition;
@@ -10,7 +15,7 @@ function displayTotalMoneyNotDirectlyAllocatedAfterAllocationToMf(x, y, isVertic
     const nbOfGpgis = mfComposition.length;
     const widthBand = widthRect / nbOfGpgis;
 
-    const totalProportionMoneyNotDirectlyAllocatedAfterAllocationToMf = initialAllocation * totalProportionMoneyNotDirectlyAllocated / totalProportionMoneyInitiallyAllocatedToMfs;
+    const totalProportionMoneyNotDirectlyAllocatedAfterAllocationToMf = initialAllocation * nbOfGpgis * totalProportionMoneyNotDirectlyAllocated / totalProportionMoneyInitiallyAllocatedToMfsWeighted;
     const lengthTotalMoneyNotDirectlyAllocatedAfterAllocationToMf = totalScale * totalProportionMoneyNotDirectlyAllocatedAfterAllocationToMf;
     for (let i = 0; i < nbOfGpgis; i += 1) {
       const gpgi = mfComposition[i];

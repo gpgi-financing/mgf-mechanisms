@@ -1,5 +1,14 @@
+
+const mecanism = [
+  "corsia+",
+  "simple-mgf",
+  "mgf"
+]
+
+const currentMecanism = "corsia+"
+
 const retentionRate = 0.3;
-const totalScale = 600;
+const totalScale = 400;
 const widthRect = 30;
 
 const rawStrategies = `1.0000    2.0400    1.0000   -1.0000    2.0200   -1.0000    1.0000    4.1000   -1.0000   -1.0000    1.0000    2.1000
@@ -24,12 +33,14 @@ const rawMetrics = `0.0676    0.4818    0.4179   -0.0188    0.2986    0.1195    
 */
 const gpgis = {
   CDM: "#518FCB",
-  CEPI: "#00244F",
+  CEPI: "#52767F", // "#20246"
   GFATBM: "#CC381C",
   FCPCF: "#5B9E3C",
   ITER: "#FDBB34",
   CPRF: "#784C27"
 }
+
+const colorCorsiaGpgi = "#569683"
 
 /*
   allocations is an object structure that links each player's country with the percent of fund taxed they have

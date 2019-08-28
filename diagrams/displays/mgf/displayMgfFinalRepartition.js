@@ -1,8 +1,8 @@
-function displayFinalRepartition(x, y, isVertical) {
+function displayMgfFinalRepartition(x, y, isVertical) {
   const mfs = getMfs();
   const totalProportionMoneyNotDirectlyAllocated = getTotalProportionMoneyNotDirectlyAllocated();
   const totalDirectlyAllocatedMoneyRepartition = getTotalDirectlyAllocatedMoneyRepartition();
-  const totalProportionMoneyInitiallyAllocatedToMfs = getTotalProportionMoneyInitiallyAllocatedToMfs()
+  const totalProportionMoneyInitiallyAllocatedToMfsWeighted = getTotalProportionMoneyInitiallyAllocatedToMfsWeighted()
 
   const finalAllocation = Object.assign({}, totalDirectlyAllocatedMoneyRepartition);
 
@@ -13,7 +13,7 @@ function displayFinalRepartition(x, y, isVertical) {
 
     const totalProportionMoneyDirectlyAllocatedToGpgisOfMf = getTotalProportionMoneyDirectlyAllocatedToGpgisOfMf(mf);
 
-    const proportionMoneyAllocatedToMf = initialAllocation * (1 + totalProportionMoneyNotDirectlyAllocated / totalProportionMoneyInitiallyAllocatedToMfs);
+    const proportionMoneyAllocatedToMf = initialAllocation * (1 + (nbOfGpgis * totalProportionMoneyNotDirectlyAllocated) / totalProportionMoneyInitiallyAllocatedToMfsWeighted);
 
     for (var i = 0; i < nbOfGpgis; i += 1) {
       const gpgi = mfComposition[i];
@@ -36,4 +36,9 @@ function displayFinalRepartition(x, y, isVertical) {
     else
       x += lengthMoneyAllocatedToCurrentGpgi + 10;
   })
+
+  fill("#111111")
+  textSize(22);
+  textAlign(LEFT, BOTTOM);
+  text('Final repartition', x + 5, y + widthRect - 4);
 }

@@ -68,4 +68,9 @@ function displayStrategies(x , y, isVertical) {
     else 
       x += 10;
   }) 
+
+  fill("#111111")
+  textSize(22);
+  textAlign(LEFT, BOTTOM);
+  text('Strategies chosen', x + 5, y + widthRect - 4);
 }
