@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Diagramatic computation</title>
+
+	<!-- <script src="libraries/p5.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+  <style>
+  body {
+    width: 100%;
+    margin: 0;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #sketch-holder {
+    border-color: '#aa1144';
+    border-width: 10px;
+  }
+  #slidecontainer {
+  width: 100%; /* Width of the outside container */
+  }
+  #slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%; 
+    height: 25px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; 
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  background: #04AA6D; 
+  cursor: pointer; 
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; 
+  height: 25px; 
+  background: #04AA6D; 
+  cursor: pointer;
+}
+  </style>
+
+
+</head>
+<body>
+  <div id="sketch-holder">
+   <!-- Our sketch will go here! --> 
+  <p> Non-Allocated </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="non-allocated">
+  </div>
+  <p> Direct Allocation </p>
+  <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="direct-allocation">
+  </div>
+  <p> Matching Fund Allocation </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="0" class="slider" id="matching-fund-allocation">
+  </div>
+  <p> Include CDM in matching funds? </p>
+  <input type="checkbox" id="cdmCheck" onclick="displayAll()">
+  <p> Include CEPI in matching funds? </p>
+  <input type="checkbox" id="cepiCheck" onclick="displayAll()">
+  <p> Include GFATBM in matching funds? </p>
+  <input type="checkbox" id="gfatbmCheck" onclick="displayAll()">
+  <p> Include FCPCF in matching funds? </p>
+  <input type="checkbox" id="fcpcfCheck" onclick="displayAll()">
+  <p> Include ITER in matching funds? </p>
+  <input type="checkbox" id="iterCheck" onclick="displayAll()">
+  <p> Include CPRF in matching funds? </p>
+  <input type="checkbox" id="cprfCheck" onclick="displayAll()">
+  <p> CDM </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="cdm">
+  </div>
+  <p> CEPI </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="cepi">
+  </div>
+  <p> GFATBM </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="gfatbm">
+  </div>
+  <p> FCPCF </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="fcpcf">
+  </div>
+  <p> ITER </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="iter">
+  </div>
+  <p> CPRF </p>
+  <div class="slidecontainer">
+      <input type="range" min="0" max="100" value="50" class="slider" id="cprf">
+  </div>
+  <script src="datas/parseStrategies.js"></script>
+  <script src="datas/datas.js"></script>
+
+
+  <script src="display/displayAllocation.js"></script>
+  <script src="display/displayAllocationsStrategies.js"></script>
+  <script src="display/displayAllocationsToMf.js"></script>
+  <script src="display/displayCumulatedAllocations.js"></script>
+  <script src="display/displayFinalRepartition.js"></script>
+  <script src="display/displayMfRepartition.js"></script>
+  <script src="display/displaySummedAllocationsToMf.js"></script>
+
+  <script src="diagramatic-computation.js"></script>
+ </div>
+</body>
+</html>
