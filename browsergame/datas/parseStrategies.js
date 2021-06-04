@@ -48,10 +48,17 @@ function displayAll() {
 	setup();
 }
 
+async function loadStrategies() {
+   const response = await fetch("PUT_URL_HERE/getStrategies");
+   return response.json();
+}
+
 function getStrategies() {
+
   //TODO: get strategies for multiplayer game instead
-  const parsedStrategies = parseRawData(rawStrategies)
-  const utilities = getUtilities()
+  loadStrategies().then(data=> {
+     const parsedStrategies = data;
+     const utilities = getUtilities();
 
   let strategies = {};
   const players = Object.keys(allocations);
@@ -68,20 +75,20 @@ function getStrategies() {
     const sortedUtility = utility.sort((a, b) => {
       return (a.value - b.value);
     }).reverse();
-	
+
     let proportionMoneyNotAllocated = 0;
     let proportionMoneyDirectlyAllocated = 0;
     let proportionMoneyAllocatedToMf = 0;
 	const v1 = parseFloat(parsedStrategies[0][i]);
 	const v2 = parseFloat(parsedStrategies[1][i]);
 	const v3 = parseFloat(parsedStrategies[2][i]);
-	
+
 	if (i != chosenPlayer) {
 
 		proportionMoneyNotAllocated = parseFloat((1 - v3).toFixed(2));
 
 		if (v1 >= 1  && v1 < 2) {
-		  proportionMoneyDirectlyAllocated = parseFloat(v3); 
+		  proportionMoneyDirectlyAllocated = parseFloat(v3);
 		} else if (v1 >= 2) {
 		  proportionMoneyDirectlyAllocated = (Math.floor(v1) + 0.1 - v1) * 10 * v3
 		  proportionMoneyDirectlyAllocated = parseFloat(proportionMoneyDirectlyAllocated.toFixed(2))
@@ -95,7 +102,7 @@ function getStrategies() {
 		let matchingFundAllocationSlider = document.getElementById("matching-fund-allocation");
 		nonAllocatedSlider.oninput = displayAll;
 		directAllocationSlider.oninput = displayAll;
-        matchingFundAllocationSlider.oninput = displayAll; 		
+        matchingFundAllocationSlider.oninput = displayAll;
 		const totalSliderValue = parseFloat(nonAllocatedSlider.value) + parseFloat(directAllocationSlider.value) + parseFloat(matchingFundAllocationSlider.value);
 		proportionMoneyNotAllocated = parseFloat(nonAllocatedSlider.value) / totalSliderValue;
 		proportionMoneyDirectlyAllocated = parseFloat(directAllocationSlider.value) / totalSliderValue;
@@ -103,9 +110,9 @@ function getStrategies() {
 	}
 
 
-    let directlyAllocatedMoneyRepartition = {}  
+    let directlyAllocatedMoneyRepartition = {}
     if (proportionMoneyDirectlyAllocated > 0) {
-      if (i != chosenPlayer) {		
+      if (i != chosenPlayer) {
 		if (v2 < 1) {
 	      directlyAllocatedMoneyRepartition[sortedUtility[1].gpgi] = parseFloat(1 - v2);
 		}
@@ -122,7 +129,7 @@ function getStrategies() {
         gfatbmSlider.oninput = displayAll;
         fcpcfSlider.oninput = displayAll;
 		iterSlider.oninput = displayAll;
-        cprfSlider.oninput = displayAll;		
+        cprfSlider.oninput = displayAll;
 		const totalDirectSliderValue = parseFloat(cdmSlider.value) + parseFloat(cepiSlider.value) + parseFloat(gfatbmSlider.value) + parseFloat(fcpcfSlider.value) + parseFloat(iterSlider.value) + parseFloat(cprfSlider.value);
 		directlyAllocatedMoneyRepartition =	{
 			CDM: parseFloat(cdmSlider.value)/totalDirectSliderValue,
@@ -140,17 +147,17 @@ function getStrategies() {
     const mfComposition = []
 
     if (proportionMoneyAllocatedToMf > 0) {
-	  if (i != chosenPlayer) {	
+	  if (i != chosenPlayer) {
 		const nbOfGpgi = Math.floor(v1);
 		//console.log(nbOfGpgi)
 		if (nbOfGpgi > 1) {
 		  const composition = sortedUtility.slice(0,nbOfGpgi);
 		  //console.log(composition)
-		  
+
 		  for (let j = 0; j < composition.length; j++) {
 			mfComposition.push(composition[j].gpgi);
 		  }
-	  
+
 		 }
 	  } else {
 		let cdmCheck = document.getElementById("cdmCheck");
@@ -160,24 +167,24 @@ function getStrategies() {
 		let iterCheck = document.getElementById("iterCheck");
 		let cprfCheck = document.getElementById("cprfCheck");
         if (cdmCheck.checked) {
-		    mfComposition.push("CDM");	
+		    mfComposition.push("CDM");
 	    }
 		if (cepiCheck.checked) {
-		    mfComposition.push("CEPI");	
+		    mfComposition.push("CEPI");
 	    }
 		if (gfatbmCheck.checked) {
-		    mfComposition.push("GFATBM");	
+		    mfComposition.push("GFATBM");
 	    }
 		if (fcpcfCheck.checked) {
-		    mfComposition.push("FCPCF");	
+		    mfComposition.push("FCPCF");
 	    }
 		if (iterCheck.checked) {
-		    mfComposition.push("ITER");	
+		    mfComposition.push("ITER");
 	    }
 		if (cprfCheck.checked) {
-		    mfComposition.push("CPRF");	
+		    mfComposition.push("CPRF");
 	    }
-	  }		
+	  }
     }
     strategies[player] = {
       fundRepartition: [
@@ -189,6 +196,7 @@ function getStrategies() {
       mfComposition
     }
   }
-  return strategies
+  return strategies;
+  });
 }
 
