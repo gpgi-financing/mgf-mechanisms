@@ -4,10 +4,11 @@ from .fund import Fund
 
 class Settings:
 
-    def __init__(self, resources, defaultStrategies, funds):
+    def __init__(self, resources, defaultStrategies, funds, finalRound=120):
         self.resources = resources
         self.defaultStrategies = defaultStrategies
         self.funds = funds
+        self.finalRound = finalRound
 
 def getDefaultSettings():
     defaultFunds = [Fund("CDM", [0.0676, 0.4818, 0.4179, -0.0188, 0.2986, 0.1195, 0.1250, -0.4446, 0.0785, -0.1825, 0.2440, 0.3130]),

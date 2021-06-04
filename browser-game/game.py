@@ -15,6 +15,17 @@ class Game:
         self.finalRound = settings.finalRound
         self.funds = settings.funds
         self.name = name
+
+    def __init__(self, players, resources, strategies, currPlayer, period, payoffs, finalRound, funds, name):
+        self.players = players
+        self.resources = resources
+        self.strategies = strategies
+        self.currPlayer = currPlayer
+        self.period = period
+        self.payoffs = payoffs
+        self.finalRound = finalRound
+        self.funds = funds
+        self.name = name
     #Receive a strategy, advance the game by a move;
     #TODO: move outside this class, so as to modify the URL by game
     @app.route("/submit")

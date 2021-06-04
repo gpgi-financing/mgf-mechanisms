@@ -49,6 +49,7 @@ function displayAll() {
 }
 
 function getStrategies() {
+  //TODO: get strategies for multiplayer game instead
   const parsedStrategies = parseRawData(rawStrategies)
   const utilities = getUtilities()
 
