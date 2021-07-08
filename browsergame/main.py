@@ -1,10 +1,10 @@
 from random import random
 
 from flask import Flask, request
-from browsergame.context import Context
-from browsergame.game import Game
-from browsergame.settings import getDefaultSettings
-from browsergame.strategy import Strategy
+from .context import Context
+from .game import Game
+from .settings import getDefaultSettings
+from .strategy import Strategy
 import bcrypt
 import psycopg2
 
@@ -26,7 +26,7 @@ def loadPage():
 
     app = Flask(__name__)
 
-    conn = psycopg2.connect("dbname=Superuser user=postgres password=Ku,ku,ku!")
+    conn = psycopg2.connect("dbname=Superuser user=postgres password=ENCRYPT_THIS")
 
     cur = conn.cursor()
 

@@ -1,5 +1,5 @@
-from browsergame.strategy import defaultStrategies
-from browsergame.fund import Fund
+from .strategy import defaultStrategies
+from .fund import Fund
 
 
 class Settings:
