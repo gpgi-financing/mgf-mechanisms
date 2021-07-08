@@ -1,10 +1,10 @@
 from random import random
 
 from flask import Flask, request
-from .context import Context
-from .game import Game
-from .settings import getDefaultSettings
-from .strategy import Strategy
+from browsergame.context import Context
+from browsergame.game import Game
+from browsergame.settings import getDefaultSettings
+from browsergame.strategy import Strategy
 import bcrypt
 import psycopg2
 
@@ -26,7 +26,7 @@ def loadPage():
 
     app = Flask(__name__)
 
-    conn = psycopg2.connect("dbname=Superuser user=postgres password=ENCRYPT_THIS")
+    conn = psycopg2.connect("dbname=postgres user=postgres password=ENCRYPT_THIS")
 
     cur = conn.cursor()
 
@@ -35,16 +35,16 @@ def loadPage():
 
     gameCounter = 0
     cur.execute("SELECT uid FROM users;")
-    uids = cur.fetchAll()
+    uids = cur.fetchall()
 
     cur.execute("SELECT uid, hashSaltPw FROM users;")
     hashSaltPws = {}
-    hashSaltArray = cur.fetchAll()
+    hashSaltArray = cur.fetchall()
     for tuple in hashSaltArray:
         hashSaltPws[tuple[0]] = tuple[1]
     games = []
     cur.execute("SELECT * FROM games;")
-    gameInfos = cur.fetchAll()
+    gameInfos = cur.fetchall()
     for gameInfo in gameInfos:
         name = gameInfo[len(gameInfo) - 1]
         players = decomposeStringOfInts(gameInfo[0])
@@ -67,10 +67,10 @@ def loadPage():
         games.append(Game(players, resources, strategies, currPlayer, period, payoffs, finalRound, funds, name))
 
     cur.execute("SELECT uid FROM waitingUsers;")
-    waitingUsers = cur.fetchAll()
+    waitingUsers = cur.fetchall()
     userToGame = {}
     cur.execute("SELECT uid, game FROM users WHERE game != null;")
-    usersAndGames = cur.fetchAll()
+    usersAndGames = cur.fetchall()
     for userAndGame in usersAndGames:
         for game in games:
             if game.name == userAndGame[1]:
@@ -100,16 +100,21 @@ def loadPage():
                     for user in waitingUsers:
                         userToGame[user] = nextGame
                         cur.execute("UPDATE users SET game = %s WHERE uid = %s;", (nextGame.name, user))
+                        cur.commit()
                     waitingUsers = []
                     cur.execute("TRUNCATE TABLE waitingUsers;")
+                    cur.commit()
                     games.append(nextGame)
                     cur.execute("INSERT INTO games VALUES (%s, %s, %s, %s, %s, %s);",
                                 (createStringOfInts(nextGame.players), createStringOfInts(nextGame.resources), nextGame.currPlayer, nextGame.period, createStringOfInts(nextGame.payoffs), nextGame.finalRound, nextGame.name))
+                    cur.commit()
                     for strat in nextGame.strategies:
                         cur.execute("INSERT INTO strategies VALUES (%s, %s, %s, %s, %s, %s);", (nextGame.name, strat.proportionNotAllocated, strat.proportionDirect, strat.proportionMatching, createStringOfInts(strat.directSplit), createStringOfInts(strat.matchingComp)) )
+                        cur.commit()
                     gameCounter += 1
                 else:
                     cur.execute("INSERT INTO waitingUsers VALUES (%s);", context.uid)
+                    cur.commit()
             else:
                 pass#TODO: display game
 

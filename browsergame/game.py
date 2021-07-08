@@ -1,8 +1,6 @@
 import random
 from flask import Flask
 
-app= Flask(__import__("main.py"))
-
 class Game:
     #Start a game
     def __init__(self, uids, name, settings):
@@ -26,20 +24,6 @@ class Game:
         self.finalRound = finalRound
         self.funds = funds
         self.name = name
-    #Receive a strategy, advance the game by a move;
-    #TODO: move outside this class, so as to modify the URL by game
-    @app.route("/submit")
-    def receiveStrategy(self, strategy):
-        self.strategies[self.currPlayer] = strategy
-        currPayoffs = self.getRoundPayoffs()
-        self.payoffs = [self.payoffs[i] + currPayoffs[i] for i in range(len(self.players))]
-        self.currPlayer = random.choice(self.players)
-        #TODO: REST stuff updating the game state for all players
-        if self.period > self.finalRound :
-            self.end()
-        else:
-            self.period += 1
-
     def end(self):
        #TODO: Update players' scores, ranks, and reference scores.
        return None
