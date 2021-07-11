@@ -157,3 +157,4 @@ def create_app(test_config=None):
         else:
             game.period += 1
             cur.execute("UPDATE TABLE games SET period = %s", game.period)
+    return app
