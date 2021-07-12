@@ -1,6 +1,6 @@
 from random import random
 import os
-from flask import Flask, request
+from flask import Flask, request, render_template
 from browsergame.context import Context
 from browsergame.game import Game
 from browsergame.settings import getDefaultSettings
@@ -126,7 +126,9 @@ def create_app(test_config=None):
                     cur.execute("INSERT INTO waitingUsers VALUES (%s);", context.uid)
                     cur.commit()
             else:
-                pass  # TODO: display game
+                render_template("index.html")  # TODO: display game
+        else:
+            render_template("index.html")
 
     @app.route('/getStrategies', methods=['GET'])
     def getStrategies():
@@ -157,4 +159,8 @@ def create_app(test_config=None):
         else:
             game.period += 1
             cur.execute("UPDATE TABLE games SET period = %s", game.period)
+
+    @app.route("/game")
+    def displayDefaultGame():
+        return render_template("index.html")
     return app
