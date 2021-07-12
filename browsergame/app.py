@@ -99,7 +99,7 @@ def create_app(test_config=None):
                             (request.form['uid'], hashSaltPws[request.form['uid']]))
                 cur.commit()
             context.uid = request.form['uid']
-            if (context.uid not in userToGame):
+            if (context.uid not in userToGame and context.uid not in waitingUsers):
                 waitingUsers.append(context.uid)
                 if (len(waitingUsers) == 12):
                     nextGame = Game(waitingUsers, str(gameCounter), getDefaultSettings())  # TODO: Generate name
@@ -126,9 +126,11 @@ def create_app(test_config=None):
                     cur.execute("INSERT INTO waitingUsers VALUES (%s);", context.uid)
                     cur.commit()
             else:
-                render_template("index.html")  # TODO: display game
+                if context.uid in waitingUsers:
+                    return render_template("wait.html")
+                return render_template("index.html")  # TODO: display game
         else:
-            render_template("index.html")
+            return render_template("login.html")
 
     @app.route('/getStrategies', methods=['GET'])
     def getStrategies():
