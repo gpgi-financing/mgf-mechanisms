@@ -88,17 +88,17 @@ def create_app(test_config=None):
         nonlocal gameCounter
         nonlocal waitingUsers
         if (request.method == 'POST'):
-            hashedPw = bcrypt.hashpw(request.form['pw'], salt)
-            if request.form['uid'] in hashSaltPws:
-                if hashedPw != hashSaltPws[request.form['uid']]:
+            hashedPw = bcrypt.hashpw(request.json['pw'].encode('utf8'), salt)
+            if request.json['uid'] in hashSaltPws:
+                if hashedPw != hashSaltPws[request.json['uid']]:
                     return
             else:
-                uids.append(request.form['uid'])
-                hashSaltPws[request.form['uid']] = bcrypt.hashpw(request.form['pw'], salt)
+                uids.append(request.json['uid'])
+                print(request.json['pw'])
+                hashSaltPws[request.json['uid']] = bcrypt.hashpw(request.json['pw'].encode('utf8'), salt)
                 cur.execute("INSERT INTO users (uid, hashSaltPw) VALUES (%s, %s);",
-                            (request.form['uid'], hashSaltPws[request.form['uid']]))
-                cur.commit()
-            context.uid = request.form['uid']
+                            (request.json['uid'], hashSaltPws[request.json['uid']]))
+            context.uid = request.json['uid']
             if (context.uid not in userToGame and context.uid not in waitingUsers):
                 waitingUsers.append(context.uid)
                 if (len(waitingUsers) == 12):
@@ -106,25 +106,23 @@ def create_app(test_config=None):
                     for user in waitingUsers:
                         userToGame[user] = nextGame
                         cur.execute("UPDATE users SET game = %s WHERE uid = %s;", (nextGame.name, user))
-                        cur.commit()
                     waitingUsers = []
                     cur.execute("TRUNCATE TABLE waitingUsers;")
-                    cur.commit()
                     games.append(nextGame)
                     cur.execute("INSERT INTO games VALUES (%s, %s, %s, %s, %s, %s);",
                                 (createStringOfInts(nextGame.players), createStringOfInts(nextGame.resources),
                                  nextGame.currPlayer, nextGame.period, createStringOfInts(nextGame.payoffs),
                                  nextGame.finalRound, nextGame.name))
-                    cur.commit()
                     for strat in nextGame.strategies:
                         cur.execute("INSERT INTO strategies VALUES (%s, %s, %s, %s, %s, %s);", (
                         nextGame.name, strat.proportionNotAllocated, strat.proportionDirect, strat.proportionMatching,
                         createStringOfInts(strat.directSplit), createStringOfInts(strat.matchingComp)))
                         cur.commit()
                     gameCounter += 1
+                    return render_template("index.html") # TODO: display game
                 else:
-                    cur.execute("INSERT INTO waitingUsers VALUES (%s);", context.uid)
-                    cur.commit()
+                    cur.execute("INSERT INTO waitingUsers VALUES (%s);", (context.uid,))
+                    return render_template("wait.html")
             else:
                 if context.uid in waitingUsers:
                     return render_template("wait.html")
