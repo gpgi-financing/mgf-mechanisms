@@ -141,7 +141,7 @@ def create_app(test_config=None):
     def receiveStrategy():
         if (userToGame[context.uid].currPlayer != context.uid):
             return
-        strategy = request.form['strategy']
+        strategy = request.json['strategy']
         game = userToGame[context.uid]
         game.strategies[game.currPlayer] = strategy
         currPayoffs = game.getRoundPayoffs()
@@ -163,4 +163,10 @@ def create_app(test_config=None):
     @app.route("/game")
     def displayDefaultGame():
         return render_template("index.html")
+    
+    @app.route("/gameInfo", methods=['GET'])
+    def getGameInfo():
+        for game in games:
+            if game.name == request.json['name']:
+                return game
     return app

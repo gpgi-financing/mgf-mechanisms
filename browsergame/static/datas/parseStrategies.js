@@ -50,8 +50,23 @@ function displayAll() {
 
 function getStrategies() {
   //TODO: get strategies for multiplayer game instead
-  const parsedStrategies = parseRawData(rawStrategies)
-  const utilities = getUtilities()
+  let json = {
+      gameName: //TODO: get name of current game. Use URL?
+  }
+  const options = {
+     method: "GET",
+     body: JSON.stringify(json),
+     headers: {
+        "Content-Type": "application/json"
+     }
+  }
+
+  let response = fetch(window.location, options)
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+  const parsedStrategies = response; //parseRawData(rawStrategies)
+  const utilities = getUtilities();
 
   let strategies = {};
   const players = Object.keys(allocations);
@@ -187,6 +202,25 @@ function getStrategies() {
       ],
       directlyAllocatedMoneyRepartition,
       mfComposition
+    }
+    if (i == chosenPlayer) {
+          document.getElementById("submitButton").onclick = function(){
+              let strat = strategies[player];
+              let json = {
+                  "strategy": strat
+              }
+              const options = {
+                  method: 'POST',
+                  body: JSON.stringify(json),
+                  headers: {
+                      "Content-Type": "application/json"
+                  }
+              }
+              fetch(window.location, options)
+              .then(res => res.json())
+              .then(res => console.log(res))
+              .catch(err => console.error(err));
+          }
     }
   }
   return strategies
